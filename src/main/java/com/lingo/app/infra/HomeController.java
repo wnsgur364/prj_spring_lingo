@@ -11,4 +11,9 @@ public class HomeController {
 		return "/home";
 	}
 	
+	@RequestMapping(value = "/chatting")
+	public String chatting() {
+		return "infra/chatting/chatting";
+	}
+	
 }
