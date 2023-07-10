@@ -13,6 +13,7 @@
 </head>
 <body>
 	home.jspnnnnnnnnnnnnnnnnnnnn
-	<img src="../resources/images/LingoLogo.png">
+	<img src="/resources/images/LingoLogo.png"/>
+	<img src="/resources/images/logo.jpg"/>
 </body>
 </html>
