@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +14,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/resources/css/chat.css" rel="stylesheet" />
 	<style>
+<%--		test--%>
 		#sandMassageBtn{
 			display: flex;
 			align-items: center;
@@ -98,7 +104,10 @@
 		}
 	</style>
 </head>
+
 <body>
+<!-- header -->
+<%@ include file="/WEB-INF/views/include/header.jsp" %>
 <div class="container">
 	<div class="content container-fluid bootstrap snippets bootdey">
 		<div class="row row-broken">
@@ -205,6 +214,11 @@
 		</div>
 	</div>
 </div>
+<%@ include file="/WEB-INF/views/include/footer.jsp" %>
+
+
+
+
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>

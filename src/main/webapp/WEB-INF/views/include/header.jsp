@@ -5,25 +5,26 @@
   Time: 5:09 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
 
 <!-- Site Icons -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="shortcut icon" href="../../../../resources/vendor/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="../../../../resources/vendor/images/apple-touch-icon.png">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../resources/vendor/css/bootstrap.min.css">
 <!-- Site CSS -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../../../resources/vendor/style.css">
 <!-- ALL VERSION CSS -->
-<link rel="stylesheet" href="css/versions.css">
+<link rel="stylesheet" href="../../../../resources/vendor/css/versions.css">
 <!-- Responsive CSS -->
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="../../../../resources/vendor/css/responsive.css">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="../../../../resources/vendor/css/custom.css">
 
 <!-- Modernizer for Portfolio -->
-<script src="js/modernizer.js"></script>
+<script src="../../../../resources/vendor/js/modernizer.js"></script>
 
 <!--fontawesome -->
 <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
@@ -34,16 +35,24 @@
 <![endif]-->
 
 <!-- ALL JS FILES -->
-<script src="js/all.js"></script>
+<script src="../../../../resources/vendor/js/all.js"></script>
 <!-- ALL PLUGINS -->
-<script src="js/custom.js"></script>
+<script src="../../../../resources/vendor/js/custom.js"></script>
 
+<style>
+  .headerLogo {
+    width: 100px;
+    height: 100px;
+    margin-top: -26px;
+    margin-left: -35px;
+  }
+</style>
 <!-- Start header -->
 <header class="top-navbar">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="" />
+        <img src="../../../../resources/vendor/images/LingoLogo.png" alt="" class="headerLogo" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
