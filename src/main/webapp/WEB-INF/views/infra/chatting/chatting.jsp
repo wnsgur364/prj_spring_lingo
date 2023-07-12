@@ -9,6 +9,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/resources/css/chat.css" rel="stylesheet" />
 	<style>
+<%--		test--%>
 		#sandMassageBtn{
 			display: flex;
 			align-items: center;
