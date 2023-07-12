@@ -37,6 +37,8 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.18.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.18.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="prj_spring_lingo/web/Web" />
