@@ -9,6 +9,22 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/resources/css/chat.css" rel="stylesheet" />
 	<style>
+		#sandMassageBtn{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparent;
+			border: none;
+		}
+		#sandMassageBtn img:hover {
+			width: 100px;
+			height: 100px;
+			transition: 0.5s;
+		}
+		#sandMassageBtn img{
+			width: 80px;
+			height: 80px;
+		}
 		.chat-body {
 			height: 92%;
 			overflow-y: scroll;
@@ -43,10 +59,10 @@
 			-webkit-appearance: none;
 			border-radius: 0;
 		}
-		.chat-wrap .answer-add .answer-btn-1 {
-			background: url("http://91.234.35.26/iwiki-admin/v1.0.0/admin/img/icon-40.png") 50% 50% no-repeat;
-			right: 56px;
-		}
+		/*.chat-wrap .answer-add .answer-btn-1 {*/
+		/*	background: url("../../../../resources/images/LingoLogo.png") 50% 50% no-repeat;*/
+		/*	right: 56px;*/
+		/*}*/
 		.chat-wrap .answer-add .answer-btn {
 			display: block;
 			cursor: pointer;
@@ -57,8 +73,9 @@
 			margin-top: -18px;
 		}
 		.chat-wrap .answer-add .answer-btn-2 {
-			background: url("http://91.234.35.26/iwiki-admin/v1.0.0/admin/img/icon-41.png") 50% 50% no-repeat;
+			/*background: url("../../../../resources/images/LingoLogo.png") 50% 50% no-repeat;*/
 			right: 20px;
+			/*background-size: cover;*/
 		}
 		.chat input::-webkit-input-placeholder {
 			color: #fff;
@@ -177,9 +194,11 @@
 						</div>
 					</div>
 					<div class="answer-add">
-						<input placeholder="Write a message" />
-						<span class="answer-btn answer-btn-1"></span>
-						<span class="answer-btn answer-btn-2"></span>
+						<input placeholder="메세지를 입력하세요" />
+
+						<button id="sandMassageBtn" class="answer-btn answer-btn-2">
+							<img src="../../../../resources/images/LingoLogo.png" alt="전송" />
+						</button>
 					</div>
 				</div>
 			</div>
