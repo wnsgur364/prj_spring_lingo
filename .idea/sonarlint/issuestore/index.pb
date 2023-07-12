@@ -1,8 +1,6 @@
 
 V
 &src/main/webapp/WEB-INF/views/home.jsp,1/a/1af60de6709e573f5dad4fe0319db0bb3a87e804
-O
-html/smartedu-master/index.html,6/3/63d84cd0ccd597f51562ece9746062bd9a9b3b3d
 m
 =src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml,d/3/d3e54629b9a71e7b6b2949fb63e8fbc3314079cf
 _

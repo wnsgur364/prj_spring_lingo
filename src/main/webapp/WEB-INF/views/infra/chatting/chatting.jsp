@@ -99,7 +99,10 @@
 		}
 	</style>
 </head>
+
 <body>
+<!-- header -->
+<%@ include file="/WEB-INF/views/include/header.jsp" %>
 <div class="container">
 	<div class="content container-fluid bootstrap snippets bootdey">
 		<div class="row row-broken">
@@ -206,6 +209,11 @@
 		</div>
 	</div>
 </div>
+<%@ include file="/WEB-INF/views/include/footer.jsp" %>
+
+
+
+
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
