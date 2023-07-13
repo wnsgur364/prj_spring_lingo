@@ -1,237 +1,216 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8" />
-	<title>facebook messenger chat - Bootdey.com</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="/resources/css/chat.css" rel="stylesheet" />
-	<style>
-<%--		test--%>
-        .chat {
-            height: calc(100vh - 150px);
-        }
-		#sandMassageBtn{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: transparent;
-			border: none;
-            outline: none;
-		}
-		#sandMassageBtn img:hover {
-			width: 100px;
-			height: 100px;
-			transition: 0.5s;
-
-		}
-		#sandMassageBtn img{
-			width: 80px;
-			height: 80px;
-            outline: none;
-		}
-		.chat-body {
-			height: 92%;
-			overflow-y: scroll;
-			position: relative;
-		}
-
-		.answer-add {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-		}
-
-		/**************ADD FORM ***************/
-		.chat-wrap .answer-add {
-			clear: both;
-			position: relative;
-			padding: 20px;
-			background: #eea412;
-		}
-		.chat-wrap .answer-add input {
-			border: none;
-			background: none;
-			display: block;
-			width: 100%;
-			font-size: 16px;
-			line-height: 20px;
-			padding: 0;
-			color: #ffffff;
-		}
-		.chat input {
-			-webkit-appearance: none;
-			border-radius: 0;
-		}
-		/*.chat-wrap .answer-add .answer-btn-1 {*/
-		/*	background: url("../../../../resources/images/LingoLogo.png") 50% 50% no-repeat;*/
-		/*	right: 56px;*/
-		/*}*/
-		.chat-wrap .answer-add .answer-btn {
-			display: block;
-			cursor: pointer;
-			width: 36px;
-			height: 36px;
-			position: absolute;
-			top: 50%;
-			margin-top: -18px;
-		}
-		.chat-wrap .answer-add .answer-btn-2 {
-			/*background: url("../../../../resources/images/LingoLogo.png") 50% 50% no-repeat;*/
-			right: 20px;
-			/*background-size: cover;*/
-		}
-		.chat input::-webkit-input-placeholder {
-			color: #fff;
-		}
-
-		.chat input:-moz-placeholder { /* Firefox 18- */
-			color: #fff;
-		}
-
-		.chat input::-moz-placeholder {  /* Firefox 19+ */
-			color: #fff;
-		}
-
-		.chat input:-ms-input-placeholder {
-			color: #fff;
-		}
-		.chat input {
-			-webkit-appearance: none;
-			border-radius: 0;
-		}
-	</style>
+    <title>채팅입니당</title>
+    <link rel="stylesheet" href="../../../../resources/chat/css/chatStyle.css" />
+    <meta charset="utf-8" />
 </head>
-
-<body>
-<!-- header -->
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
-<div class="container">
-	<div class="content container-fluid bootstrap snippets bootdey">
-		<div class="row row-broken">
-			<div class="col-sm-3 col-xs-12">
-				<div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none" tabindex="5000">
-					<div class="chat-users">
-						<h6>채팅방 이름</h6>
-						<p>참여인원 1/10</p>
-						<!-- 유저 인원 -->
-						<div class="user">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name" />
-								<div class="status off"></div>
-							</div>
-							<div class="name">User name</div>
-							<div class="mood">User mood</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none" tabindex="5001">
-				<!-- 채팅 바디 -->
-				<div class="col-inside-lg decor-default chat-wrap" style="height: 100%">
-					<div class="chat-body">
-						<h6>채팅방이름</h6>
-						<div class="answer left">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name" />
-								<div class="status offline"></div>
-							</div>
-							<div class="name">Alexander Herthic</div>
-							<div class="text">
-								Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-							</div>
-							<div class="time">5 min ago</div>
-						</div>
-						<div class="answer right">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name" />
-								<div class="status offline"></div>
-							</div>
-							<div class="name">Alexander Herthic</div>
-							<div class="text">
-								Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-							</div>
-							<div class="time">5 min ago</div>
-						</div>
-						<!-- 길이 때문에 추가 -->
-						<div class="answer left">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name" />
-								<div class="status offline"></div>
-							</div>
-							<div class="name">Alexander Herthic</div>
-							<div class="text">
-								Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-							</div>
-							<div class="time">5 min ago</div>
-						</div>
-						<div class="answer right">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name" />
-								<div class="status offline"></div>
-							</div>
-							<div class="name">Alexander Herthic</div>
-							<div class="text">
-								Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-							</div>
-							<div class="time">5 min ago</div>
-						</div>
-						<!-- 길이 때문에 추가 -->
-						<div class="answer left">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name" />
-								<div class="status offline"></div>
-							</div>
-							<div class="name">Alexander Herthic</div>
-							<div class="text">
-								Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-							</div>
-							<div class="time">5 min ago</div>
-						</div>
-						<div class="answer right">
-							<div class="avatar">
-								<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name" />
-								<div class="status offline"></div>
-							</div>
-							<div class="name">Alexander Herthic</div>
-							<div class="text">
-								Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-							</div>
-							<div class="time">5 min ago</div>
-						</div>
-					</div>
-					<div class="answer-add">
-						<input placeholder="메세지를 입력하세요" style="outline: none" />
+<div class="wrap">
+    <section class="menu-section">
+        <h1>
+            <!-- <a href="#" target="_blank">
+              <img src="Logo.png" alt="logo" />
+            </a> -->
+            이그잼플 채팅
+        </h1>
+        <div class="user-box">
+            <img class="user-img" src="../../../../resources/chat/images/user_0.png" alt="user image" />
+            <div class="name">
+                <!-- addClass : active -->
+                <input type="text" value="안도형" />
+            </div>
+            <a href="javascript:void(0);" class="btn-alter"></a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="active"><a href="javascript:void(0);">채팅방1</a></li>
+                <li><a href="javascript:void(0);">채팅방2</a></li>
+            </ul>
+        </nav>
+        <!-- resource btns -->
+        <ul class="resource-box">
+            <li>
+                <a href="javascript:void(0);" class="btn"
+                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a
+                >
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="btn"
+                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a
+                >
+            </li>
+        </ul>
+    </section>
 
-						<button id="sandMassageBtn" class="answer-btn answer-btn-2">
-							<img src="../../../../resources/images/LingoLogo.png" alt="전송" />
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <main class="chat-wrap">
+        <div class="chat-wrap-inner">
+            <div class="chat-container">
+                <h2 class="chat-title">톡플러스</h2>
+                <!-- chat-area -->
+                <div class="chat-area" id="chatView">
+                    <div class="date"></div>
+                    <div class="notibox">
+                        <span>채팅방 운영정책 및 공지를 입력할 수 있는 영역입니다</span>
+                    </div>
+                    <!-- message-area -->
+                    <div class="message-area">
+                        <div class="message-list avatar">
+                            <div class="avatar-image">
+                                <img src="../../../../resources/chat/images/user_1.png" />
+                            </div>
+                            <div class="message-box">
+                                <div class="avatar-name">톡플러스</div>
+                                <div class="message-time">
+                                    <div class="message-text">발송메시지 영역</div>
+                                    <div class="timestamps">오후 00:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list wirter">
+                            <div class="message-box">
+                                <div class="message-time">
+                                    <div class="timestamps">오후 00:00</div>
+                                    <div class="message-text">발송메시지 영역</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="message-list avatar">
+                            <div class="avatar-image">
+                                <img src="../../../../resources/chat/images/user_1.png" />
+                            </div>
+                            <div class="message-box">
+                                <div class="avatar-name">톡플러스</div>
+                                <div class="message-time">
+                                    <div class="file-area file">
+                                        <a href="javascript:void(0);">
+                                            <sapn class="fileName">톡플러스 샘플파일.txt</sapn>
+                                            <sapn class="fileSize">용량 : 15MB</sapn>
+                                            <sapn class="filedown"></sapn>
+                                        </a>
+                                    </div>
+                                    <div class="timestamps">오후 00:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list wirter">
+                            <div class="message-box">
+                                <div class="message-time">
+                                    <div class="timestamps">오후 00:00</div>
+                                    <div class="file-area picture">
+                                        <a href="https://www.w3schools.com/tags/img_girl.jpg"
+                                        ><img src="https://www.w3schools.com/tags/img_girl.jpg"
+                                        /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-list wirter">
+                        <div class="message-box">
+                            <div class="message-time">
+                                <div class="timestamps">오후 00:00</div>
+                                <div class="file-area video">
+                                    <video width="384" controls>
+                                        <source
+                                                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                                                type="video/mp4"
+                                        />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-list wirter">
+                        <div class="message-box">
+                            <div class="message-time">
+                                <div class="timestamps">오후 00:00</div>
+                                <div class="file-area file">
+                                    <a href="javascript:void(0);">
+                                        <sapn class="fileName">톡플러스 샘플파일.txt</sapn>
+                                        <sapn class="fileSize">용량 : 15MB</sapn>
+                                        <sapn class="filedown"></sapn>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //message-area -->
+            </div>
+            <!-- //chat-area -->
+            <!-- message-write-area -->
+            <div class="message-write-area">
+                <div class="message-write-inner">
+                    <div class="btn-attach">
+                        <a href="javascript:void(0);"></a>
+                    </div>
+                    <div class="attach-box">
+                        <ul>
+                            <li>
+                                <a class="attach pic" href="javascript:void(0);">사진첨부</a>
+                            </li>
+                            <li>
+                                <a class="attach video" href="javascript:void(0);"
+                                >동영상 첨부</a
+                                >
+                            </li>
+                            <li>
+                                <a class="attach file" href="javascript:void(0);">파일첨부</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="write-box">
+                        <input
+                                type="text"
+                                class="enterMessage"
+                                placeholder="메시지를 입력해주세요."
+                        />
+                    </div>
+                    <a class="btn-send" id="btnEnterMessage" href="javascript:void(0);"
+                    >전송</a
+                    >
+                </div>
+            </div>
+            <!-- //message-write-area -->
+        </div>
+    </main>
 </div>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
+<script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"
+></script>
+<script src="../../../../resources/chat/js/talkplus-0.4.0.js"></script>
 
+<!-- <script src="../../../../resources/chat/js/chat.js" type="module"></script> -->
 
-
-
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
-<script type="text/javascript">
-	$(function () {
-		$(".chat-body").niceScroll();
-	});
+<script>
+    $(".btn-attach").on("click", function () {
+        $(".attach-box").toggleClass("active");
+    });
 </script>
-</body>
+<!-- <script>
+
+  $('.btn-attach a').on('click', function () {
+      $(this).toggleClass('active');
+      $(this).closest('.message-write-inner').find('.attach-box').addClass('active');
+  });
+  $('.btn-attach a').on('focusout', function () {
+      $(this).removeClass('active');
+      $(this).closest('.message-write-inner').find('.attach-box').removeClass('active');
+  });
+
+</script> -->
+
+<body></body>
 </html>

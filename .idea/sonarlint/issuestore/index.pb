@@ -1,6 +1,4 @@
 
-V
-&src/main/webapp/WEB-INF/views/home.jsp,1/a/1af60de6709e573f5dad4fe0319db0bb3a87e804
 m
 =src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml,d/3/d3e54629b9a71e7b6b2949fb63e8fbc3314079cf
 _
@@ -17,3 +15,7 @@ a
 1.idea/artifacts/prj_spring_lingo_war_exploded.xml,7/e/7eb5631f25baf996130fb9fabc068a188aa27a0b
 Å
 Q.idea/sonarlint/securityhotspotstore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,5/7/57f21a9649435d4c0bebbf63045d868ce2bc78c1
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Z
+*src/main/webapp/resources/vendor/style.css,b/f/bf92e7794a2abe683ef113b97e8be87152f2cec1
