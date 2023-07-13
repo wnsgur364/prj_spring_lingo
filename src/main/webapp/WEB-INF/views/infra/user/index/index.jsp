@@ -316,7 +316,9 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
+    
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
+
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>
