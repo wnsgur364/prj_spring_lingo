@@ -8,9 +8,6 @@ body{
 .col-inside-lg {
     padding: 20px;
 }
-.chat {
-    height: calc(100vh - 180px);
-}
 .decor-default {
     background-color: #ffffff;
 }

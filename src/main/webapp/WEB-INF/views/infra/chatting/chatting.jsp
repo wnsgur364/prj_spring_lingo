@@ -15,21 +15,27 @@
 	<link href="/resources/css/chat.css" rel="stylesheet" />
 	<style>
 <%--		test--%>
+        .chat {
+            height: calc(100vh - 150px);
+        }
 		#sandMassageBtn{
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			background-color: transparent;
 			border: none;
+            outline: none;
 		}
 		#sandMassageBtn img:hover {
 			width: 100px;
 			height: 100px;
 			transition: 0.5s;
+
 		}
 		#sandMassageBtn img{
 			width: 80px;
 			height: 80px;
+            outline: none;
 		}
 		.chat-body {
 			height: 92%;
@@ -203,7 +209,7 @@
 						</div>
 					</div>
 					<div class="answer-add">
-						<input placeholder="메세지를 입력하세요" />
+						<input placeholder="메세지를 입력하세요" style="outline: none" />
 
 						<button id="sandMassageBtn" class="answer-btn answer-btn-2">
 							<img src="../../../../resources/images/LingoLogo.png" alt="전송" />
