@@ -13,7 +13,7 @@ public class HomeController {
 	
 	@RequestMapping("/material")
 	public String material() {
-		return "/infra/user/index/material";
+		return "/infra/user/index/materials";
 	}
 	
 	@RequestMapping("/chatting")
@@ -26,9 +26,9 @@ public class HomeController {
 		return "/infra/user/index/bigginer";
 	}
 	
-	@RequestMapping("/interdadiate")
+	@RequestMapping("/intermediate")
 	public String interdadiate() {
-		return "/infra/user/index/interdadiate";
+		return "/infra/user/index/intermediate";
 	}
 	
 	@RequestMapping("/advanced")
