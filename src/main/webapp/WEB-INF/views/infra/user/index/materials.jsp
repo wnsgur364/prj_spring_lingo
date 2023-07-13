@@ -47,6 +47,8 @@
 
 </head>
 <body class="host_version"> 
+
+<%@ include file="/WEB-INF/views/include/header.jsp" %>
 	<div class="all-title-box">
 		<div class="container text-center">
 			<h1>학습자료<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
@@ -161,6 +163,10 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
+    
+    
+    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
+    
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->

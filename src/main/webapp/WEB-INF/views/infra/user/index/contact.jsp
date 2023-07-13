@@ -46,7 +46,7 @@
 </head>
 <body class="host_version"> 
 
-	
+	<%@ include file="/WEB-INF/views/include/header.jsp" %>
 	
 	<div class="all-title-box">
 		<div class="container text-center">
@@ -123,7 +123,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-  
+  <%@ include file="/WEB-INF/views/include/footer.jsp" %>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>
