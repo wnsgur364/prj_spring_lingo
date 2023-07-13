@@ -1,12 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: andohyeong
-  Date: 2023/07/12
-  Time: 5:09 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 
 <!-- Site Icons -->
 <link rel="shortcut icon" href="../../../../resources/vendor/images/favicon.ico" type="image/x-icon" />
@@ -51,7 +48,7 @@
 <header class="top-navbar">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index">
         <img src="../../../../resources/vendor/images/LingoLogo.png" alt="" class="headerLogo" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,24 +58,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbars-host">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Level Test</a></li>
+          <li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="materials">Materials</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a>
             <div class="dropdown-menu" aria-labelledby="dropdown-a">
-              <a class="dropdown-item" href="course-grid-2.html">Bigginer</a>
-              <a class="dropdown-item" href="course-grid-3.html">Intermediate</a>
-              <a class="dropdown-item" href="course-grid-4.html">Advanced </a>
+              <a class="dropdown-item" href="bigginer">Bigginer</a>
+              <a class="dropdown-item" href="intermediate">Intermediate</a>
+              <a class="dropdown-item" href="advanced">Advanced</a>
             </div>
           </li>
-
-          <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
-          <li class="nav-item"><a class="nav-link" href="pricing.html">Materials</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Book Now</span></a></li>
+          <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
         </ul>
       </div>
     </div>
