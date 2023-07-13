@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	public String index() {
 		return "/infra/user/index/index";
 	}
 	
-	@RequestMapping("/material")
-	public String material() {
+	@RequestMapping("/materials")
+	public String materials() {
 		return "/infra/user/index/materials";
 	}
 	
@@ -21,9 +21,9 @@ public class HomeController {
 		return "infra/chatting/chatting";
 	}
 	
-	@RequestMapping("/bigginer")
+	@RequestMapping("/begginner")
 	public String bigginer() {
-		return "/infra/user/index/bigginer";
+		return "/infra/user/index/begginner";
 	}
 	
 	@RequestMapping("/intermediate")
