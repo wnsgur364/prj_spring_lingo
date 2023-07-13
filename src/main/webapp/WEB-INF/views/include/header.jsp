@@ -64,7 +64,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a>
             <div class="dropdown-menu" aria-labelledby="dropdown-a">
-              <a class="dropdown-item" href="bigginer">Bigginer</a>
+              <a class="dropdown-item" href="begginner">Begginner</a>
               <a class="dropdown-item" href="intermediate">Intermediate</a>
               <a class="dropdown-item" href="advanced">Advanced</a>
             </div>
