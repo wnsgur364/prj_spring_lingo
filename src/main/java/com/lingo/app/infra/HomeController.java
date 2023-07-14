@@ -11,8 +11,8 @@ public class HomeController {
 		return "/infra/user/index/index";
 	}
 	
-	@RequestMapping("/material")
-	public String material() {
+	@RequestMapping("/materials")
+	public String materials() {
 		return "/infra/user/index/materials";
 	}
 	
@@ -21,9 +21,9 @@ public class HomeController {
 		return "infra/chatting/chatting";
 	}
 	
-	@RequestMapping("/begginer")
+	@RequestMapping("/begginner")
 	public String bigginer() {
-		return "/infra/user/index/begginer";
+		return "/infra/user/index/begginner";
 	}
 	
 	@RequestMapping("/intermediate")
