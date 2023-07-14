@@ -90,8 +90,8 @@
                             <span class="heading">
                                 <h3>Intermediate</h3>
                             </span>
-                           <span class="price-value">This step is for students who have a basic understanding of English but want to further develop their skills.</span>
-                            <!-- <span class="month"></span> -->
+                           <!-- <span class="price-value">This step is for students who have a basic understanding of English but want to further develop their skills.</span> -->
+                            <span class="month">This step is for students who have a basic understanding of English but want to further develop their skills.</span> 
                         </div>
 
                         <div class="pricingContent">
@@ -116,21 +116,23 @@
                             <span class="heading">
                                 <h3>Advanced</h3>
                             </span>
-                            <span class="price-value">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span>
-                            <!-- <span class="month"></span> -->
+                            <!-- <span class="price-value">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> -->
+                       <span class="price-value"><span class="month"></span><span>This step is aimed at students who have a solid grasp of English and want to refine their language skills.																																																																																																																																																																																 																																																							`									`						`							`										`																																																																																																																																																 						 						f	g							gbt														
+                       																																																																																																																																															</span></span>
+                       <!--  <span class="month">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> -->
                         </div>
-
-                        <div class="pricingContent">
-                            <i class="bi bi-brightness-high-fill"></i>
-                            <ul>
-                               <li>Grammer</li>
-                                <li>words</li>
+																																																																																																																								
+																																																																																																																							                        <div class="pricingContent">
+																																																																																																																							                            <i class="bi bi-brightness-high-fill"></i>
+																																																																																																																						                            <ul>
+																																																																																																																						                               <li>Grammer</li>
+                                <li>words</li>																							
                                 <li>Reading</li>
                                 <li>Speaking</li>
                             </ul>
                         </div><!-- /  CONTENT BOX-->
-
-                        <div class="pricingTable-sign-up">
+																																																																																					
+																																																																																					                        <div class="pricingTable-sign-up">	
                             <a href="#" class="hover-btn-new orange"><span>Test</span></a>
                         </div><!-- BUTTON BOX-->
                     </div>
@@ -141,7 +143,7 @@
 
     <div class="parallax section dbcolor">
         <div class="container">
-            <div class="row logos">
+    <div class="row logos">																																																																																													 					 																																																																																																																																																																																																																																																																																																																																																																																								
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
                     <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
                 </div>
