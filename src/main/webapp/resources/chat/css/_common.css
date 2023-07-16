@@ -9,7 +9,7 @@
 .menu-section {
   flex: 1;
   position: relative;
-  width: 270px;
+  width: 10vw;
   max-width: 270px;
   min-height: 100%;
   border-right: 1px solid #f0f2f5;
@@ -129,7 +129,7 @@
 
 .chat-wrap {
   flex: 1;
-  width: 100%;
+  width: 80vw;
   position: relative;
   height: 100%;
   box-sizing: border-box;
@@ -138,9 +138,9 @@
 
 .chat-wrap-inner {
   position: relative;
-  width: 1280px;
+  width: 100%;
   height: calc(100% - 200px);
-  margin: 98px auto 102px;
+  margin: 50px auto 102px;
   padding: 0 40px 45px 40px;
   background: #f7f8fc;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -150,7 +150,7 @@
 
 .chat-container .chat-title {
   height: 24px;
-  padding: 38px 0 17px;
+  padding: 20px 0 40px;
   font-family: "Noto Sans KR";
   font-weight: 500;
   font-size: 24px;
@@ -543,17 +543,17 @@
 }
 
 .attach-box ul li .attach.pic {
-  background: url("btn_picture.png") no-repeat 0 0;
+  background: url("../images/btn_picture.png") no-repeat 0 0;
   background-size: 69px 69px;
 }
 
 .attach-box ul li .attach.video {
-  background: url("btn_video.png") no-repeat 0 0;
+  background: url("../images/btn_video.png") no-repeat 0 0;
   background-size: 69px 69px;
 }
 
 .attach-box ul li .attach.file {
-  background: url("btn_file.png") no-repeat 0 0;
+  background: url("../images/btn_file.png") no-repeat 0 0;
   background-size: 69px 69px;
 }
 /* width */

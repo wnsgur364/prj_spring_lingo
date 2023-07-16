@@ -1,8 +1,6 @@
 
 m
 =src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml,d/3/d3e54629b9a71e7b6b2949fb63e8fbc3314079cf
-_
-/src/main/webapp/WEB-INF/spring/root-context.xml,5/2/528c08e315052712c6de729d808bc541b1c5b506
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 w
@@ -15,7 +13,21 @@ a
 1.idea/artifacts/prj_spring_lingo_war_exploded.xml,7/e/7eb5631f25baf996130fb9fabc068a188aa27a0b
 Å
 Q.idea/sonarlint/securityhotspotstore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,5/7/57f21a9649435d4c0bebbf63045d868ce2bc78c1
+e
+5src/main/java/com/lingo/app/infra/HomeController.java,6/d/6de435dc752cde4f08273719a28fda6de4a8cdc5
+`
+0src/main/webapp/WEB-INF/views/include/footer.jsp,9/9/993eb78874cb6f3cab884696c21261227a3a6332
+O
+html/smartedu-master/index.html,6/3/63d84cd0ccd597f51562ece9746062bd9a9b3b3d
+k
+;src/main/webapp/WEB-INF/views/infra/user/index/advanced.jsp,8/a/8a52a337f9651f89d4469f42dd6fa77104040007
+`
+0src/main/webapp/WEB-INF/views/include/header.jsp,c/3/c35e09d64fc9049d4505526bd169a1b649160aae
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+]
+-src/main/webapp/resources/chat/css/_reset.css,8/f/8f6b625d02424e76d2ff5039af3efdefe8ebc843
 Z
 *src/main/webapp/resources/vendor/style.css,b/f/bf92e7794a2abe683ef113b97e8be87152f2cec1
+_
+/src/main/webapp/WEB-INF/spring/root-context.xml,5/2/528c08e315052712c6de729d808bc541b1c5b506
