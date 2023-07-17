@@ -40,7 +40,7 @@
   .headerLogo {
     width: 100px;
     height: 100px;
-    margin-top: -26px;
+    margin-top: 0;
     margin-left: -35px;
   }
 </style>
