@@ -15,7 +15,3 @@ a
 1.idea/artifacts/prj_spring_lingo_war_exploded.xml,7/e/7eb5631f25baf996130fb9fabc068a188aa27a0b
 Å
 Q.idea/sonarlint/securityhotspotstore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,5/7/57f21a9649435d4c0bebbf63045d868ce2bc78c1
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-Z
-*src/main/webapp/resources/vendor/style.css,b/f/bf92e7794a2abe683ef113b97e8be87152f2cec1

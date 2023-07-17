@@ -6,6 +6,11 @@
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 
 <!DOCTYPE html>
+<style>
+    .avatar{
+        width: 100%!important;
+    }
+</style>
 <html>
 <head>
     <title>채팅입니당</title>
@@ -36,18 +41,18 @@
             </ul>
         </nav>
         <!-- resource btns -->
-        <ul class="resource-box">
-            <li>
-                <a href="javascript:void(0);" class="btn"
-                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a
-                >
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="btn"
-                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a
-                >
-            </li>
-        </ul>
+<%--        <ul class="resource-box">--%>
+<%--            <li>--%>
+<%--                <a href="javascript:void(0);" class="btn"--%>
+<%--                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a--%>
+<%--                >--%>
+<%--            </li>--%>
+<%--            <li>--%>
+<%--                <a href="javascript:void(0);" class="btn"--%>
+<%--                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a--%>
+<%--                >--%>
+<%--            </li>--%>
+<%--        </ul>--%>
     </section>
 
     <main class="chat-wrap">
@@ -62,18 +67,7 @@
                     </div>
                     <!-- message-area -->
                     <div class="message-area">
-                        <div class="message-list avatar">
-                            <div class="avatar-image">
-                                <img src="../../../../resources/chat/images/user_1.png" />
-                            </div>
-                            <div class="message-box">
-                                <div class="avatar-name">톡플러스</div>
-                                <div class="message-time">
-                                    <div class="message-text">발송메시지 영역</div>
-                                    <div class="timestamps">오후 00:00</div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="message-list wirter">
                             <div class="message-box">
                                 <div class="message-time">
@@ -84,9 +78,7 @@
                         </div>
 
                         <div class="message-list avatar">
-                            <div class="avatar-image">
-                                <img src="../../../../resources/chat/images/user_1.png" />
-                            </div>
+                            <div class="avatar-image"><img src="./images/user_1.png" /></div>
                             <div class="message-box">
                                 <div class="avatar-name">톡플러스</div>
                                 <div class="message-time">
@@ -106,46 +98,43 @@
                                 <div class="message-time">
                                     <div class="timestamps">오후 00:00</div>
                                     <div class="file-area picture">
-                                        <a href="https://www.w3schools.com/tags/img_girl.jpg"
-                                        ><img src="https://www.w3schools.com/tags/img_girl.jpg"
-                                        /></a>
+                                        <a href="https://www.w3schools.com/tags/img_girl.jpg"><img src="https://www.w3schools.com/tags/img_girl.jpg" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list wirter">
+                            <div class="message-box">
+                                <div class="message-time">
+                                    <div class="timestamps">오후 00:00</div>
+                                    <div class="file-area video">
+                                        <video width="384" controls>
+                                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list wirter">
+                            <div class="message-box">
+                                <div class="message-time">
+                                    <div class="timestamps">오후 00:00</div>
+                                    <div class="file-area file">
+                                        <a href="javascript:void(0);">
+                                            <sapn class="fileName">톡플러스 샘플파일.txt</sapn>
+                                            <sapn class="fileSize">용량 : 15MB</sapn>
+                                            <sapn class="filedown"></sapn>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="message-list wirter">
-                        <div class="message-box">
-                            <div class="message-time">
-                                <div class="timestamps">오후 00:00</div>
-                                <div class="file-area video">
-                                    <video width="384" controls>
-                                        <source
-                                                src="https://www.w3schools.com/html/mov_bbb.mp4"
-                                                type="video/mp4"
-                                        />
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="message-list wirter">
-                        <div class="message-box">
-                            <div class="message-time">
-                                <div class="timestamps">오후 00:00</div>
-                                <div class="file-area file">
-                                    <a href="javascript:void(0);">
-                                        <sapn class="fileName">톡플러스 샘플파일.txt</sapn>
-                                        <sapn class="fileSize">용량 : 15MB</sapn>
-                                        <sapn class="filedown"></sapn>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- //message-area -->
+
+
                 </div>
-                <!-- //message-area -->
-            </div>
             <!-- //chat-area -->
             <!-- message-write-area -->
             <div class="message-write-area">
