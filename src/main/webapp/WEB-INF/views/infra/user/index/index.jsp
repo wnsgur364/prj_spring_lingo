@@ -57,7 +57,7 @@
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
-				<div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
+				<div id="home" class="first-section" style="background-image:url('../../../../../resources/images/heynado.jpg');">
 					<div class="dtab">
 						<div class="container">
 							<div class="row">
@@ -65,12 +65,12 @@
 									<div class="big-tagline">
 										<h2><strong>Learn</strong> Languages <Strong>Easily</Strong> </h2>
 										<p class="lead"> Linggo offers a wide range of engaging and interactive activities, exercises, and lessons that are specifically designed to enhance your reading, writing, speaking, and listening abilities. </p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+											<a href="/chatting" class="hover-btn-new"><span>to enter</span></a>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											
+
 									</div>
 								</div>
-							</div><!-- end row -->            
+							</div><!-- end row -->
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -83,15 +83,15 @@
 								<div class="col-md-12 col-sm-12 text-left">
 									<div class="big-tagline">
 										<h2 data-animation="animated zoomInRight"><strong>Mastering </strong>  languages <strong>made easy</strong></h2>
-										<p class="lead" data-animation="animated fadeInLeft">  Discover the power of Learn Languages Easily, 
+										<p class="lead" data-animation="animated fadeInLeft">  Discover the power of Learn Languages Easily,
 										an invaluable tool that simplifies the process of acquiring new languages
 										</p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											
-											
+											<a href="#" class="hover-btn-new"><span>to enter</span></a>
+
+
 									</div>
 								</div>
-							</div><!-- end row -->            
+							</div><!-- end row -->
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -106,7 +106,7 @@
 										<h2 data-animation="animated zoomInRight"><strong>Empower yourself through effortless</strong> language<strong> acquisition</strong></h2>
 										<p class="lead" data-animation="animated fadeInLeft"> Learn Languages Easily provides an accessible and enjoyable learning experience
 										</p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+											<a href="#" class="hover-btn-new"><span>to enter</span></a>
 											
 											
 									</div>
@@ -129,76 +129,177 @@
 			</a>
 		</div>
 	</div>
-	
-    <div id="overviews" class="section lb">
-        <div class="container">
-            <div class="section-title row text-center">
-                <div class="col-md-8 offset-md-2">
-                    <h3>Welcome</h3>
-                    <p class="lead"> We are passionate about language learning and are here to guide you on your journey to becoming a confident and fluent speaker.</p>
-                </div>
-            </div><!-- end title -->
-        
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h4>About us</h4>
-                        <h2>Awards Winner Support Center</h2>
-                        <p>we believe that learning a language is more than just memorizing vocabulary and grammar rules. It's about immersing yourself in the language, embracing the culture, and building connections with people from around the world.</p>
 
-                        <p> Our team of experienced language enthusiasts and educators is dedicated to providing engaging and effective learning materials tailored to your needs. </p>
 
-                        <a href="#" class="hover-btn-new orange"><span></span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-				
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/wooden-dice-with-letters-them-pages-book (1).jpg"" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
+<div id="overviews" class="section wb">
+	<div class="container">
+		<div class="section-title row text-center">
+			<div class="col-md-8 offset-md-2">
+				<p class="lead"><strong style="font-size: 35px;">chat room list</strong><br>
+					Select a chat room list to enter the room</p>
 			</div>
-			<div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-				
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h2>Our Approach</h2>
-                        <p>We take a communicative approach to language learning, focusing on practical skills that you can use in real-life situations. Our carefully designed lessons and activities encourage active participation,
-                         fostering listening, speaking, reading, and writing skills.</p>
+		</div><!-- end title -->
 
-                        <p>Through our interactive exercises, cultural insights, and multimedia resources, you'll gain a deeper understanding of the language and its context.</p>
+		<hr class="invis">
 
-                        <a href="#" class="hover-btn-new orange"><span></span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-				
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-item">
+					<div class="image-blog">
+						<img src="../../../../../resources/images/exchahimg.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="meta-info-blog">
+						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+					</div>
+					<div class="blog-title">
+						<h2><a href="/chatting" title="">방제목</a></h2>
+					</div>
+					<div class="blog-desc">
+						<p>상세설명</p>
+					</div>
+					<div class="blog-button">
+						<a class="hover-btn-new orange" href="/chatting"><span>입장하기<span></a>
+					</div>
+				</div>
+			</div><!-- end col -->
+
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-item">
+					<div class="image-blog">
+						<img src="images/blog_2.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="meta-info-blog">
+						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+					</div>
+					<div class="blog-title">
+						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+					</div>
+					<div class="blog-desc">
+						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+					</div>
+					<div class="blog-button">
+						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+					</div>
+				</div>
+			</div><!-- end col -->
+
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-item">
+					<div class="image-blog">
+						<img src="images/blog_3.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="meta-info-blog">
+						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+					</div>
+					<div class="blog-title">
+						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+					</div>
+					<div class="blog-desc">
+						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+					</div>
+					<div class="blog-button">
+						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+					</div>
+				</div>
+			</div><!-- end col -->
+		</div><!-- end row -->
+
+		<hr class="hr3">
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-item">
+					<div class="image-blog">
+						<img src="images/blog_4.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="meta-info-blog">
+						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+					</div>
+					<div class="blog-title">
+						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+					</div>
+					<div class="blog-desc">
+						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+					</div>
+					<div class="blog-button">
+						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+					</div>
+				</div>
+			</div><!-- end col -->
+
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-item">
+					<div class="image-blog">
+						<img src="images/blog_5.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="meta-info-blog">
+						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+					</div>
+					<div class="blog-title">
+						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+					</div>
+					<div class="blog-desc">
+						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+					</div>
+					<div class="blog-button">
+						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+					</div>
+				</div>
+			</div><!-- end col -->
+
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-item">
+					<div class="image-blog">
+						<img src="images/blog_6.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="meta-info-blog">
+						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+					</div>
+					<div class="blog-title">
+						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+					</div>
+					<div class="blog-desc">
+						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+					</div>
+					<div class="blog-button">
+						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+					</div>
+				</div>
+			</div><!-- end col -->
+		</div><!-- end row -->
+	</div><!-- end container -->
+</div><!-- end section -->
 	<div class="section cl">
 		<div class="container">
 			<div class="row text-left stat-wrap">
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
-					<p class="stat_count">12000</p>
-					<h3>Students</h3>
+					<p class="stat_count">120</p>
+					<h3>number of students with</h3>
 				</div><!-- end col -->
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
-					<p class="stat_count">240</p>
-					<h3>Courses</h3>
+					<p class="stat_count">15</p>
+					<h3>chat rooms studied</h3>
 				</div><!-- end col -->
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
 					<p class="stat_count">55</p>
-					<h3>Years Completed</h3>
+					<h3>date studied</h3>
 				</div><!-- end col -->
 			</div><!-- end row -->
 		</div><!-- end container -->
@@ -285,7 +386,7 @@
                             <!-- end testi-meta -->
                         </div>
                         <!-- end testimonial -->
-           
+
                     </div><!-- end carousel -->
                 </div><!-- end col -->
             </div><!-- end row -->
