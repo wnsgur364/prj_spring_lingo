@@ -11,7 +11,7 @@
     	,useNy
     	,codegroup_seq   	
     </sql>
-    d
+    
    <sql id ="selectCommon">
    		FROM    
 	    	code
