@@ -1,0 +1,94 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="com.lingo.app.code.CodeMapper">
+ 
+    <resultMap id="resultMapObj" type="com.mycompany.app.infra.code.Code"></resultMap>
+    
+    <sql id="lingo">
+    	seq
+    	,name
+    	,delNy
+    	,useNy
+    	,codegroup_seq   	
+    </sql>
+    
+   <sql id ="selectCommon">
+   		FROM    
+	    	code
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+    </sql>
+
+   	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+
+   	<select id="selectList" resultMap="resultMapObj">
+		SELECT bb.* FROM (   	
+	   		SELECT
+				<include refid="lingo" />
+	   			<include refid="selectCommon" />
+		)bb
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select>
+   	
+   	<select id="selectOne" resultMap="resultMapObj">
+   		SELECT
+			<include refid="lingo" />
+   		FROM
+   			code
+		WHERE 1=1
+			AND seq = #{seq}	
+   	</select>   	
+   	
+   	<update id="update">
+   		UPDATE code
+   		SET
+   			name = #{name}
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<delete id="delete">
+   		delete from code WHERE seq = #{seq}	
+   	</delete>   	
+   	 
+   	<update id="uelete">
+   		UPDATE code
+   		SET
+   			codegroup_seq= 1
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<insert id="insert">
+   		INSERT INTO code (
+   			seq
+	    	,name
+	    	,delNy
+	    	,useNy
+	    	,codegroup_seq  
+   			
+   		) values (
+   		    #{seq}
+   		   ,#{name}
+   			,#{delNy}
+   			#{useNy}
+   		   ,#{codegroup_seq}
+   		)
+   	</insert>   	
+   
+	<select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
+		SELECT
+			seq
+	    	,name
+	    	,delNy
+	    	,useNy
+	    	,codegroup_seq  
+			
+		FROM
+			code
+	
+    </select>
+</mapper> -->

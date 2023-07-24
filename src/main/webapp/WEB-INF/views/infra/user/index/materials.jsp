@@ -51,7 +51,7 @@
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 	<div class="all-title-box">
 		<div class="container text-center">
-			<h1>학습자료<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+			<h1>English Materials</h1>
 		</div>
 	</div>
 
@@ -64,10 +64,8 @@
                             <span class="heading">
                                 <h3>Beginner</h3>
                             </span>
-                            <span class="price-value">This step is designed for students who have little to no prior knowledge of English.</span>
-                            <!-- <span class="month"></span> -->
+                           <span class="month">This step is designed for students who have little to no prior knowledge of English. </span>
                         </div>
-
                         <div class="pricingContent">
                             <i class="bi bi-brightness-alt-high"></i>
                             <ul>
@@ -90,7 +88,7 @@
                             <span class="heading">
                                 <h3>Intermediate</h3>
                             </span>
-                           <!-- <span class="price-value">This step is for students who have a basic understanding of English but want to further develop their skills.</span> -->
+                          
                             <span class="month">This step is for students who have a basic understanding of English but want to further develop their skills.</span> 
                         </div>
 
@@ -116,23 +114,21 @@
                             <span class="heading">
                                 <h3>Advanced</h3>
                             </span>
-                            <!-- <span class="price-value">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> -->
-                       <span class="price-value"><span class="month"></span><span>This step is aimed at students who have a solid grasp of English and want to refine their language skills.																																																																																																																																																																																 																																																							`									`						`							`										`																																																																																																																																																 						 						f	g							gbt														
-                       																																																																																																																																															</span></span>
-                       <!--  <span class="month">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> -->
+                          
+                            <span class="month">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> 
                         </div>
-																																																																																																																								
-																																																																																																																							                        <div class="pricingContent">
-																																																																																																																							                            <i class="bi bi-brightness-high-fill"></i>
-																																																																																																																						                            <ul>
-																																																																																																																						                               <li>Grammer</li>
-                                <li>words</li>																							
+
+                        <div class="pricingContent">
+                            <i class="bi bi-brightness-high"></i>
+                            <ul>
+                               <li>Grammer</li>
+                                <li>words</li>
                                 <li>Reading</li>
                                 <li>Speaking</li>
                             </ul>
                         </div><!-- /  CONTENT BOX-->
-																																																																																					
-																																																																																					                        <div class="pricingTable-sign-up">	
+
+                        <div class="pricingTable-sign-up">
                             <a href="#" class="hover-btn-new orange"><span>Test</span></a>
                         </div><!-- BUTTON BOX-->
                     </div>
