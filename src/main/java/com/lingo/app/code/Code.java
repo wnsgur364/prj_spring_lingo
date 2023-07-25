@@ -37,5 +37,5 @@ public class Code {
 	public void setUseNy(String useNy) {
 		this.useNy = useNy;
 	}
-
+w
 }
