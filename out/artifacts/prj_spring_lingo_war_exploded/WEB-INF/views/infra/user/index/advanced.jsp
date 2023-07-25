@@ -120,7 +120,7 @@
 						</div>
 						<div class="course-meta-bot">
 							<ul>
-								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Months</li>
 								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
 								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
 							</ul>
@@ -248,7 +248,7 @@
 						</div>
 						<div class="course-meta-bot">
 							<ul>
-								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Months</li>
 								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
 								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
 							</ul>

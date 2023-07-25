@@ -1,4 +1,4 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <mapper namespace="com.lingo.app.code.CodeMapper">
  
@@ -91,4 +91,4 @@
 			code
 	
     </select>
-</mapper> -->
+</mapper> 

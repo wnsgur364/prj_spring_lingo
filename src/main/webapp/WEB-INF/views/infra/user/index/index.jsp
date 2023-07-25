@@ -87,8 +87,6 @@
 										an invaluable tool that simplifies the process of acquiring new languages
 										</p>
 											<a href="#" class="hover-btn-new"><span>to enter</span></a>
-
-
 									</div>
 								</div>
 							</div><!-- end row -->

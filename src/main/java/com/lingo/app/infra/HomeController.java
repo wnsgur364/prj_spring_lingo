@@ -40,5 +40,9 @@ public class HomeController {
 	public String contact() {
 		return "/infra/user/index/contact";
 	}
-	
+
+	@RequestMapping("/quiz")
+	public String quiz() {
+		return "/infra/user/index/quiz";
+	}
 }

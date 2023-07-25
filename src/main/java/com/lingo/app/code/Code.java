@@ -7,6 +7,7 @@ public class Code {
 	private String delNy;
 	private String useNy;
 	private String codeGroup_seq;
+	
 	public String getSeq() {
 		return seq;
 	}
@@ -37,5 +38,4 @@ public class Code {
 	public void setUseNy(String useNy) {
 		this.useNy = useNy;
 	}
-w
 }
