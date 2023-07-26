@@ -45,4 +45,9 @@ public class HomeController {
 	public String quiz() {
 		return "/infra/user/index/quiz";
 	}
+
+	@RequestMapping("/join")
+	public String join() {
+		return "/infra/user/index/join";
+	}
 }

@@ -39,56 +39,96 @@
 		 		<img src="assets/images/logo-icon.png" alt="logo icon">
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3">Sign Up</div>
-		    <form>
-			  <div class="form-group">
-			  <label for="exampleInputName" class="sr-only">Name</label>
-			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter Your Name">
-				  <div class="form-control-position">
-					  <i class="icon-user"></i>
-				  </div>
-			   </div>
-			  </div>
-			  <div class="form-group">
-			  <label for="exampleInputEmailId" class="sr-only">Email ID</label>
-			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Your Email ID">
-				  <div class="form-control-position">
-					  <i class="icon-envelope-open"></i>
-				  </div>
-			   </div>
-			  </div>
-			  <div class="form-group">
-			   <label for="exampleInputPassword" class="sr-only">Password</label>
-			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputPassword" class="form-control input-shadow" placeholder="Choose Password">
-				  <div class="form-control-position">
-					  <i class="icon-lock"></i>
-				  </div>
-			   </div>
-			  </div>
-			  
-			   <div class="form-group">
-			     <div class="icheck-material-white">
-                   <input type="checkbox" id="user-checkbox" checked="" />
-                   <label for="user-checkbox">I Agree With Terms & Conditions</label>
-			     </div>
-			    </div>
-			  
-			 <button type="button" class="btn btn-light btn-block waves-effect waves-light">Sign Up</button>
-			  <div class="text-center mt-3">Sign Up With</div>
-			  
-			 <div class="form-row mt-4">
-			  <div class="form-group mb-0 col-6">
-			   <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> Facebook</button>
-			 </div>
-			 <div class="form-group mb-0 col-6 text-right">
-			  <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Twitter</button>
-			 </div>
-			</div>
-			
+			 <form>
+				 <div class="form-group">
+					 <label for="exampleInputName" class="sr-only">이름</label>
+					 <div class="position-relative has-icon-right">
+						 <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="이름을 입력하세요">
+						 <div class="form-control-position">
+							 <i class="icon-user"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <label for="exampleInputEmailId" class="sr-only">이메일 주소</label>
+					 <div class="position-relative has-icon-right">
+						 <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="이메일 주소를 입력하세요">
+						 <div class="form-control-position">
+							 <i class="icon-envelope-open"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <label for="exampleInputPassword" class="sr-only">비밀번호</label>
+					 <div class="position-relative has-icon-right">
+						 <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="비밀번호를 입력하세요">
+						 <div class="form-control-position">
+							 <i class="icon-lock"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <label for="exampleInputAddress" class="sr-only">주소</label>
+					 <div class="position-relative has-icon-right">
+						 <input type="text" id="exampleInputAddress" class="form-control input-shadow" placeholder="주소를 입력하세요">
+						 <div class="form-control-position">
+							 <i class="icon-home"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <label for="exampleInputAddressDetail" class="sr-only">상세 주소</label>
+					 <div class="position-relative has-icon-right">
+						 <input type="text" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="상세 주소를 입력하세요">
+						 <div class="form-control-position">
+							 <i class="icon-home"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <label for="exampleInputRank" class="sr-only">계급</label>
+					 <div class="position-relative has-icon-right">
+						 <input type="text" id="exampleInputRank" class="form-control input-shadow" placeholder="계급을 입력하세요">
+						 <div class="form-control-position">
+							 <i class="icon-trophy"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <label for="exampleInputGender" class="sr-only">성별</label>
+					 <div class="position-relative has-icon-right">
+						 <select id="exampleInputGender" class="form-control input-shadow">
+							 <option value="" disabled selected>성별 선택</option>
+							 <option value="male">남성</option>
+							 <option value="female">여성</option>
+							 <option value="other">기타</option>
+						 </select>
+						 <div class="form-control-position">
+							 <i class="icon-venus-mars"></i>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="form-group">
+					 <div class="icheck-material-white">
+						 <input type="checkbox" id="user-checkbox" checked="">
+						 <label for="user-checkbox">약관에 동의합니다</label>
+					 </div>
+				 </div>
+
+				 <button type="button" class="btn btn-light btn-block waves-effect waves-light">가입하기</button>
+				 <div class="text-center mt-3">다음과 함께 가입하기</div>
+
+				 <div class="form-row mt-4">
+					 <div class="form-group mb-0 col-6">
+						 <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> 페이스북</button>
+					 </div>
+					 <div class="form-group mb-0 col-6 text-right">
+						 <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> 트위터</button>
+					 </div>
+				 </div>
 			 </form>
-		   </div>
+
+		 </div>
 		  </div>
 		  <div class="card-footer text-center py-3">
 		    <p class="text-warning mb-0">Already have an account? <a href="login.html"> Sign In here</a></p>
