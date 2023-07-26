@@ -13,17 +13,17 @@ public class CodeDao {
 	
 	@Inject
 	@Resource(name = "sqlSession")
-	private static SqlSession sqlSession;
+	private  SqlSession sqlSession;
 	
 	private static String namespace = "com.lingo.app.code.CodeMapper";
 
-	public static int selectOneCount(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
-	public static List<Code> selectList(CodeVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
-	public static Code selectOne(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
-	public static int update(Code dto){ return sqlSession.update(namespace + ".update", dto); }
-	public static int delete(Code dto){ return sqlSession.delete(namespace + ".delete", dto); }
-	public static int uelete(Code dto){ return sqlSession.update(namespace + ".uelete", dto); }
-	public static int insert(Code dto){ return sqlSession.insert(namespace + ".insert", dto); }
+	public  int selectOneCount(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
+	public  List<Code> selectList(CodeVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
+	public  Code selectOne(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
+	public  int updatse(Code dto){ return sqlSession.update(namespace + ".update", dto); }
+	public  int delete(Code dto){ return sqlSession.delete(namespace + ".delete", dto); }
+	public  int uelete(Code dto){ return sqlSession.update(namespace + ".uelete", dto); }
+	public  int insert(Code dto){ return sqlSession.insert(namespace + ".insert", dto); }
 	
 //	for cache
 	public List<Code> selectListCachedCodeArrayList(){ return sqlSession.selectList(namespace + ".selectListCachedCodeArrayList", null); }

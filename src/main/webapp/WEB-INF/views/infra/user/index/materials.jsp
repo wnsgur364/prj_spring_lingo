@@ -45,6 +45,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	<script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
 </head>
 <body class="host_version"> 
 
@@ -64,12 +65,12 @@
                             <span class="heading">
                                 <h3>Beginner</h3>
                             </span>
-                           <span class="month">This step is designed for students who have little to no prior knowledge of English. </span>
+                           <span class="month"> Step: This step is designed for beginner students who have little to no prior knowledge of English.  </span>
                         </div>
                         <div class="pricingContent">
                             <i class="bi bi-brightness-alt-high"></i>
                             <ul>
-                                <li>Grammer</li>
+                                <li>Grammar</li>
                                 <li>words</li>
                                 <li>Reading</li>
                                 <li>Speaking</li>
@@ -88,14 +89,14 @@
                             <span class="heading">
                                 <h3>Intermediate</h3>
                             </span>
-                          
-                            <span class="month">This step is for students who have a basic understanding of English but want to further develop their skills.</span> 
+<!--<i class="fa-regular fa-lightbulb"></i> -->
+                            <span class="month"> Step: This step is for students who have a basic understanding of English but want to further develop their skills.</span> 
                         </div>
 
                         <div class="pricingContent">
                             <i class="bi bi-brightness-high"></i>
                             <ul>
-                               <li>Grammer</li>
+                               <li>Grammar</li>
                                 <li>words</li>
                                 <li>Reading</li>
                                 <li>Speaking</li>
@@ -115,13 +116,13 @@
                                 <h3>Advanced</h3>
                             </span>
                           
-                            <span class="month">This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> 
+                            <span class="month"> Step: This step is aimed at students who have a solid grasp of English and want to refine their language skills.</span> 
                         </div>
 
                         <div class="pricingContent">
                             <i class="bi bi-brightness-high"></i>
                             <ul>
-                               <li>Grammer</li>
+                               <li>Grammar</li>
                                 <li>words</li>
                                 <li>Reading</li>
                                 <li>Speaking</li>
@@ -137,32 +138,6 @@
 		</div>
     </div><!-- end section -->
 
-    <div class="parallax section dbcolor">
-        <div class="container">
-    <div class="row logos">																																																																																													 					 																																																																																																																																																																																																																																																																																																																																																																																								
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
-                </div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-    
-    
     <%@ include file="/WEB-INF/views/include/footer.jsp" %>
     
     <!-- ALL JS FILES -->
