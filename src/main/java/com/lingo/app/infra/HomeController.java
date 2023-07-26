@@ -41,13 +41,4 @@ public class HomeController {
 		return "/infra/user/index/contact";
 	}
 
-	@RequestMapping("/quiz")
-	public String quiz() {
-		return "/infra/user/index/quiz";
-	}
-
-	@RequestMapping("/join")
-	public String join() {
-		return "/infra/user/index/join";
-	}
 }
