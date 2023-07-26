@@ -24,22 +24,22 @@ public class MemberController {
         return "/infra/user/index/join";
     }
 
-    @RequestMapping("/adminMemberList")
+//    @RequestMapping("/adminMemberList")
 
-    public String adminMemberList(@ModelAttribute("vo") MemberVo vo, Model model) {
-
-        vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
-        vo.setParamsPaging(service.selectOneCount(vo));
-        if (vo.getTotalRows() > 0) {
-            List<Member> list = service.selectList(vo);
-            model.addAttribute("list", list);
-        } else {
-//			by pass
-        }
-
-
-        return "admin/infra/member/adminMemberList";
-    }
+//    public String adminMemberList(@ModelAttribute("vo") MemberVo vo, Model model) {
+//
+//        vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+//        vo.setParamsPaging(service.selectOneCount(vo));
+//        if (vo.getTotalRows() > 0) {
+//            List<Member> list = service.selectList(vo);
+//            model.addAttribute("list", list);
+//        } else {
+////			by pass
+//        }
+//
+//
+//        return "admin/infra/member/adminMemberList";
+//    }
 
 
     @RequestMapping("/adminMemberForm")
