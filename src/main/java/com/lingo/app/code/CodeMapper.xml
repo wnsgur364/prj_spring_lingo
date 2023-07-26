@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis,org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+>>>>>>> branch 'main' of https://github.com/wnsgur364/prj_spring_lingo.git
 <mapper namespace="com.lingo.app.code.CodeMapper">
  
     <resultMap id="resultMapObj" type="com.lingo.app.code.Code"></resultMap>
@@ -75,10 +83,18 @@
    			
    		) values (
    		    #{seq}
+<<<<<<< HEAD
    		    ,#{name}
+=======
+   		  	,#{name}
+>>>>>>> branch 'main' of https://github.com/wnsgur364/prj_spring_lingo.git
    			,#{delNy}
    			,#{useNy}
+<<<<<<< HEAD
    		    ,#{codegroup_seq}
+=======
+   		  	,#{codegroup_seq}
+>>>>>>> branch 'main' of https://github.com/wnsgur364/prj_spring_lingo.git
    		)
    	</insert>   	
    

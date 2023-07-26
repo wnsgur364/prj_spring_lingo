@@ -23,7 +23,11 @@ public class CodeServiceImpl implements CodeService {
 
 	@Override
 	public int update(Code dto) {
+<<<<<<< HEAD
 		return  dao.update(dto); 
+=======
+		return dao.update(dto); 
+>>>>>>> branch 'main' of https://github.com/wnsgur364/prj_spring_lingo.git
 	}
 
 	@Override
