@@ -2,7 +2,7 @@
 
 <mapper namespace="com.lingo.app.code.CodeMapper">
  
-    <resultMap id="resultMapObj" type="com.mycompany.app.infra.code.Code"></resultMap>
+    <resultMap id="resultMapObj" type="com.lingo.app.code.Code"></resultMap>
     
     <sql id="lingo">
     	seq
@@ -74,7 +74,7 @@
    		    #{seq}
    		   ,#{name}
    			,#{delNy}
-   			#{useNy}
+   			,#{useNy}
    		   ,#{codegroup_seq}
    		)
    	</insert>   	
