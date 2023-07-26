@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis,org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
 <mapper namespace="com.lingo.app.code.CodeMapper">
  
-    <resultMap id="resultMapObj" type="com.mycompany.app.infra.code.Code"></resultMap>
+    <resultMap id="resultMapObj" type="com.lingo.app.code.Code"></resultMap>
     
     <sql id="lingo">
     	seq
@@ -72,10 +75,10 @@
    			
    		) values (
    		    #{seq}
-   		   ,#{name}
+   		  	,#{name}
    			,#{delNy}
-   			#{useNy}
-   		   ,#{codegroup_seq}
+   			,#{useNy}
+   		  	,#{codegroup_seq}
    		)
    	</insert>   	
    
