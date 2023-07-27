@@ -101,7 +101,7 @@
 							<div class="row">
 								<div class="col-md-12 col-sm-12 text-center">
 									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight"><strong>Empower yourself through effortless</strong> language<strong> acquisition</strong></h2>
+										<h2 data-animation="animated zoomInRight"><strong> Empower yourself through effortless</strong> language<strong> acquisition</strong></h2>
 										<p class="lead" data-animation="animated fadeInLeft"> Learn Languages Easily provides an accessible and enjoyable learning experience
 										</p>
 											<a href="#" class="hover-btn-new"><span>to enter</span></a>
@@ -133,15 +133,15 @@
             <div class="section-title row text-center">
                 <div class="col-md-8 offset-md-2">
                     <h3>About</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+               
                 </div>
             </div><!-- end title -->
         
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
-                        <h4>2018 BEST SmartEDU education school</h4>
-                        <h2>Welcome to SmartEDU education school</h2>
+                        
+                        <h2>Welcome to LingoConnect</h2>
                         <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
 
                         <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
