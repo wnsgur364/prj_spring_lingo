@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,22 +14,23 @@
   <meta name="author" content=""/>
   <title>회원가입</title>
   <!-- loader-->
-  <link href="../../../../../resources/vendorassets/css/pace.min.css" rel="stylesheet"/>
-  <script src="assets/js/pace.min.js"></script>
+  <link href="../../../../../resources/assets/css/pace.min.css" rel="stylesheet"/>
+  <script src="../../../../../resources/assets/js/pace.min.js"></script>
   <!--favicon-->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../../../../resources/assets/images/favicon.ico" type="image/x-icon">
   <!-- Bootstrap core CSS-->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../../../../../resources/assets/css/bootstrap.min.css" rel="stylesheet"/>
   <!-- animate CSS-->
-  <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <link href="../../../../../resources/assets/css/animate.css" rel="stylesheet" type="text/css"/>
   <!-- Icons CSS-->
-  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <link href="../../../../../resources/assets/css/icons.css" rel="stylesheet" type="text/css"/>
   <!-- Custom Style-->
-  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  <link href="../../../../../resources/assets/css/app-style.css" rel="stylesheet"/>
 
 </head>
 
-<body class="bg-theme bg-theme1">
+
+<body class="bg-theme bg-theme4">
 
 <!-- start loader -->
 <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
@@ -36,72 +43,83 @@
     <div class="card-body">
       <div class="card-content p-2">
         <div class="text-center">
-          <img src="assets/images/logo-icon.png" alt="logo icon">
+          <a href="index">
+            <img src="../../../../../resources/vendor/images/LingoLogo.png" alt="logo icon" style="width: 70px">
+          </a>
         </div>
         <div class="card-title text-uppercase text-center py-3">Sign Up</div>
         <form>
           <div class="form-group">
-            <label for="exampleInputName" class="sr-only">이름</label>
+            <label for="exampleInputName" class="sr-only">id</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="이름을 입력하세요">
+              <input type="text" id="exampleInputid" class="form-control input-shadow" placeholder="Enter your ID">
               <div class="form-control-position">
                 <i class="icon-user"></i>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputEmailId" class="sr-only">이메일 주소</label>
+            <label for="exampleInputName" class="sr-only">Name</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="이메일 주소를 입력하세요">
+              <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter your name">
+              <div class="form-control-position">
+                <i class="icon-user"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmailId" class="sr-only">Email Address</label>
+            <div class="position-relative has-icon-right">
+              <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter your email address">
               <div class="form-control-position">
                 <i class="icon-envelope-open"></i>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword" class="sr-only">비밀번호</label>
+            <label for="exampleInputPassword" class="sr-only">Password</label>
             <div class="position-relative has-icon-right">
-              <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="비밀번호를 입력하세요">
+              <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter your password">
               <div class="form-control-position">
                 <i class="icon-lock"></i>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputAddress" class="sr-only">주소</label>
+            <label for="exampleInputAddress" class="sr-only">Address</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputAddress" class="form-control input-shadow" placeholder="주소를 입력하세요">
+              <input type="text" id="exampleInputAddress" class="form-control input-shadow" placeholder="Enter your address">
               <div class="form-control-position">
                 <i class="icon-home"></i>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputAddressDetail" class="sr-only">상세 주소</label>
+            <label for="exampleInputAddressDetail" class="sr-only">Address Detail</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="상세 주소를 입력하세요">
+              <input type="text" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="Enter your address detail">
               <div class="form-control-position">
                 <i class="icon-home"></i>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputRank" class="sr-only">계급</label>
+            <label for="exampleInputRank" class="sr-only">Rank</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputRank" class="form-control input-shadow" placeholder="계급을 입력하세요">
+              <input type="text" id="exampleInputRank" class="form-control input-shadow" placeholder="Enter your rank">
               <div class="form-control-position">
                 <i class="icon-trophy"></i>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputGender" class="sr-only">성별</label>
+            <label for="exampleInputGender" class="sr-only">Gender</label>
             <div class="position-relative has-icon-right">
               <select id="exampleInputGender" class="form-control input-shadow">
-                <option value="" disabled selected>성별 선택</option>
-                <option value="male">남성</option>
-                <option value="female">여성</option>
-                <option value="other">기타</option>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
               </select>
               <div class="form-control-position">
                 <i class="icon-venus-mars"></i>
@@ -111,19 +129,19 @@
           <div class="form-group">
             <div class="icheck-material-white">
               <input type="checkbox" id="user-checkbox" checked="">
-              <label for="user-checkbox">약관에 동의합니다</label>
+              <label for="user-checkbox">I agree to the terms and conditions</label>
             </div>
           </div>
 
-          <button type="button" class="btn btn-light btn-block waves-effect waves-light">가입하기</button>
-          <div class="text-center mt-3">다음과 함께 가입하기</div>
+          <button type="button" class="btn btn-light btn-block waves-effect waves-light">Sign Up</button>
+          <div class="text-center mt-3">Sign up with the following</div>
 
           <div class="form-row mt-4">
             <div class="form-group mb-0 col-6">
-              <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> 페이스북</button>
+              <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> KakaoTalk</button>
             </div>
             <div class="form-group mb-0 col-6 text-right">
-              <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> 트위터</button>
+              <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Naver</button>
             </div>
           </div>
         </form>
@@ -131,9 +149,12 @@
       </div>
     </div>
     <div class="card-footer text-center py-3">
-      <p class="text-warning mb-0">Already have an account? <a href="login.html"> Sign In here</a></p>
+      <p class="text-warning mb-0">Already have an account? <a href="login.html">Sign In here</a></p>
     </div>
   </div>
+
+
+
 
   <!--Start Back To Top Button-->
   <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
@@ -180,15 +201,15 @@
 </div><!--wrapper-->
 
 <!-- Bootstrap core JavaScript-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../../../../../resources/assets/js/jquery.min.js"></script>
+<script src="../../../../../resources/assets/js/popper.min.js"></script>
+<script src="../../../../../resources/assets/js/bootstrap.min.js"></script>
 
 <!-- sidebar-menu js -->
-<script src="assets/js/sidebar-menu.js"></script>
+<script src="../../../../../resources/assets/js/sidebar-menu.js"></script>
 
 <!-- Custom scripts -->
-<script src="assets/js/app-script.js"></script>
+<script src="../../../../../resources/assets/js/app-script.js"></script>
 
 </body>
 </html>
