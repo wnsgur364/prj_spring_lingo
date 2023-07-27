@@ -13,7 +13,7 @@ public class CodeServiceImpl implements CodeService {
 	
 	@Override
 	public List<Code> selectList(CodeVo vo) { 
-		return dao.selectList(vo); 
+		return dao.selectList(vo);
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class CodeServiceImpl implements CodeService {
 
 	@Override
 	public int update(Code dto) {
-		return dao.update(dto); 
+		return dao.update(dto);
 	}
 
 	@Override
