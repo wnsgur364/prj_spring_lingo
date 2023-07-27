@@ -24,6 +24,10 @@ public class MemberController {
         return "/infra/user/index/join";
     }
 
+    @RequestMapping("/login")
+    public String login() {
+        return "/infra/user/index/login";
+    }
 //    @RequestMapping("/adminMemberList")
 
 //    public String adminMemberList(@ModelAttribute("vo") MemberVo vo, Model model) {
