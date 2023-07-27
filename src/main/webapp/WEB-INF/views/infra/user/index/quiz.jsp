@@ -1350,7 +1350,77 @@
                                         <div class="ays_questtion_explanation" style="display: none"></div>
                                     </div>
                                 </div>
-                                
+                                <!-- 퀴즈와 답변을 매칭시키는 JavaScript 객체 -->
+<script>
+const quizData = [
+  <c:forEach items="${quiz}" var="quiz" varStatus="loop">
+    {
+      question: "<c:out value="${quiz.question}"></c:out>",
+      seq: "${quiz.seq}"
+    }<c:if test="${!loop.last}">,</c:if>
+  </c:forEach>
+];
+
+const answerData = [
+  <c:forEach items="${answer}" var="answer" varStatus="loop">
+    {
+      answer: "<c:out value="${answer.answer}"></c:out>",
+      quiz_seq: "${answer.quiz_seq}"
+    }<c:if test="${!loop.last}">,</c:if>
+  </c:forEach>
+];
+
+let currentIndex = 0;
+
+function showQuestion() {
+  const quizContainer = document.querySelector(".step");
+  const quizQuestion = quizContainer.querySelector(".ays_quiz_question");
+  const quizAnswers = quizContainer.querySelectorAll(".ays-quiz-answers");
+  
+  // 현재 인덱스에 맞는 퀴즈와 답변을 가져옵니다.
+  const currentQuiz = quizData[currentIndex];
+  const currentAnswers = answerData.filter(answer => answer.quiz_seq === currentQuiz.seq);
+  
+  // 퀴즈 질문 표시
+  quizQuestion.innerHTML = `
+    <p>${currentIndex + 1} <strong>${currentQuiz.question}</strong></p>
+  `;
+  
+  // 답변 옵션 표시
+  quizAnswers.forEach((answerElement, index) => {
+    if (index < currentAnswers.length) {
+      const currentAnswer = currentAnswers[index];
+      answerElement.innerHTML = `
+        <div class="ays-field ays_list_view_item">
+          <input type="hidden" name="ays_answer_correct[]" value="0"/>
+          <input type="radio" name="ays_questions[ays-question-${currentQuiz.seq}]" id="ays-answer-${currentAnswer.seq}" value="${currentAnswer.seq}"/>
+          <label for="ays-answer-${currentAnswer.seq}" class="ays_position_initial">${currentAnswer.answer}</label>
+          <label for="ays-answer-${currentAnswer.seq}" class="ays_answer_image ays_empty_before_content"></label>
+        </div>
+      `;
+    } else {
+      answerElement.innerHTML = ""; // 남은 옵션은 비워둡니다.
+    }
+  });
+}
+
+function showNextQuestion() {
+  if (currentIndex < quizData.length - 1) {
+    currentIndex++;
+    showQuestion();
+  }
+}
+
+function showPreviousQuestion() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    showQuestion();
+  }
+}
+
+// 페이지가 로드되면 첫 번째 문제를 보여줍니다.
+showQuestion();
+</script>
                                 <div class="step ays_thank_you_fs">
                                     <div class="ays-abs-fs ays-end-page">
                                         <div style="text-align: center">
