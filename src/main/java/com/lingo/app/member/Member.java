@@ -3,18 +3,19 @@ package com.lingo.app.member;
 public class Member {
 
     private String seq;
-    private String defaultNy;
-    private String userName;
-    private String phoneNumber;
+    private Integer delNy;
     private String id;
-    private String nickName;
+    private String name;
+    private String email;
     private String password;
-    private String postalCode;
+    private String signupDate;
+    private String lastLoginDate;
     private String address;
     private String addressDetail;
-    private Integer smsCheck;
-    private String createdAt;
-    private Integer delNy;
+    private String rank;
+    private String badge;
+    private String gender;
+
 
     //    -----
 
@@ -27,28 +28,12 @@ public class Member {
         this.seq = seq;
     }
 
-    public String getDefaultNy() {
-        return defaultNy;
+    public Integer getDelNy() {
+        return delNy;
     }
 
-    public void setDefaultNy(String defaultNy) {
-        this.defaultNy = defaultNy;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setDelNy(Integer delNy) {
+        this.delNy = delNy;
     }
 
     public String getId() {
@@ -59,12 +44,20 @@ public class Member {
         this.id = id;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getName() {
+        return name;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -75,12 +68,20 @@ public class Member {
         this.password = password;
     }
 
-    public String getPostalCode() {
-        return postalCode;
+    public String getSignupDate() {
+        return signupDate;
     }
 
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+    public void setSignupDate(String signupDate) {
+        this.signupDate = signupDate;
+    }
+
+    public String getLastLoginDate() {
+        return lastLoginDate;
+    }
+
+    public void setLastLoginDate(String lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
     }
 
     public String getAddress() {
@@ -99,22 +100,27 @@ public class Member {
         this.addressDetail = addressDetail;
     }
 
-    public Integer getSmsCheck() {
-        return smsCheck;
+    public String getRank() {
+        return rank;
     }
 
-    public void setSmsCheck(Integer smsCheck) {this.smsCheck = smsCheck;}
-
-    public String getCreatedAt() {return createdAt;}
-
-    public void setCreatedAt(String createdAt) {this.createdAt = createdAt;}
-
-    public Integer getDelNy() {
-        return delNy;
+    public void setRank(String rank) {
+        this.rank = rank;
     }
 
-    public void setDelNy(Integer delNy) {
-        this.delNy = delNy;
+    public String getBadge() {
+        return badge;
     }
 
+    public void setBadge(String badge) {
+        this.badge = badge;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
