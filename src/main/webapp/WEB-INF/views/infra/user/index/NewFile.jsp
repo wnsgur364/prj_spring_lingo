@@ -47,45 +47,30 @@
 <body class="host_version"> 
 
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
-<div class="step" data-question-id="57" data-type="radio" data-required="false">
-    <div class="container">
+<div class="container">
+	<form>
         <c:forEach items="${quiz}" var="quiz" varStatus="loop">
-            <div class="ays-quiz-question">
-                <p>
-                    ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
-                </p>
+            <div class="col-md-8">
+                ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
             </div>
         </c:forEach>
         <c:forEach items="${answer}" var="answer">
-            <div class="ays-quiz-answers ays-list-view-container">
-                <div class="ays-field ays-list-view-item">
-                    <input type="hidden" name="ays_answer_correct[]" value="0" />
-                    <input type="radio" name="ays_questions[ays-question-57]" id="ays-answer-222-9" value="222" />
-                    <label for="ays-answer-222-9" class="ays-position-initial">
-                        <c:out value="${answer.answer}"></c:out>
-                    </label>
-                    <label for="ays-answer-222-9" class="ays-answer-image ays-empty-before-content"></label>
-                </div>
-            </div>
+        	<div class="form-check">
+				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+				<label class="form-check-label" for="flexRadioDefault1">
+			  		<c:out value="${answer.answer}"></c:out>
+				</label>
+			</div>
         </c:forEach>
-        <div class="ays-buttons-div">
-            <i class="ays-fa ays-fa-arrow-left ays-previous action-button ays-arrow ays-display-none"></i>
-            <input type="button" name="next" class="ays-previous action-button" value="Prev" />
-            <i class="ays-fa ays-fa-arrow-right ays-next action-button ays-arrow ays-next-arrow ays-display-none"></i>
-            <input type="button" name="next" class="ays-next action-button" value="Next" />
-        </div>
-        <div class="wrong-answer-text ays-do-not-show" style="display: none"></div>
-        <div class="right-answer-text ays-do-not-show" style="display: none"></div>
-        <div class="ays-question-explanation" style="display: none"></div>
-    </div>
+        <button type="button" class="btn btn-dark"><strong> &lt; </strong></button>
+        <button type="button" class="btn btn-dark"><strong> &gt; </strong></button>
+	</form>
 </div>
+<%@ include file="/WEB-INF/views/include/footer.jsp" %>
 
-    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
-    
-    <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
-
+<!-- ALL JS FILES -->
+<script src="js/all.js"></script>
+<!-- ALL PLUGINS -->
+<script src="js/custom.js"></script>
 </body>
 </html>
