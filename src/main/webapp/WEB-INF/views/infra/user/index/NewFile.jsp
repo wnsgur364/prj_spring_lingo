@@ -5,7 +5,7 @@
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
     <!-- Basic -->
     <meta charset="utf-8">
@@ -34,14 +34,8 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
     <!-- Modernizer for Portfolio -->
     <script src="/resources/template/js/modernizer.js"></script>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 <body class="host_version"> 
@@ -49,28 +43,54 @@
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 <div class="container">
 	<form>
-        <c:forEach items="${quiz}" var="quiz" varStatus="loop">
-            <div class="col-md-8">
-                ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
-            </div>
-        </c:forEach>
-        <c:forEach items="${answer}" var="answer">
-        	<div class="form-check">
-				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-				<label class="form-check-label" for="flexRadioDefault1">
-			  		<c:out value="${answer.answer}"></c:out>
-				</label>
-			</div>
-        </c:forEach>
-        <button type="button" class="btn btn-dark"><strong> &lt; </strong></button>
-        <button type="button" class="btn btn-dark"><strong> &gt; </strong></button>
+	    <c:forEach items="${quiz}" var="quiz" varStatus="loop">
+	        <div class="col-md-8 quiz-div">
+	            ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
+	            <c:forEach items="${answer}" var="answer">
+	                <c:if test="${quiz.seq eq answer.quiz_seq}">
+	                    <div class="form-check">
+	                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+	                        <label class="form-check-label" for="flexRadioDefault">
+	                            <c:out value="${answer.answer}"></c:out>
+	                        </label>
+	                    </div>
+	                </c:if>
+	            </c:forEach>
+	        </div>
+	    </c:forEach>
+	    <button type="button" class="btn btn-dark" onclick="moveToQuiz('previous')"><strong>&lt;</strong></button>
+	    <button type="button" class="btn btn-dark" onclick="moveToQuiz('next')"><strong>&gt;</strong></button>
 	</form>
 </div>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
-
 <!-- ALL JS FILES -->
 <script src="js/all.js"></script>
 <!-- ALL PLUGINS -->
 <script src="js/custom.js"></script>
+<script>
+	var currentQuizIndex = 0;
+	var quizDivs = document.querySelectorAll('.quiz-div');
+	
+	function showQuizByIndex(index) {
+	    for (var i = 0; i < quizDivs.length; i++) {
+	        quizDivs[i].style.display = 'none';
+	    }
+	
+	    quizDivs[index].style.display = 'block';
+	}
+	
+	function moveToQuiz(direction) {
+	    if (direction === 'previous') {
+	        currentQuizIndex = Math.max(0, currentQuizIndex - 1);
+	    } else if (direction === 'next') {
+	        currentQuizIndex = Math.min(currentQuizIndex + 1, quizDivs.length - 1);
+	    }
+	
+	    showQuizByIndex(currentQuizIndex);
+	}
+	
+	// Show the first quiz initially
+	showQuizByIndex(0);
+</script>
 </body>
 </html>
