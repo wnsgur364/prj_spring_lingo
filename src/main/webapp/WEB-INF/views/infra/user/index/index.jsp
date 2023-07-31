@@ -27,7 +27,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../../../resources/assets/css/style.css">
     <!-- ALL VERSION CSS -->
     <link rel="stylesheet" href="css/versions.css">
     <!-- Responsive CSS -->
@@ -49,24 +49,19 @@
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 	
 	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
-			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
-		</ol>
+		
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
-				<div id="home" class="first-section" style="background-image:url('../../../../../resources/images/english_blackboard.jpg');">
+				<div id="home" class="first-section" style="background-image:url('../../../../../resources/images/main.png'); background-size: 40%;background-repeat: no-repeat; background-position: right;">
 					<div class="dtab">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 col-sm-12 text-right">
 									<div class="big-tagline">
-										<h2><strong>Learn</strong> Languages <Strong>Easily</Strong> </h2>
-										<p class="lead"> Lingo offers a wide range of engaging and interactive activities, exercises, and lessons that are specifically designed to enhance your reading, writing, speaking, and listening abilities. </p>
+										<h2><strong style="font-family: "DM Serif Display",cursive;">Learn English <br> Online Find Best Courses</Strong> </h2>
+										<!-- <p class="lead"> Lingo offers a wide range of engaging and interactive activities, exercises, and lessons that are specifically designed to enhance your reading, writing, speaking, and listening abilities. </p> -->
 											<a href="/chatting" class="hover-btn-new"><span>to enter</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											
 
 									</div>
 								</div>
@@ -75,56 +70,6 @@
 					</div>
 				</div><!-- end section -->
 			</div>
-			<div class="carousel-item">
-				<div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
-					<div class="dtab">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 text-left">
-									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight"><strong>Mastering </strong>  languages <strong>made easy</strong></h2>
-										<p class="lead" data-animation="animated fadeInLeft">  Discover the power of Learn Languages Easily,
-										an invaluable tool that simplifies the process of acquiring new languages
-										</p>
-											<a href="#" class="hover-btn-new"><span>to enter</span></a>
-									</div>
-								</div>
-							</div><!-- end row -->
-						</div><!-- end container -->
-					</div>
-				</div><!-- end section -->
-			</div>
-			<div class="carousel-item">
-				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
-					<div class="dtab">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12 col-sm-12 text-center">
-									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight"><strong> Empower yourself through effortless</strong> language<strong> acquisition</strong></h2>
-										<p class="lead" data-animation="animated fadeInLeft"> Learn Languages Easily provides an accessible and enjoyable learning experience
-										</p>
-											<a href="#" class="hover-btn-new"><span>to enter</span></a>
-											
-											
-									</div>
-								</div>
-							</div><!-- end row -->            
-						</div><!-- end container -->
-					</div>
-				</div><!-- end section -->
-			</div>
-			<!-- Left Control -->
-			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-				<span class="fa fa-angle-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-
-			<!-- Right Control -->
-			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-				<span class="fa fa-angle-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
 		</div>
 	</div>
 
@@ -142,9 +87,9 @@
                     <div class="message-box">
                         
                         <h2>Welcome to LingoConnect</h2>
-                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                        <p>LingoConnect, accessing English resources, and taking exams. Immerse yourself in English conversations, explore a wide range of study materials, and challenge yourself with interactive tests. </p>
 
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
+                        <p> Enhance your language skills and knowledge at your own pace. Join us and embark on an exciting journey of English learning and growth! </p>
 
                         <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
                     </div><!-- end messagebox -->
@@ -163,16 +108,16 @@
                     </div><!-- end media -->
                 </div><!-- end col -->
 				
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p> nteger rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
+				 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                     <div class="message-box"> 
+                        <h2> Engage, Explore, Excel!</h2>
+                        <p>Your ultimate destination for seamless English conversations, an extensive collection of language resources, and the opportunity to challenge yourself with proficiency exams. Immerse yourself in dynamic English dialogues, explore a treasure trove of educational materials,
+                         and put your language skills to the ultimate test with interactive assessments.</p>
+                        <p>Embrace a transformative language learning experience that empowers you to excel in English and beyond. Embark on this enriching journey of growth and self-discovery, as you unlock the doors to a brighter future through language proficiency!</p>
 
                         <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
+                    </div>
+                </div> 
 				
             </div><!-- end row -->
         </div><!-- end container -->
