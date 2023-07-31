@@ -70,7 +70,7 @@
                         <div class="pricingContent">
                             <i class="bi bi-brightness-alt-high"></i>
                             <ul>
-                                <li>Grammar</li>
+                                <li>Grammer</li>
                                 <li>words</li>
                                 <li>Reading</li>
                                 <li>Speaking</li>

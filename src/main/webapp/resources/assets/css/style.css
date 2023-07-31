@@ -751,6 +751,9 @@ a img.aligncenter {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.big-tagline h2{
+	text-align: left;
+}
 
 . a.hover-btn-new::before,
 . a.hover-btn-new::after {

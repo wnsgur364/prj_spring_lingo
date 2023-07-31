@@ -741,7 +741,21 @@ a img.aligncenter {
 	color: #333333;
 	font-weight: 500;
 }
-
+.big-tagline h2{
+	text-align: left;
+	font-size: 58px;
+	font-family: 'DM Serif Display', serif;
+}
+.big-tagline p{
+	font-size: xx-large;
+	font-family: 'DM Serif Display', serif;
+}
+.lead strong {
+	 display: block;
+	font-size: 40px;
+	/*  font-family: 'DM Serif Display', serif; */
+	 color: #002147;
+}
 
 .big-tagline a,
 .big-tagline a.hover-btn-new::after {
@@ -800,7 +814,6 @@ a img.aligncenter {
 	height: 100%;
 	width: 100%;
 }
-
 
 
 /*------------------------------------------------------------------
@@ -878,7 +891,10 @@ a img.aligncenter {
     background-color: #448AFF;
 }
 .section.cl {
-	background-color: #2d3032;
+	/* background-color: #2d3032; */
+	background-image:url('../../../../../resources/images/main-numberarea.png');
+	background-position: center;
+	 background-size: cover;
 }
 
 .hover-btn-new{
@@ -1756,7 +1772,10 @@ a img.aligncenter {
 }
 
 .post-media img {
-    width: 100%;
+    width: 380px;
+    
+    height: 380px;
+   margin-left: 110px;
 }
 
 .playbutton {
@@ -2936,7 +2955,7 @@ span.m_1 {
 }
 .pricingTable .pricingTable-header{
     color:#feffff;
-    background: #333333;
+      background-color: #EEA412; 
 }
 .pricingTable .heading{
     display: block;

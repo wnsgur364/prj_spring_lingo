@@ -50,7 +50,7 @@
 
 	<div class="all-title-box">
 		<div class="container text-center">
-			<h1>my learning status<!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> --></h1>
+			<h1>Begginner<!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> --></h1>
 		</div>
 	</div>
 
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="section-title row text-center">
                 <div class="col-md-8 offset-md-2">
-                    <p class="lead"><strong style="font-size: 35px;">my learning Lank</strong><br>
+                    <p class="lead"><strong style="font-size: 35px;">Popular Courses</strong><br>
                     	Upgrade your skills with newest courses</p>
                 </div>
             </div><!-- end title -->

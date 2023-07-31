@@ -34,6 +34,10 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
@@ -52,13 +56,14 @@
 		
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
-				<div id="home" class="first-section" style="background-image:url('../../../../../resources/images/main.png'); background-size: 40%;background-repeat: no-repeat; background-position: right;">
+				<div id="home" class="first-section" style="background-image:url('../../../../../resources/images/main.png'); background-size: 35%;background-repeat: no-repeat; background-position: 95%;">
 					<div class="dtab">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 col-sm-12 text-right">
 									<div class="big-tagline">
-										<h2><strong style="font-family: "DM Serif Display",cursive;">Learn English <br> Online Find Best Courses</Strong> </h2>
+									    <p>Become Master</p>
+										<h2><strong >Learn English Skills <br> Online Find Best <br>Courses</Strong> </h2>
 										<!-- <p class="lead"> Lingo offers a wide range of engaging and interactive activities, exercises, and lessons that are specifically designed to enhance your reading, writing, speaking, and listening abilities. </p> -->
 											<a href="/chatting" class="hover-btn-new"><span>to enter</span></a>
 											
@@ -72,63 +77,13 @@
 			</div>
 		</div>
 	</div>
-
- <div id="overviews" class="section wb">
-        <div class="container">
-            <div class="section-title row text-center">
-                <div class="col-md-8 offset-md-2">
-                    <h3>About</h3>
-               
-                </div>
-            </div><!-- end title -->
-        
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="message-box">
-                        
-                        <h2>Welcome to LingoConnect</h2>
-                        <p>LingoConnect, accessing English resources, and taking exams. Immerse yourself in English conversations, explore a wide range of study materials, and challenge yourself with interactive tests. </p>
-
-                        <p> Enhance your language skills and knowledge at your own pace. Join us and embark on an exciting journey of English learning and growth! </p>
-
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
-				
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="../../../../../resources/images/learn_block.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-			</div>
-			<div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                    </div><!-- end media -->
-                </div><!-- end col -->
-				
-				 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                     <div class="message-box"> 
-                        <h2> Engage, Explore, Excel!</h2>
-                        <p>Your ultimate destination for seamless English conversations, an extensive collection of language resources, and the opportunity to challenge yourself with proficiency exams. Immerse yourself in dynamic English dialogues, explore a treasure trove of educational materials,
-                         and put your language skills to the ultimate test with interactive assessments.</p>
-                        <p>Embrace a transformative language learning experience that empowers you to excel in English and beyond. Embark on this enriching journey of growth and self-discovery, as you unlock the doors to a brighter future through language proficiency!</p>
-
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div>
-                </div> 
-				
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
-<div id="overviews" class="section wb">
+	
+	<div id="overviews" class="section wb">
 	<div class="container">
 		<div class="section-title row text-center">
 			<div class="col-md-8 offset-md-2">
-				<p class="lead"><strong style="font-size: 35px;">Chat room list</strong><br>
-					Select a chat room list to enter the room</p>
+				<h3>Top Featured Courses</h3>	
+					<p>Select a chat room list to enter the room</p>
 			</div>
 		</div><!-- end title -->
 
@@ -273,6 +228,58 @@
 		</div><!-- end row -->
 	</div><!-- end container -->
 </div><!-- end section -->
+
+ <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>About</h3>
+               
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        
+                        <h2>Welcome to LingoConnect</h2>
+                        <p>LingoConnect, accessing English resources, and taking exams. Immerse yourself in English conversations, explore a wide range of study materials, and challenge yourself with interactive tests. </p>
+
+                        <p> Enhance your language skills and knowledge at your own pace. Join us and embark on an exciting journey of English learning and growth! </p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="../../../../../resources/images/main_02.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<!-- <div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div>
+                </div> -->
+				
+				 <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                     <div class="message-box"> 
+                        <h2> Engage, Explore, Excel!</h2>
+                        <p>Your ultimate destination for seamless English conversations, an extensive collection of language resources, and the opportunity to challenge yourself with proficiency exams. Immerse yourself in dynamic English dialogues, explore a treasure trove of educational materials,
+                         and put your language skills to the ultimate test with interactive assessments.</p>
+                        <p>Embrace a transformative language learning experience that empowers you to excel in English and beyond. Embark on this enriching journey of growth and self-discovery, as you unlock the doors to a brighter future through language proficiency!</p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div>
+                </div>  -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
 	<div class="section cl">
 		<div class="container">
 			<div class="row text-left stat-wrap">
