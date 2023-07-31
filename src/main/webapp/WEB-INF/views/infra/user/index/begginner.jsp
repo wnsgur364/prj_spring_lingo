@@ -51,7 +51,7 @@
 	<div class="all-title-box">
 		<div class="container text-center">
 			<h1>Begginner</h1>
-		</div>
+		</div>  
 	</div>
 
     <div id="overviews" class="section wb">

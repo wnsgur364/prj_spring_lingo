@@ -14,18 +14,18 @@
 
     <sql id="abc">
         seq,
-        defaultNy,
-        userName,
-        phoneNumber,
+        delNy,
         id,
-        nickName,
+        name,
+        email,
         password,
-        postalCode,
+        signupDate,
+        lastLoginDate,
         address,
         addressDetail,
-        smsCheck,
-        createdAt,
-        delNy
+        rank,
+        bedge,
+        gender,
     </sql>
 
     <sql id="selectCommon">
@@ -64,7 +64,7 @@
         SELECT
             seq,
             id,
-            userName
+            name
         FROM
             member
         WHERE 1=1
@@ -78,18 +78,18 @@
     <update id="update">
         UPDATE member
         SET
-        defaultNy = #{defaultNy},
-        userName = #{userName},
-        phoneNumber = #{phoneNumber},
+        delNy = #{delNy},
         id = #{id},
-        nickName = #{nickName},
+        name = #{name},
+        email = #{email},
         password = #{password},
-        postalCode = #{postalCode},
+        signupDate = NOW(),
+        lastLoginDate = #{lastLoginDate},
         address = #{address},
         addressDetail = #{addressDetail},
-        smsCheck = #{smsCheck},
-        createdAt = NOW(),
-        delNy = #{delNy}
+        rank = #{rank},
+        badge = #{badge},
+        gender = #{gender}
         WHERE seq = #{seq}
     </update>
 
@@ -100,31 +100,31 @@
 
     <insert id="insert">
         INSERT INTO member (
-        defaultNy,
-        userName,
-        phoneNumber,
+        delNy,
         id,
-        nickName,
+        name,
+        email,
         password,
-        postalCode,
+        signupDate,
+        lastLoginDate,
         address,
         addressDetail,
-        smsCheck,
-        createdAt,
-        delNy
-        ) VALUES (
-        #{defaultNy},
-        #{userName},
-        #{phoneNumber},
+        rank,
+        badge,
+        gender
+        ) VALUE (
+        #{delNy},
         #{id},
-        #{nickName},
+        #{name},
+        #{email},
         #{password},
-        #{postalCode},
+        NOW(),
+        #{lastLoginDate},
         #{address},
         #{addressDetail},
-        #{smsCheck},
-        NOW(),
-        #{delNy}
+        #{rank},
+        #{badge},
+        #{gender}
         )
     </insert>
 

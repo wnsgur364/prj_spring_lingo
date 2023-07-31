@@ -218,7 +218,7 @@
 							</div>
 							<div class="course-desc">
 								<p></p>
-							</div>	
+		  					</div>	
 							<div class="course-rating">
 								4.5
 								<i class="fa fa-star"></i>	
