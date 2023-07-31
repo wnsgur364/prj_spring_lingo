@@ -217,7 +217,7 @@
 								<h2><a href="#" title="">Fashion Designing</a></h2>
 							</div>
 							<div class="course-desc">
-								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+								<p></p>
 							</div>	
 							<div class="course-rating">
 								4.5

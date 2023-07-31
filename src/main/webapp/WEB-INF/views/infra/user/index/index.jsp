@@ -257,28 +257,7 @@
                     </div><!-- end media -->
                 </div><!-- end col -->
 			</div>
-			<!-- <div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="post-media wow fadeIn">
-                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                    </div>
-                </div> -->
-				
-				 <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                     <div class="message-box"> 
-                        <h2> Engage, Explore, Excel!</h2>
-                        <p>Your ultimate destination for seamless English conversations, an extensive collection of language resources, and the opportunity to challenge yourself with proficiency exams. Immerse yourself in dynamic English dialogues, explore a treasure trove of educational materials,
-                         and put your language skills to the ultimate test with interactive assessments.</p>
-                        <p>Embrace a transformative language learning experience that empowers you to excel in English and beyond. Embark on this enriching journey of growth and self-discovery, as you unlock the doors to a brighter future through language proficiency!</p>
-
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-                    </div>
-                </div>  -->
-				
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-
+			
 
 	<div class="section cl">
 		<div class="container">

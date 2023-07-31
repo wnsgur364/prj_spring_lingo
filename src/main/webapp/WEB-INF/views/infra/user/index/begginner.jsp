@@ -50,7 +50,7 @@
 
 	<div class="all-title-box">
 		<div class="container text-center">
-			<h1>Begginner<!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> --></h1>
+			<h1>Begginner</h1>
 		</div>
 	</div>
 
