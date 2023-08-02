@@ -291,7 +291,7 @@
 						<h3>Mission</h3>
 						<div class="tr-pa">M</div>
 						<p>Our mission is to facilitate global communication and cultural understanding by providing accessible and engaging language learning resources.
-						 We aim to empower learners of all backgrounds to develop their language skills and build connections across borders.</p>
+						 We aim to empower learners of all backgrounds to develop their language skills.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-12">
@@ -316,8 +316,18 @@
 		</div>
 	</div>
 
+<div class="copyrights copy">
+  <div class="container">
+    <div class="footer-distributed">
+      <div class="footer-center">
+        <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
+      </div>
+    </div>
+  </div><!-- end container -->
+</div><!-- end copyrights -->
 
-<%@ include file="/WEB-INF/views/include/footer.jsp" %>
+<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>

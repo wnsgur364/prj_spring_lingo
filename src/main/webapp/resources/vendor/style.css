@@ -2461,9 +2461,11 @@ select.mobile-device {
     background: url(images/bg.png) no-repeat center center #fff;
 }
 
-.map-box{
-	margin-left: -15px;
-}
+/* .map-box img{
+	width: 250px;
+	height: 250px;
+	margin-right: -305px;
+} */
 
 /*------------------------------------------------------------------
     FOOTER
@@ -2576,6 +2578,13 @@ select.mobile-device {
     text-align: left;
     padding: 10px 0px;
     overflow: hidden;
+  
+
+}
+ .copy{
+	position: absolute;
+	bottom:0;
+	left:0
 }
 
 
@@ -2954,8 +2963,9 @@ span.m_1 {
 	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
 }
 .pricingTable .pricingTable-header{
-    color:#feffff;
-      background-color: #EEA412; 
+    color:#002147;
+      background-color: #CEE6F3;
+      min-height: 207px;
 }
 .pricingTable .heading{
     display: block;
@@ -2972,13 +2982,14 @@ span.m_1 {
     text-transform: capitalize;
     font-size: 38px;
 	font-weight: 700;
-	color: #fff;
+	color: #002147
 }
 .pricingTable .heading > span{
     text-transform: capitalize;
     font-size: 13px;
     margin-top: 5px;
     display: block;
+    color: #002147;
 }
 .pricingTable .price-value{
     padding-bottom: 25px;
@@ -3064,10 +3075,10 @@ span.m_1 {
     margin-right: 10px;
 }
 .pricingTable.pink .pricingTable-header{
-    background: #333333;
+	 background: #CEE6F3;
 }
 .pricingTable.orange .pricingTable-header{
-    background: #333333;
+    background: #CEE6F3;
 }
 .pricingTable.green .pricingTable-header{
     background: #008b8b;
