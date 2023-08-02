@@ -23,7 +23,7 @@
         lastLoginDate,
         address,
         addressDetail,
-        rank,
+        `rank`,
         bedge,
         gender,
     </sql>
@@ -87,7 +87,7 @@
         lastLoginDate = #{lastLoginDate},
         address = #{address},
         addressDetail = #{addressDetail},
-        rank = #{rank},
+        `rank` = #{rank},
         badge = #{badge},
         gender = #{gender}
         WHERE seq = #{seq}
@@ -100,33 +100,36 @@
 
     <insert id="insert">
         INSERT INTO member (
-        delNy,
-        id,
-        name,
-        email,
-        password,
-        signupDate,
-        lastLoginDate,
-        address,
-        addressDetail,
-        rank,
-        badge,
-        gender
-        ) VALUE (
-        #{delNy},
-        #{id},
-        #{name},
-        #{email},
-        #{password},
-        NOW(),
-        #{lastLoginDate},
-        #{address},
-        #{addressDetail},
-        #{rank},
-        #{badge},
-        #{gender}
-        )
+            delNy,
+            id,
+            name,
+            email,
+            password,
+            signupDate,
+            lastLoginDate,
+            address,
+            addressDetail,
+            `rank`,
+            badge,
+            gender
+        ) VALUES (
+                     #{delNy},
+                     #{id},
+                     #{name},
+                     #{email},
+                     #{password},
+                     NOW(),
+                     NULL,
+                     #{address},
+                     #{addressDetail},
+                     #{rank},
+                     #{badge},
+                     #{gender}
+                 )
     </insert>
+
+
+
 
     <update id="uelete">
         UPDATE member

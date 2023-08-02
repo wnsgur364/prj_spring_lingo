@@ -48,11 +48,11 @@
           </a>
         </div>
         <div class="card-title text-uppercase text-center py-3">Sign Up</div>
-        <form>
+        <form name="form">
           <div class="form-group">
             <label for="exampleInputid" class="sr-only">id</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputid" class="form-control input-shadow" placeholder="Enter your ID">
+              <input type="text" name="id" id="exampleInputid" class="form-control input-shadow" placeholder="Enter your ID">
               <div class="form-control-position">
                 <i class="icon-user"></i>
               </div>
@@ -63,7 +63,7 @@
           <div class="form-group">
             <label for="exampleInputName" class="sr-only">Name</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter your name">
+              <input type="text" name="name" id="exampleInputName" class="form-control input-shadow" placeholder="Enter your name">
               <div class="form-control-position">
                 <i class="icon-user"></i>
               </div>
@@ -74,7 +74,7 @@
           <div class="form-group">
             <label for="exampleInputEmailId" class="sr-only">Email Address</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter your email address">
+              <input type="text" name="email" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter your email address">
               <div class="form-control-position">
                 <i class="icon-envelope-open"></i>
               </div>
@@ -85,7 +85,7 @@
           <div class="form-group">
             <label for="exampleInputPassword" class="sr-only">Password</label>
             <div class="position-relative has-icon-right">
-              <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter your password">
+              <input type="password" name="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter your password">
               <div class="form-control-position">
                 <i class="icon-lock"></i>
               </div>
@@ -96,7 +96,7 @@
           <div class="form-group">
             <label for="exampleInputAddress" class="sr-only">Address</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputAddress" class="form-control input-shadow" placeholder="Enter your address">
+              <input type="text" name="address" id="exampleInputAddress" class="form-control input-shadow" placeholder="Enter your address">
               <div class="form-control-position">
                 <i class="icon-home"></i>
               </div>
@@ -107,7 +107,7 @@
           <div class="form-group">
             <label for="exampleInputAddressDetail" class="sr-only">Address Detail</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="Enter your address detail">
+              <input type="text" name="addressDetail" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="Enter your address detail">
               <div class="form-control-position">
                 <i class="icon-home"></i>
               </div>
@@ -118,7 +118,7 @@
           <div class="form-group">
             <label for="exampleInputRank" class="sr-only">Rank</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputRank" class="form-control input-shadow" placeholder="Enter your rank">
+              <input type="text" name="rank" id="exampleInputRank" class="form-control input-shadow" placeholder="Enter your rank">
               <div class="form-control-position">
                 <i class="icon-trophy"></i>
               </div>
@@ -130,7 +130,7 @@
           <div class="form-group">
             <label for="exampleInputGender" class="sr-only">Gender</label>
             <div class="position-relative has-icon-right">
-              <select id="exampleInputGender" class="form-control input-shadow">
+              <select id="exampleInputGender" name="gender" class="form-control input-shadow">
                 <option value="" disabled selected>Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -140,6 +140,10 @@
                 <i class="icon-user"></i>
               </div>
             </div>
+<%--           숨김박스--%>
+            <input type="hidden" name="badge" id="badge" value="0"/>
+            <input type="hidden" name="seq" id="seq"/>
+            <input type="hidden" name="delNy" id="delNy" value="0"/>
 
             <!-- 메시지 텍스트 박스 추가 -->
             <div class="msg-box alert alert-danger" id="mb_gender_msg" style="display: none;"></div>
@@ -326,8 +330,11 @@
 
     if (isValid) {
       $(".msg-box").hide().text(''); // 정상적으로 가입되면 메시지 텍스트 박스 초기화
+      $("form[name=form]").attr("action", "/adminMemberIns").submit();
       alert("회원가입이 완료되었습니다.");
       // 여기에 서버로 회원가입 정보를 제출하는 코드를 추가해야 합니다.
+
+
     }
   });
 </script>

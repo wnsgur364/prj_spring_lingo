@@ -12,8 +12,8 @@ public class Member {
     private String lastLoginDate;
     private String address;
     private String addressDetail;
-    private String rank;
-    private String badge;
+    private Integer rank;
+    private Integer badge;
     private String gender;
 
 
@@ -100,19 +100,19 @@ public class Member {
         this.addressDetail = addressDetail;
     }
 
-    public String getRank() {
+    public Integer getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(Integer rank) {
         this.rank = rank;
     }
 
-    public String getBadge() {
+    public Integer getBadge() {
         return badge;
     }
 
-    public void setBadge(String badge) {
+    public void setBadge(Integer badge) {
         this.badge = badge;
     }
 
