@@ -7,6 +7,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/chatting/chatting.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/chatting" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index/begginner.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index/join.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index/quiz.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index/testQuiz.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/infra/user/index" />
       </map>
