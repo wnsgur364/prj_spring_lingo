@@ -470,7 +470,7 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
-	color: #ffffff;
+	color:/*  #ffffff; */ black;
 	font-size: 16px;
 	font-weight: 500;
 }
@@ -612,7 +612,9 @@ a img.aligncenter {
     padding-top: 0px;
     padding-bottom: 0px;
     box-shadow: 0 0 18px 0 rgba(0,0,0,.12);
+    background:#F5F5F5 !important;
 }
+
 
 .top-navbar .navbar-light .navbar-nav li .dropdown-menu {
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.12);
@@ -2869,17 +2871,18 @@ body.host_version .first-section .effect-1.slide-btn::after{
 /**-------------- inner Page css ---------------**/
 
 .all-title-box{
-	background: url(images/banner.jpg)no-repeat;
+ /* background: url(images/banner.jpg)no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover; */
 	background-position: center;
-	min-height: 300px;
+	background-color: #F0F4F9;
+	min-height: 300px; 
 }
 
 .all-title-box h1{
-	color: #fff;
+	color:black;
 	font-weight: 600;
 	text-transform: capitalize;
 	padding-top: 11%;
@@ -2964,7 +2967,7 @@ span.m_1 {
 }
 .pricingTable .pricingTable-header{
     color:#002147;
-      background-color: #CEE6F3;
+      background-color: #eee1e0;
       min-height: 207px;
 }
 .pricingTable .heading{
@@ -3014,7 +3017,16 @@ span.m_1 {
 .pricingTable .pricingContent > i{
     font-size: 60px;
     margin-top: 20px;
-	color: #eea412;
+	
+}
+.pricingTable .pricingContent >.begini{
+	color:#c56b66;
+}
+.pricingTable .pricingContent >.interi{
+	color:#43b97e;
+}
+.pricingTable .pricingContent >.advani{
+	color:#bdbd39;
 }
 .pricingTable .pricingContent ul{
     list-style: none;
@@ -3075,10 +3087,10 @@ span.m_1 {
     margin-right: 10px;
 }
 .pricingTable.pink .pricingTable-header{
-	 background: #CEE6F3;
+	 background: #e9f5ef;
 }
 .pricingTable.orange .pricingTable-header{
-    background: #CEE6F3;
+    background: #f9f9e4;
 }
 .pricingTable.green .pricingTable-header{
     background: #008b8b;

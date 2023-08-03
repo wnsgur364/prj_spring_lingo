@@ -68,7 +68,7 @@
                            <span class="month"> Step: This step is designed for beginner students who have little to no prior knowledge of English.  </span>
                         </div>
                         <div class="pricingContent">
-                            <i class="bi bi-brightness-alt-high"></i>
+                            <i class="bi bi-brightness-alt-high begini"></i>
                             <ul>
                                 <li>Grammer</li>
                                 <li>words</li>
@@ -94,7 +94,7 @@
                         </div>
 
                         <div class="pricingContent">
-                            <i class="bi bi-brightness-high"></i>
+                            <i class="bi bi-brightness-high interi"></i>
                             <ul>
                                <li>Grammar</li>
                                 <li>words</li>
@@ -120,7 +120,7 @@
                         </div>
 
                         <div class="pricingContent">
-                            <i class="bi bi-brightness-high"></i>
+                            <i class="bi bi-brightness-high advani"></i>
                             <ul>
                                <li>Grammar</li>
                                 <li>words</li>
