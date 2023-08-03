@@ -1,0 +1,5 @@
+
+k	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Øã²úÿÿÿÿ
+r	java:S116	"XRename this field "codeGroup_seq" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í–€Õúÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú÷Øâüÿÿÿÿ
+h	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Øã²úÿÿÿÿ
