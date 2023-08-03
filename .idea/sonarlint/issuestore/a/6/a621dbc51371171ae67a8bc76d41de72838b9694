@@ -1,0 +1,13 @@
+
+u
+java:S1192G"ZDefine a constant instead of duplicating this literal "redirect:/adminMemberList" 3 times.(“Þú¢úÿÿÿÿ
+k	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Èþ„ýÿÿÿÿ
+V	java:S125!"<This block of commented-out lines of code should be removed.(˜ß›Ìøÿÿÿÿ
+Q	java:S125;"<This block of commented-out lines of code should be removed.(¿ÁýÆ
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(•’ÓÂ
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(©¥Ì‰
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(µ¢Å†
+i
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
