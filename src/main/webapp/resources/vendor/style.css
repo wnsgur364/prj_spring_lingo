@@ -3004,6 +3004,9 @@ span.m_1 {
     display: inline-block;
     text-transform: uppercase;
 }
+.month{
+	padding: 10px;
+}
 .pricingTable .price-value > span{
     display: block;
     font-size: 14px;
@@ -3040,6 +3043,7 @@ span.m_1 {
     border-top: 1px solid #333;
     width: 85%;
     margin: 0 auto;
+    cursor: pointer;
 }
 .pricingTable .pricingContent ul li:first-child{
     border-top: 0px none;
