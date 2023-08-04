@@ -110,6 +110,7 @@ public class MemberController {
         }
         return returnMap;
     }
+//수정해야합니당
 
     @ResponseBody
     @RequestMapping("/selectOneLogin")
