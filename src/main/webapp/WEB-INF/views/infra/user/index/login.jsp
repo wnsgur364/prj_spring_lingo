@@ -46,7 +46,7 @@
                     <img src="../../../../../resources/assets/images/logo-icon.png" alt="logo icon">
                 </div>
                 <div class="card-title text-uppercase text-center py-3">Sign In</div>
-                <form name="login">
+                <form name="form" method="post">
                     <div class="form-group">
                         <label for="id" class="sr-only">UserID</label>
                         <div class="position-relative has-icon-right">
@@ -157,7 +157,6 @@
 <script src="../../../../../resources/assets/js/jquery.min.js"></script>
 <script type="text/javascript">
         $("#login_submit_btn").on("click", function() {
-            // e.preventDefault(); // 기본 동작 방지
 
             // 정규표현식
             var idRegex = /^[a-zA-Z0-9]{4,12}$/; // 아이디 정규식
@@ -170,7 +169,7 @@
             var password = $("#password").val();
 
             if (id.trim() === "") {
-                $("#mb_id_msg").text("아이디 또는 휴대폰번호를 입력해주세요.").show();
+                $("#mb_id_msg").text("아이디를 입력해주세요.").show();
                 return false;
             }
 
@@ -196,14 +195,12 @@
                 type: "post",
                 /* dataType:"json" */
                 url: "/selectOneLogin",
-                data: { "id": id, "password": password },
+                data: { "id": $("#id").val(), "password": $("#password").val() },
                 success: function(response) {
-                    console.log(response.rt)
-                    console.log(response.rtember)
                     if (response.rt == "success") {
                         location.href = "/index";
                     } else {
-                        alert("아이디 또는 비밀번호를 잘못 입력하셨습니다");
+                    	$(".p_msg").text("아이디와 비밀번호를 확인해주세요.").show;
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
