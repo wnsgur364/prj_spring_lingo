@@ -169,7 +169,7 @@
             var password = $("#password").val();
 
             if (id.trim() === "") {
-                $("#mb_id_msg").text("아이디를 입력해주세요.").show();
+                $("#mb_id_msg").text("아이디 또는 휴대폰번호를 입력해주세요.").show();
                 return false;
             }
 
@@ -200,7 +200,7 @@
                     if (response.rt == "success") {
                         location.href = "/index";
                     } else {
-                    	$(".p_msg").text("아이디와 비밀번호를 확인해주세요.").show;
+                        alert("아이디 또는 비밀번호를 잘못 입력하셨습니다");
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
