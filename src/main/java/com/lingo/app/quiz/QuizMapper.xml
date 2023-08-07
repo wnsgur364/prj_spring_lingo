@@ -33,7 +33,7 @@
 				<include refid="quiz" />
 	   			<include refid="selectCommon" />
 		)qq
-		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+<!-- 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
    	</select>
    	
    	<select id="selectOne" resultMap="resultMapObj">
