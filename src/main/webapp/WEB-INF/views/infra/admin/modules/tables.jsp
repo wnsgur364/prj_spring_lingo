@@ -31,7 +31,7 @@
       			<div class="col-lg-6">
        				<div class="card">
           				<div class="card-body">
-            					<h5 class="card-title">Basic Table</h5>
+            					<h5 class="card-title">CodeGroup Table</h5>
 								<div class="table-responsive">
              						<table class="table">
                 						<thead>
@@ -70,7 +70,7 @@
       				<div class="col-lg-6">
         				<div class="card">
           					<div class="card-body">
-            					<h5 class="card-title">Bordered Table</h5>
+            					<h5 class="card-title">Code Table</h5>
 	  							<div class="table-responsive">
             						<table class="table table-bordered">
               							<thead>

@@ -64,7 +64,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a>
             <div class="dropdown-menu" aria-labelledby="dropdown-a">
-              <a class="dropdown-item" href="begginner">Begginner</a>
+              <a class="dropdown-item" href="begginner">Beginner</a>
               <a class="dropdown-item" href="intermediate">Intermediate</a>
               <a class="dropdown-item" href="advanced">Advanced</a>
             </div>
@@ -72,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
+          <li><a class="hover-btn-new log orange" href="/login" <%--data-toggle="modal" data-target="#login"--%>><span>Login</span></a></li>
         </ul>
       </div>
     </div>

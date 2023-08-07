@@ -10,22 +10,20 @@
 <mapper namespace="com.lingo.app.member.MemberMapper">
 
     <!--                                        select 결과물 받을 객체-->
-    <resultMap id="resultMapObj" type="com.lingo.app.member.Member"></resultMap>
-
+    <resultMap id="resultMapObj" type="com.lingo.app.member.Member"/>
     <sql id="abc">
         seq,
-        defaultNy,
-        userName,
-        phoneNumber,
+        delNy,
         id,
-        nickName,
+        name,
+        email,
         password,
-        postalCode,
+        signupDate,
+        lastLoginDate,
         address,
         addressDetail,
-        smsCheck,
-        createdAt,
-        delNy
+        bedge,
+        gender,
     </sql>
 
     <sql id="selectCommon">
@@ -64,7 +62,7 @@
         SELECT
             seq,
             id,
-            userName
+            name
         FROM
             member
         WHERE 1=1
@@ -78,18 +76,17 @@
     <update id="update">
         UPDATE member
         SET
-        defaultNy = #{defaultNy},
-        userName = #{userName},
-        phoneNumber = #{phoneNumber},
+        delNy = #{delNy},
         id = #{id},
-        nickName = #{nickName},
+        name = #{name},
+        email = #{email},
         password = #{password},
-        postalCode = #{postalCode},
+        signupDate = NOW(),
+        lastLoginDate = #{lastLoginDate},
         address = #{address},
         addressDetail = #{addressDetail},
-        smsCheck = #{smsCheck},
-        createdAt = NOW(),
-        delNy = #{delNy}
+        badge = #{badge},
+        gender = #{gender}
         WHERE seq = #{seq}
     </update>
 
@@ -100,33 +97,34 @@
 
     <insert id="insert">
         INSERT INTO member (
-        defaultNy,
-        userName,
-        phoneNumber,
-        id,
-        nickName,
-        password,
-        postalCode,
-        address,
-        addressDetail,
-        smsCheck,
-        createdAt,
-        delNy
+            delNy,
+            id,
+            name,
+            email,
+            password,
+            signupDate,
+            lastLoginDate,
+            address,
+            addressDetail,
+            badge,
+            gender
         ) VALUES (
-        #{defaultNy},
-        #{userName},
-        #{phoneNumber},
-        #{id},
-        #{nickName},
-        #{password},
-        #{postalCode},
-        #{address},
-        #{addressDetail},
-        #{smsCheck},
-        NOW(),
-        #{delNy}
-        )
+                     #{delNy},
+                     #{id},
+                     #{name},
+                     #{email},
+                     #{password},
+                     NOW(),
+                     NULL,
+                     #{address},
+                     #{addressDetail},
+                     #{badge},
+                     #{gender}
+                 )
     </insert>
+
+
+
 
     <update id="uelete">
         UPDATE member

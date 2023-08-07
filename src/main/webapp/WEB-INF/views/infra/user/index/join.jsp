@@ -14,8 +14,8 @@
   <meta name="author" content=""/>
   <title>회원가입</title>
   <!-- loader-->
-  <link href="../../../../../resources/assets/css/pace.min.css" rel="stylesheet"/>
-  <script src="../../../../../resources/assets/js/pace.min.js"></script>
+<%--  <link href="../../../../../resources/assets/css/pace.min.css" rel="stylesheet"/>--%>
+<%--  <script src="../../../../../resources/assets/js/pace.min.js"></script>--%>
   <!--favicon-->
   <link rel="icon" href="../../../../../resources/assets/images/favicon.ico" type="image/x-icon">
   <!-- Bootstrap core CSS-->
@@ -48,108 +48,109 @@
           </a>
         </div>
         <div class="card-title text-uppercase text-center py-3">Sign Up</div>
-        <form>
+        <form name="form">
           <div class="form-group">
-            <label for="exampleInputName" class="sr-only">id</label>
+            <label for="exampleInputid" class="sr-only">id</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputid" class="form-control input-shadow" placeholder="Enter your ID">
+              <input type="text" name="id" id="exampleInputid" class="form-control input-shadow" placeholder="Enter your ID">
               <div class="form-control-position">
                 <i class="icon-user"></i>
               </div>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_id_msg" style="display: none;"></div>
           </div>
           <div class="form-group">
             <label for="exampleInputName" class="sr-only">Name</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter your name">
+              <input type="text" name="name" id="exampleInputName" class="form-control input-shadow" placeholder="Enter your name">
               <div class="form-control-position">
                 <i class="icon-user"></i>
               </div>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_name_msg" style="display: none;"></div>
           </div>
           <div class="form-group">
             <label for="exampleInputEmailId" class="sr-only">Email Address</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter your email address">
+              <input type="text" name="email" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter your email address">
               <div class="form-control-position">
                 <i class="icon-envelope-open"></i>
               </div>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_email_msg" style="display: none;"></div>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword" class="sr-only">Password</label>
             <div class="position-relative has-icon-right">
-              <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter your password">
+              <input type="password" name="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter your password">
               <div class="form-control-position">
                 <i class="icon-lock"></i>
               </div>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_password_msg" style="display: none;"></div>
           </div>
           <div class="form-group">
             <label for="exampleInputAddress" class="sr-only">Address</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputAddress" class="form-control input-shadow" placeholder="Enter your address">
+              <input type="text" name="address" id="exampleInputAddress" class="form-control input-shadow" placeholder="Enter your address">
               <div class="form-control-position">
                 <i class="icon-home"></i>
               </div>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_address_msg" style="display: none;"></div>
           </div>
           <div class="form-group">
             <label for="exampleInputAddressDetail" class="sr-only">Address Detail</label>
             <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="Enter your address detail">
+              <input type="text" name="addressDetail" id="exampleInputAddressDetail" class="form-control input-shadow" placeholder="Enter your address detail">
               <div class="form-control-position">
                 <i class="icon-home"></i>
               </div>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_address_detail_msg" style="display: none;"></div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputRank" class="sr-only">Rank</label>
-            <div class="position-relative has-icon-right">
-              <input type="text" id="exampleInputRank" class="form-control input-shadow" placeholder="Enter your rank">
-              <div class="form-control-position">
-                <i class="icon-trophy"></i>
-              </div>
-            </div>
-          </div>
+
           <div class="form-group">
             <label for="exampleInputGender" class="sr-only">Gender</label>
             <div class="position-relative has-icon-right">
-              <select id="exampleInputGender" class="form-control input-shadow">
+              <select id="exampleInputGender" name="gender" class="form-control input-shadow">
                 <option value="" disabled selected>Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
               </select>
               <div class="form-control-position">
-                <i class="icon-venus-mars"></i>
+                <i class="icon-user"></i>
               </div>
             </div>
+<%--           숨김박스--%>
+            <input type="hidden" name="badge" id="badge" value="0"/>
+            <input type="hidden" name="seq" id="seq"/>
+            <input type="hidden" name="delNy" id="delNy" value="0"/>
+
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_gender_msg" style="display: none;"></div>
           </div>
           <div class="form-group">
             <div class="icheck-material-white">
-              <input type="checkbox" id="user-checkbox" checked="">
-              <label for="user-checkbox">I agree to the terms and conditions</label>
+              <input type="checkbox" id="mb_agree">
+              <label for="mb_agree">Agree the terms and policy</label>
             </div>
+            <!-- 메시지 텍스트 박스 추가 -->
+            <div class="msg-box alert alert-danger" id="mb_agree_msg" style="display: none;"></div>
           </div>
-
-          <button type="button" class="btn btn-light btn-block waves-effect waves-light">Sign Up</button>
-          <div class="text-center mt-3">Sign up with the following</div>
-
-          <div class="form-row mt-4">
-            <div class="form-group mb-0 col-6">
-              <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> KakaoTalk</button>
-            </div>
-            <div class="form-group mb-0 col-6 text-right">
-              <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Naver</button>
-            </div>
-          </div>
+          <button type="button" class="btn btn-primary btn-block waves-effect waves-light" id="mb_join_btn">Sign Up</button>
         </form>
-
       </div>
     </div>
     <div class="card-footer text-center py-3">
-      <p class="text-warning mb-0">Already have an account? <a href="login.html">Sign In here</a></p>
+      <p class="text-warning mb-0">Already have an account? <a href="login">Sign In here</a></p>
     </div>
   </div>
 
@@ -210,6 +211,116 @@
 
 <!-- Custom scripts -->
 <script src="../../../../../resources/assets/js/app-script.js"></script>
+<script type="text/javascript">
+  // 정규식 검사 함수
+  function validateInput() {
+    var idRegex = /^[a-zA-Z0-9]{4,12}$/; // 아이디 정규식
+    var nameRegex = /^[가-힣]{2,}$/; // 한글 이름 정규식
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // 이메일 주소 정규식
+    var passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,12}$/; // 비밀번호 정규식
+
+    // 초기화
+    $(".msg-box").hide().text('');
+
+    var isValid = true;
+
+    // 아이디 검사
+    var id = $("#exampleInputid").val();
+    if (id == "") {
+      $("#mb_id_msg").text("아이디를 입력해주세요.").show();
+      $("#exampleInputid").focus();
+      isValid = false;
+    } else if (!idRegex.test(id)) {
+      $("#mb_id_msg").text("영문 대소문자와 숫자로만 이루어진 4~12자로 입력해 주세요.").show();
+      $("#exampleInputid").focus();
+      isValid = false;
+    }
+
+    // 이름 검사
+    var name = $("#exampleInputName").val();
+    if (name == "") {
+      $("#mb_name_msg").text("이름을 입력해주세요.").show();
+      $("#exampleInputName").focus();
+      isValid = false;
+    } else if (!nameRegex.test(name)) {
+      $("#mb_name_msg").text("올바른 이름 형식이 아닙니다.").show();
+      $("#exampleInputName").focus();
+      isValid = false;
+    }
+
+    // 이메일 주소 검사
+    var email = $("#exampleInputEmailId").val();
+    if (email == "") {
+      $("#mb_email_msg").text("이메일 주소를 입력해주세요.").show();
+      $("#exampleInputEmailId").focus();
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      $("#mb_email_msg").text("올바른 이메일 주소 형식이 아닙니다.").show();
+      $("#exampleInputEmailId").focus();
+      isValid = false;
+    }
+
+    // 비밀번호 검사
+    var password = $("#exampleInputPassword").val();
+    if (password == "") {
+      $("#mb_password_msg").text("비밀번호를 입력해주세요.").show();
+      $("#exampleInputPassword").focus();
+      isValid = false;
+    } else if (!passwordRegex.test(password)) {
+      $("#mb_password_msg").text("영문 대소문자와 숫자 또는 특수문자 조합 6~12자리로 입력해 주세요.").show();
+      $("#exampleInputPassword").focus();
+      isValid = false;
+    }
+
+    // 주소 검사
+    var address = $("#exampleInputAddress").val();
+    if (address == "") {
+      $("#mb_address_msg").text("주소를 입력해주세요.").show();
+      $("#exampleInputAddress").focus();
+      isValid = false;
+    }
+
+    // 상세주소 검사
+    var addressDetail = $("#exampleInputAddressDetail").val();
+    if (addressDetail == "") {
+      $("#mb_address_detail_msg").text("상세주소를 입력해주세요.").show();
+      $("#exampleInputAddressDetail").focus();
+      isValid = false;
+    }
+
+
+    // 성별 검사
+    var gender = $("#exampleInputGender").val();
+    if (gender == "" || gender == null) {
+      $("#mb_gender_msg").text("성별을 입력해주세요.").show();
+      $("#exampleInputGender").focus();
+      isValid = false;
+    }
+
+    // 약관 동의 검사
+    if (!$("#mb_agree").is(":checked")) {
+      $("#mb_agree_msg").text("약관에 동의해주세요.").show();
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  // 회원가입 처리
+  $("#mb_join_btn").on("click", function() {
+    var isValid = validateInput(); // 정규식 검사 수행
+
+    if (isValid) {
+      $(".msg-box").hide().text(''); // 정상적으로 가입되면 메시지 텍스트 박스 초기화
+      $("form[name=form]").attr("action", "/adminMemberIns").submit();
+      alert("회원가입이 완료되었습니다.");
+      // 여기에 서버로 회원가입 정보를 제출하는 코드를 추가해야 합니다.
+
+
+    }
+  });
+</script>
+
 
 </body>
 </html>

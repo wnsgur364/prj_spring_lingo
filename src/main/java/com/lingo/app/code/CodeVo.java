@@ -1,14 +1,10 @@
 package com.lingo.app.code;
 
-import com.lingo.app.common.base.BaseVo;
-
-public class CodeVo extends BaseVo {
+public class CodeVo {
 
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
-	
-// ----
 	
 	public Integer getShOption() {
 		return shOption;
@@ -28,5 +24,5 @@ public class CodeVo extends BaseVo {
 	public void setSeq(String seq) {
 		this.seq = seq;
 	}
-	
+		
 }

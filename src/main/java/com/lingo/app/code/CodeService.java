@@ -2,6 +2,9 @@ package com.lingo.app.code;
 
 import java.util.List;
 
+import com.lingo.app.code.Code;
+import com.lingo.app.code.CodeVo;
+
 public interface CodeService {
 
 	public int selectOneCount(CodeVo vo);

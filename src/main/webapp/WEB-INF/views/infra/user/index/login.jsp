@@ -5,7 +5,7 @@
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -46,24 +46,27 @@
                     <img src="../../../../../resources/assets/images/logo-icon.png" alt="logo icon">
                 </div>
                 <div class="card-title text-uppercase text-center py-3">Sign In</div>
-                <form>
+                <form name="login">
                     <div class="form-group">
-                        <label for="exampleInputUsername" class="sr-only">UserID</label>
+                        <label for="id" class="sr-only">UserID</label>
                         <div class="position-relative has-icon-right">
-                            <input type="text" id="exampleInputUsername" class="form-control input-shadow" placeholder="Enter User ID">
+                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="admin">
                             <div class="form-control-position">
                                 <i class="icon-user"></i>
                             </div>
                         </div>
+                        <p id="mb_id_msg" class="p_msg"></p>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword" class="sr-only">Password</label>
+                        <label for="password" class="sr-only">Password</label>
                         <div class="position-relative has-icon-right">
-                            <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter Password">
+                            <input type="password" name="password" id="password" class="form-control input-shadow" placeholder="Enter Password" value="12345a">
                             <div class="form-control-position">
                                 <i class="icon-lock"></i>
                             </div>
                         </div>
+                        <p id="mb_password_msg" class="p_msg"></p>
+
                     </div>
                     <div class="form-row">
                         <div class="form-group col-6">
@@ -76,7 +79,7 @@
                             <a href="reset-password.html">Reset Password</a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-light btn-block">Sign In</button>
+                    <button type="button" class="btn btn-light btn-block" id="login_submit_btn">Sign In</button>
                     <div class="text-center mt-3">Sign In With</div>
 
                     <div class="form-row mt-4">
@@ -97,7 +100,7 @@
     </div>
 
     <!--Start Back To Top Button-->
-    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+<%--    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>--%>
     <!--End Back To Top Button-->
 
     <!--start color switcher-->
@@ -151,6 +154,66 @@
 <!-- Custom scripts -->
 <script src="../../../../../resources/assets/js/app-script.js"></script>
 <%----%>
+<script src="../../../../../resources/assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+        $("#login_submit_btn").on("click", function() {
+            // e.preventDefault(); // 기본 동작 방지
+
+            // 정규표현식
+            var idRegex = /^[a-zA-Z0-9]{4,12}$/; // 아이디 정규식
+            var passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,12}$/; // 비밀번호 정규식
+
+            // 초기화
+            $(".p_msg").text("");
+
+            var id = $("#id").val();
+            var password = $("#password").val();
+
+            if (id.trim() === "") {
+                $("#mb_id_msg").text("아이디 또는 휴대폰번호를 입력해주세요.").show();
+                return false;
+            }
+
+            if (!idRegex.test(id)) {
+                $("#mb_id_msg").text("영문 대소문자와 숫자로만 이루어진 4~12자로 입력해 주세요.").show();
+                return false;
+            }
+
+            if (password.trim() === "") {
+                $("#mb_password_msg").text("비밀번호를 입력해주세요.").show();
+                return false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                $("#mb_password_msg").text("영문 대소문자와 숫자를 포함한 6~12자리로 입력해 주세요.").show();
+                return false;
+            }
+
+            // 유효성 검사 통과한 경우 로그인 로직 실행
+            $.ajax({
+                async: true,
+                cache: false,
+                type: "post",
+                /* dataType:"json" */
+                url: "/selectOneLogin",
+                data: { "id": id, "password": password },
+                success: function(response) {
+                    console.log(response.rt)
+                    console.log(response.rtember)
+                    if (response.rt == "success") {
+                        location.href = "/index";
+                    } else {
+                        alert("아이디 또는 비밀번호를 잘못 입력하셨습니다");
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    alert("AJAX Request Error: " + textStatus + " : " + errorThrown);
+                }
+            });
+        });
+
+</script>
+
 <%----%>
 </body>
 </html>

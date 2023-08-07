@@ -90,40 +90,17 @@
                     </div>
                 </div><!-- end col -->
 				<div class="col-xl-6 col-md-12 col-sm-12">
-					<div class="map-box">
-						<div id="custom-places" class="small-map"></div>
-					</div>
+					<!-- <div class="map-box">
+						<img src="../../../../../resources/images/contact.png" alt="" class="img-fluid">
+					</div> -->
 				</div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
 	
-	<div class="parallax section dbcolor">
-        <div class="container">
-            <div class="row logos">
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
-                </div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+	
 
-  
+  <%@ include file="/WEB-INF/views/include/footer.jsp" %>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>

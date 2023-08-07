@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-	PUBLIC "-//mybatis,org//DTD Mapper 3.0//EN"
-	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-	
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
 <mapper namespace="com.lingo.app.code.CodeMapper">
  
     <resultMap id="resultMapObj" type="com.lingo.app.code.Code"></resultMap>
     
-    <sql id="lingo">
+    <sql id="abc">
     	seq
-    	,name
     	,delNy
     	,useNy
-    	,codegroup_seq   	
+    	,name
+    	,codeGroup_seq
+    	
     </sql>
     
    <sql id ="selectCommon">
@@ -28,17 +29,17 @@
 	</select>
 
    	<select id="selectList" resultMap="resultMapObj">
-		SELECT bb.* FROM (   	
+		SELECT aa.* FROM (   	
 	   		SELECT
-				<include refid="lingo" />
+				<include refid="abc" />
 	   			<include refid="selectCommon" />
-		)bb
+		) aa
 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
    	
    	<select id="selectOne" resultMap="resultMapObj">
    		SELECT
-			<include refid="lingo" />
+			<include refid="abc" />
    		FROM
    			code
 		WHERE 1=1
@@ -60,7 +61,7 @@
    	<update id="uelete">
    		UPDATE code
    		SET
-   			delNy= 1
+   			codeGroup_seq= 1
 		WHERE
 			seq = #{seq}	
    	</update>   	
@@ -68,30 +69,31 @@
    	<insert id="insert">
    		INSERT INTO code (
    			seq
-	    	,name
 	    	,delNy
 	    	,useNy
-	    	,codegroup_seq  
+	    	,name
+	    	,codeGroup_seq
    			
    		) values (
    		    #{seq}
-   		    ,#{name}
-   			,#{delNy}
+   		   ,#{delNy}
    			,#{useNy}
-   		    ,#{codegroup_seq}
+   			,#{name}
+   			,#{codeGroup_seq}
    		)
    	</insert>   	
    
 	<select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
 		SELECT
 			seq
-	    	,name
 	    	,delNy
 	    	,useNy
-	    	,codegroup_seq  
+	    	,name
+	    	,codeGroup_seq
 			
-		FROM
+		 FROM
+		 
 			code
 	
     </select>
-</mapper> 
+</mapper>
