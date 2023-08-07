@@ -80,6 +80,7 @@
                         </div>
                     </div>
                     <button type="button" class="btn btn-light btn-block" id="login_submit_btn">Sign In</button>
+                    <p id="mb_login_msg" class="p_msg"></p>
                     <div class="text-center mt-3">Sign In With</div>
 
                     <div class="form-row mt-4">
@@ -156,60 +157,60 @@
 <%----%>
 <script src="../../../../../resources/assets/js/jquery.min.js"></script>
 <script type="text/javascript">
-        $("#login_submit_btn").on("click", function() {
+    $("#login_submit_btn").on("click", function() {
 
-            // 정규표현식
-            var idRegex = /^[a-zA-Z0-9]{4,12}$/; // 아이디 정규식
-            var passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9]).{6,12}$/; // 비밀번호 정규식
+        // 정규표현식
+        var idRegex = /^[a-zA-Z0-9]{4,12}$/; // 아이디 정규식 (공백 허용하지 않음)
+        var passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?!.*\s).{6,12}$/; // 비밀번호 정규식 (공백 허용하지 않음)
 
-            // 초기화
-            $(".p_msg").text("");
+        // 초기화
+        $(".p_msg").text("");
 
-            var id = $("#id").val();
-            var password = $("#password").val();
+        var id = $("#id").val();
+        var password = $("#password").val();
 
-            if (id.trim() === "") {
-                $("#mb_id_msg").text("아이디 또는 휴대폰번호를 입력해주세요.").show();
-                return false;
-            }
+        if (id.trim() === "") {
+            $("#mb_id_msg").text("아이디 또는 휴대폰번호를 입력해주세요.").show();
+            return false;
+        }
 
-            if (!idRegex.test(id)) {
-                $("#mb_id_msg").text("영문 대소문자와 숫자로만 이루어진 4~12자로 입력해 주세요.").show();
-                return false;
-            }
+        if (!idRegex.test(id)) {
+            $("#mb_id_msg").text("영문 대소문자와 숫자로만 이루어진 4~12자로 입력해 주세요.").show();
+            return false;
+        }
 
-            if (password.trim() === "") {
-                $("#mb_password_msg").text("비밀번호를 입력해주세요.").show();
-                return false;
-            }
+        if (password === "") {
+            $("#mb_password_msg").text("비밀번호를 입력해주세요.").show();
+            return false;
+        }
 
-            if (!passwordRegex.test(password)) {
-                $("#mb_password_msg").text("영문 대소문자와 숫자를 포함한 6~12자리로 입력해 주세요.").show();
-                return false;
-            }
+        if (!passwordRegex.test(password)) {
+            $("#mb_password_msg").text("영문 대소문자와 숫자를 포함한 6~12자리로 입력해 주세요.").show();
+            return false;
+        }
 
-            // 유효성 검사 통과한 경우 로그인 로직 실행
-            $.ajax({
-                async: true,
-                cache: false,
-                type: "post",
-                /* dataType:"json" */
-                url: "/selectOneLogin",
-                data: { "id": $("#id").val(), "password": $("#password").val() },
-                success: function(response) {
-                    if (response.rt == "success") {
-                        location.href = "/index";
-                    } else {
-                        alert("아이디 또는 비밀번호를 잘못 입력하셨습니다");
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    alert("AJAX Request Error: " + textStatus + " : " + errorThrown);
+        // 유효성 검사 통과한 경우 로그인 로직 실행
+        $.ajax({
+            async: true,
+            cache: false,
+            type: "post",
+            /* dataType:"json" */
+            url: "/selectOneLogin",
+            data: { "id": id, "password": password },
+            success: function(response) {
+                if (response.rt == "success") {
+                    location.href = "/index";
+                } else {
+                    $("#mb_login_msg").text("아이디 또는 비밀번호를 잘못 입력하셨습니다.").show();
                 }
-            });
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert("AJAX Request Error: " + textStatus + " : " + errorThrown);
+            }
         });
-
+    });
 </script>
+
 
 <%----%>
 </body>
