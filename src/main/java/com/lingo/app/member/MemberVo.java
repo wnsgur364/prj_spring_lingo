@@ -15,7 +15,6 @@ public class MemberVo{
     private String lastLoginDate;
     private String address;
     private String addressDetail;
-    private Integer rank;
     private Integer badge;
     private String gender;
 
@@ -116,14 +115,6 @@ public class MemberVo{
 
     public void setAddressDetail(String addressDetail) {
         this.addressDetail = addressDetail;
-    }
-
-    public Integer getRank() {
-        return rank;
-    }
-
-    public void setRank(Integer rank) {
-        this.rank = rank;
     }
 
     public Integer getBadge() {

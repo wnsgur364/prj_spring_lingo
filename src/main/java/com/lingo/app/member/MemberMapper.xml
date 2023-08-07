@@ -10,8 +10,7 @@
 <mapper namespace="com.lingo.app.member.MemberMapper">
 
     <!--                                        select 결과물 받을 객체-->
-    <resultMap id="resultMapObj" type="com.lingo.app.member.Member"></resultMap>
-
+    <resultMap id="resultMapObj" type="com.lingo.app.member.Member"/>
     <sql id="abc">
         seq,
         delNy,
@@ -23,7 +22,6 @@
         lastLoginDate,
         address,
         addressDetail,
-        `rank`,
         bedge,
         gender,
     </sql>
@@ -87,7 +85,6 @@
         lastLoginDate = #{lastLoginDate},
         address = #{address},
         addressDetail = #{addressDetail},
-        `rank` = #{rank},
         badge = #{badge},
         gender = #{gender}
         WHERE seq = #{seq}
@@ -109,7 +106,6 @@
             lastLoginDate,
             address,
             addressDetail,
-            `rank`,
             badge,
             gender
         ) VALUES (
@@ -122,7 +118,6 @@
                      NULL,
                      #{address},
                      #{addressDetail},
-                     #{rank},
                      #{badge},
                      #{gender}
                  )

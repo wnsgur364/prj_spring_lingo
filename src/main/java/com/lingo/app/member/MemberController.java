@@ -4,13 +4,11 @@ package com.lingo.app.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -119,9 +117,9 @@ public class MemberController {
 
         Member rtMember = service.selectOneLogin(vo);
 
-        if(rtMember != null) {
+        if (rtMember != null) {
             // 로그인 성공 시 세션에 사용자 정보 저장
-            httpSession.setMaxInactiveInterval(60*60); //60min
+            httpSession.setMaxInactiveInterval(60 * 60); // 60min
             httpSession.setAttribute("id", vo.getId());
 
             returnMap.put("rtMember", rtMember);

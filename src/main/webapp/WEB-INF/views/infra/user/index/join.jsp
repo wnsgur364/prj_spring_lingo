@@ -115,17 +115,6 @@
             <!-- 메시지 텍스트 박스 추가 -->
             <div class="msg-box alert alert-danger" id="mb_address_detail_msg" style="display: none;"></div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputRank" class="sr-only">Rank</label>
-            <div class="position-relative has-icon-right">
-              <input type="text" name="rank" id="exampleInputRank" class="form-control input-shadow" placeholder="Enter your rank">
-              <div class="form-control-position">
-                <i class="icon-trophy"></i>
-              </div>
-            </div>
-            <!-- 메시지 텍스트 박스 추가 -->
-            <div class="msg-box alert alert-danger" id="mb_rank_msg" style="display: none;"></div>
-          </div>
 
           <div class="form-group">
             <label for="exampleInputGender" class="sr-only">Gender</label>
@@ -299,13 +288,6 @@
       isValid = false;
     }
 
-    // 랭크 검사
-    var rank = $("#exampleInputRank").val();
-    if (rank == "") {
-      $("#mb_rank_msg").text("랭크를 입력해주세요.").show();
-      $("#exampleInputRank").focus();
-      isValid = false;
-    }
 
     // 성별 검사
     var gender = $("#exampleInputGender").val();
