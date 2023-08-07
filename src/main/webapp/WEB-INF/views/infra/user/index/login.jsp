@@ -144,6 +144,7 @@
 
 </div><!--wrapper-->
 
+<%----%>
 <!-- Bootstrap core JavaScript-->
 <script src="../../../../../resources/assets/js/jquery.min.js"></script>
 <script src="../../../../../resources/assets/js/popper.min.js"></script>
