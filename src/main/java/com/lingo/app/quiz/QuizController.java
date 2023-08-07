@@ -16,11 +16,11 @@ public class QuizController {
 	@Autowired
 	AnswerServiceImpl aService;
 	
-	@RequestMapping("/NewFile")
+	@RequestMapping("/quiz")
 	public String quiz(QuizVo qvo, Model qModel, AnswerVo avo, Model aModel) {
 		qModel.addAttribute("quiz", qService.selectList(qvo));
 		aModel.addAttribute("answer", aService.selectList(avo));
 		
-		return "/infra/user/index/NewFile";
+		return "/infra/user/index/quiz";
 	}
 }

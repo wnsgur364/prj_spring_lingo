@@ -28,11 +28,11 @@
 	</select>
 
    	<select id="selectList" resultMap="resultMapObj">
-		SELECT aa.* FROM (   	
+<!-- 		SELECT aa.* FROM (   	 -->
 	   		SELECT
 				<include refid="answer" />
 	   			<include refid="selectCommon" />
-		)aa
+<!-- 		)aa -->
 <!-- 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
    	</select>
    	
