@@ -92,7 +92,7 @@
 		</div>
    		<!-- End container-fluid-->
     
-   	</div><!--End content-wrapper-->
+   	</div><!--End contentwrapper-->
 <%@ include file="../include/footer.jsp" %>  
 </div><!--End wrapper-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
