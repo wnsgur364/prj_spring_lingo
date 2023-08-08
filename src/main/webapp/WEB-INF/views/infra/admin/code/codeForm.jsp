@@ -17,7 +17,7 @@
 </head>
 <body class="bg-theme bg-theme9">
 
-<!-- start loade -->
+<!-- start lade -->
 <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
 <!-- end loader -->
 
