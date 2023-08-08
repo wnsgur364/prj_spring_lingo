@@ -4,11 +4,13 @@ package com.lingo.app.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -26,22 +28,24 @@ public class MemberController {
     public String login() {
         return "/infra/user/index/login";
     }
-//    @RequestMapping("/adminMemberList")
 
-//    public String adminMemberList(@ModelAttribute("vo") MemberVo vo, Model model) {
-//
-//        vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
-//        vo.setParamsPaging(service.selectOneCount(vo));
-//        if (vo.getTotalRows() > 0) {
-//            List<Member> list = service.selectList(vo);
-//            model.addAttribute("list", list);
-//        } else {
-////			by pass
-//        }
-//
-//
-//        return "admin/infra/member/adminMemberList";
-//    }
+
+    @RequestMapping("/adminMemberList")
+
+    public String adminMemberList(@ModelAttribute("vo") MemberVo vo, Model model) {
+
+        vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+        vo.setParamsPaging(service.selectOneCount(vo));
+        if (vo.getTotalRows() > 0) {
+            List<Member> list = service.selectList(vo);
+            model.addAttribute("list", list);
+        } else {
+//			by pass
+        }
+
+
+        return "/infra/admin/modules/adminMemberList";
+    }
 
 
     @RequestMapping("/adminMemberForm")
