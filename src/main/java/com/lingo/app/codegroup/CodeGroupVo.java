@@ -4,10 +4,12 @@ public class CodeGroupVo {
 	
 	 private Integer shOption;
 	 private String shKeyword;
+	 private int rowNumToShow = 10;
 	 private String seq;
 	 private String name;
 	 private Integer delNy;
 	 private Integer useNy;
+	 private int startRnumForMysql = 0;	
 	 
 	 
 	 
@@ -48,5 +50,20 @@ public class CodeGroupVo {
 	public void setUseNy(Integer useNy) {
 		this.useNy = useNy;
 	}
+	
+	public int getStartRnumForMysql() {
+		return startRnumForMysql;
+	}
+	public void setStartRnumForMysql(int startRnumForMysql) {
+		this.startRnumForMysql = startRnumForMysql;
+	}
+	public int getRowNumToShow() {
+		return rowNumToShow;
+	}
+	public void setRowNumToShow(int rowNumToShow) {
+		this.rowNumToShow = rowNumToShow;
+	}
+
+
 
 }

@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.lingo.app.codegroup.CodeGroup;
+import com.lingo.app.codegroup.CodeGroupVo;
+
 
 @Controller
 public class CodeGroupController {
@@ -16,14 +19,17 @@ public class CodeGroupController {
 	CodeGroupServiceImpl service;
 	
 
-	@RequestMapping("/codeGroupList")
-	public String codeGroupList(@ModelAttribute("vo") CodeGroupVo vo, Model model) {
-		
-		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
 	
-		return "jdmin/infra/codegroup/codeGroupTable";
-		
-	}
+	    @RequestMapping("/codeGroupList")
+	    public String codeGroupList(@ModelAttribute("vo") CodeGroupVo vo, Model model) {
+	        List<CodeGroup> list = service.selectList(vo);
+	        model.addAttribute("list", list); 
+	        return "infra/admin/modules/codeGroupList";
+	    }
+	    
+	    // Rest of the methods...
+
+
 	
 	@RequestMapping("/codeGroupForm")
 	public String codeGroupForm(CodeGroupVo vo, Model model) {
@@ -33,7 +39,7 @@ public class CodeGroupController {
 		
 		model.addAttribute("item", item);
 		
-		return "jdmin/infra/codegroup/codeGroupForm";
+		 return "/infra/admin/modules/codeGroupForm";
 	}
 		
 	

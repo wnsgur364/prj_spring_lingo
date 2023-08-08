@@ -15,5 +15,7 @@ public class AdminController {
 	public String tables() {
 		return "/infra/admin/modules/tables";
 	}
+
+		
 			
 }

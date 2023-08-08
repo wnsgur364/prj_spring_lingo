@@ -272,6 +272,9 @@ hr {
   padding-left: 12.5px;
 }
 
+.col-lg-6{
+	margin:auto !important;
+}
 
 /* Menu Sidebar Wrapper */
 #wrapper{
