@@ -24,10 +24,9 @@ public class CodeGroupController {
 	    public String codeGroupList(@ModelAttribute("vo") CodeGroupVo vo, Model model) {
 	        List<CodeGroup> list = service.selectList(vo);
 	        model.addAttribute("list", list); 
-	        return "infra/admin/modules/codeGroupList";
+	        return "infra/admin/codeGroup/codeGroupList";
 	    }
 	    
-	    // Rest of the methods...
 
 
 	
@@ -39,7 +38,7 @@ public class CodeGroupController {
 		
 		model.addAttribute("item", item);
 		
-		 return "/infra/admin/modules/codeGroupForm";
+		 return "/infra/admin/codeGroup/codeGroupForm";
 	}
 		
 	

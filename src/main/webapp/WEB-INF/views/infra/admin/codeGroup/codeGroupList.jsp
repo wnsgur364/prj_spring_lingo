@@ -77,7 +77,7 @@
 
 <!-- Rest of your HTML code... -->
 
-              
+    <a href="codeGroupForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>          
   				
           						</div>
           					</div>

@@ -271,10 +271,11 @@ hr {
 	padding-right: 12.5px;
   padding-left: 12.5px;
 }
-
-.col-lg-6{
-	margin:auto !important;
-}
+/* 추가 변경 */
+/* .col-lg-6{
+	 margin:auto !important;
+	
+} */
 
 /* Menu Sidebar Wrapper */
 #wrapper{
@@ -760,11 +761,14 @@ body.bg-theme15 {
 }
 
 /*Cards */
+/*카드 넓이  */
 .card{
    margin-bottom: 25px; 
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
    border: none;
    background-color: rgba(0,0,0,.2);
+   width:950px;
+   height:500px;
 }
 
 .card-header {
