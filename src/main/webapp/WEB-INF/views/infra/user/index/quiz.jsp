@@ -44,7 +44,7 @@
 <div class="container d-flex justify-content-center align-items-center">
 	<form name="form" method="post">
 	    <c:forEach items="${quiz}" var="quiz" varStatus="loop">
-	        <div class="col quiz-div" style="font-size: 2.5vw;">
+	        <div class="col quiz-div" style="font-size: 2vw;">
 	            ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
 	            <c:forEach items="${answer}" var="answer">
 	                <c:if test="${quiz.seq eq answer.quiz_seq}">
@@ -59,8 +59,8 @@
 	        </div>
 	    </c:forEach>
 	    <div class="d-flex justify-content-center align-items-center">
-	    	<button type="button" class="btn btn-dark" onclick="moveToQuiz('previous')"><strong>&lt;</strong></button>
-	    	<button type="button" class="btn btn-dark" onclick="moveToQuiz('next')"><strong>&gt;</strong></button>
+	    	<button type="button" class="btn btn-dark"><strong>&lt;</strong></button>
+	    	<button type="button" class="btn btn-dark"><strong>&gt;</strong></button>
 	    </div>
 	</form>
 </div>
@@ -70,6 +70,7 @@
 <!-- ALL PLUGINS -->
 <script src="js/custom.js"></script>
 <script>
+
 	var currentQuizIndex = 0;
 	var quizDivs = document.querySelectorAll('.quiz-div');
 	
@@ -93,6 +94,7 @@
 	
 	// Show the first quiz initially
 	showQuizByIndex(0);
+	
 </script>
 </body>
 </html>
