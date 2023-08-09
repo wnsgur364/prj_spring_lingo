@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis,org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.lingo.app.quiz.QuizMapper">
+ 
+    <resultMap id="resultMapObj" type="com.lingo.app.quiz.Quiz"></resultMap>
+    
+   	<sql id="quiz">
+		seq
+		,delNy
+		,title
+		,tags
+		,question   	
+	</sql>
+    
+   <sql id ="selectCommon">
+   		FROM    
+	    	quiz
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND question LIKE CONCAT('%',#{shKeyword},'%')</if>
+    </sql>
+
+   	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+
+   	<select id="selectList" resultMap="resultMapObj">
+<!-- 		SELECT qq.* FROM (   	 -->
+	   		SELECT
+				<include refid="quiz" />
+	   			<include refid="selectCommon" />
+<!-- 		)qq -->
+<!-- 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
+   	</select>
+   	
+   	<select id="selectOne" resultMap="resultMapObj">
+   		SELECT
+			<include refid="quiz" />
+   		FROM
+   			quiz
+		WHERE 1=1
+			AND seq = #{seq}	
+   	</select>   	
+   	
+   	<update id="update">
+   		UPDATE quiz
+   		SET
+   			title = #{title}
+   			,tags = #{tags}
+   			,question = #{question}
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	 
+   	<update id="delete">
+   		UPDATE quiz
+   		SET
+   			delNy = 1
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<insert id="insert">
+   		INSERT INTO quiz (
+   			seq
+			,delNy
+			,title
+			,tags
+			,question 
+   			
+   		) values (
+   		    #{seq}
+   		  	,0
+   			,#{title}
+   			,#{tags}
+   		  	,#{question}
+   		)
+   	</insert>  
+    
+</mapper>

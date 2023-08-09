@@ -40,5 +40,5 @@ public class HomeController {
 	public String contact() {
 		return "/infra/user/index/contact";
 	}
-	
+
 }

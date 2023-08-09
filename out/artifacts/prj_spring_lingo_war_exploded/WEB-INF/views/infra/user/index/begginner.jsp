@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
@@ -9,13 +9,13 @@
 
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
      <!-- Site Metas -->
-    <title>SmartEDU - Education Responsive HTML5 Template</title>  
+    <title>SmartEDU - Education Responsive HTML5 Template</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -44,16 +44,16 @@
     <![endif]-->
 
 </head>
-<body class="host_version"> 
+<body class="host_version">
 
 	<%@ include file="/WEB-INF/views/include/header.jsp" %>
-	
+
 	<div class="all-title-box">
 		<div class="container text-center">
-			<h1>Begginer<!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> --></h1>
-		</div>
+			<h1>Begginner</h1>
+		</div>  
 	</div>
-	
+
     <div id="overviews" class="section wb">
         <div class="container">
             <div class="section-title row text-center">
@@ -63,168 +63,198 @@
                 </div>
             </div><!-- end title -->
 
-            <hr class="invis"> 
+                 <hr class="invis"> 
 
             <div class="row"> 
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
+                    <div class="course-item">
 						<div class="image-blog">
 							<img src="images/blog_1.jpg" alt="" class="img-fluid">
 						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                             <span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Engineering</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
 						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More<span></a>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
 						</div>
 					</div>
                 </div><!-- end col -->
 
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
+                    <div class="course-item">
 						<div class="image-blog">
 							<img src="images/blog_2.jpg" alt="" class="img-fluid">
 						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                             <span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Hotel Management</a></h2>
+							</div>
+							<div class="blog-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
 						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Months</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
 						</div>
 					</div>
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
+                </div><!-- end col -->	
+				
+				<div class="col-lg-4 col-md-6 col-12">
+                    <div class="course-item">
 						<div class="image-blog">
 							<img src="images/blog_3.jpg" alt="" class="img-fluid">
 						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                             <span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Biotechnology</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
 						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
 						</div>
 					</div>
                 </div><!-- end col -->
-            </div><!-- end row -->
-
-            <hr class="hr3"> 
-
+            </div><!-- end row -->			
+			
+			<hr class="hr3"> 
+			
             <div class="row"> 
-                <div class="col-lg-4 col-md-6 col-12">
-                   <div class="blog-item">
+				<div class="col-lg-4 col-md-6 col-12">
+                   <div class="course-item">
 						<div class="image-blog">
 							<img src="images/blog_4.jpg" alt="" class="img-fluid">
 						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                             <span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Medical Sciences</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
 						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
 						</div>
 					</div>
                 </div><!-- end col -->
-
+				
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
+                    <div class="course-item">
 						<div class="image-blog">
 							<img src="images/blog_5.jpg" alt="" class="img-fluid">
+						</div>		
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Finance</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
 						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                             <span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
 						</div>
 					</div>
                 </div><!-- end col -->
 
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
+                    <div class="course-item">
 						<div class="image-blog">
 							<img src="images/blog_6.jpg" alt="" class="img-fluid">
 						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                            <span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Fashion Designing</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>	
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
 						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Months</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
 						</div>
 					</div>
                 </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-    <div class="parallax section dbcolor">
-        <div class="container">
-            <div class="row logos">
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a href="#"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
-                </div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->

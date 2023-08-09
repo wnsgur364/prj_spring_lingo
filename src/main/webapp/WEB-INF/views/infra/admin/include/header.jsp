@@ -40,24 +40,31 @@
         	</a>
       	</li>
       	<li>
-        	<a href="icons.html">
-          		<i class="zmdi zmdi-invert-colors"></i> 
-          		<span>UI Icons</span>
+        	<a href="codeGroupList">
+          		<i class="zmdi zmdi-grid"></i> 
+          		<span>CodeGroup Table</span>
         	</a>
       	</li>
       	<li>
-        	<a href="forms.html">
-          		<i class="zmdi zmdi-format-list-bulleted"></i> 
-          		<span>Forms</span>
+        	<a href="codeList">
+          		<i class="zmdi zmdi-grid"></i> 
+          		<span>Code Table</span>
         	</a>
       	</li>
       	<li>
         	<a href="tables">
-          		<i class="zmdi zmdi-grid"></i> 
-          		<span>Tables</span>
+          		<i class="zmdi zmdi-grid"></i>  
+          		<span>Member Table</span>
         	</a>
       	</li>
-      	<li>
+		<li>
+			<a href="/adminMemberList">
+				<i class="zmdi zmdi-grid"></i>
+				<span>Member Tables</span>
+			</a>
+		</li>
+
+		<li>
         	<a href="calendar.html">
           		<i class="zmdi zmdi-calendar-check"></i> 
           		<span>Calendar</span>
@@ -178,4 +185,4 @@
   		</ul>
 	</nav>
 </header>
-<!--End topbar header-->
+<!--End topb header-->

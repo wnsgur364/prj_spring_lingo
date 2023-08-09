@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.lingo.app.code.CodeMapper">
+ 
+    <resultMap id="resultMapObj" type="com.lingo.app.code.Code"></resultMap>
+    
+    <sql id="abc">
+    	seq
+    	,delNy
+    	,useNy
+    	,name
+    	,codeGroup_seq
+    	
+    </sql>
+    
+   <sql id ="selectCommon">
+   		FROM    
+	    	code
+		WHERE 1=1
+			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+    </sql>
+
+   	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+
+   	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM (   	
+	   		SELECT
+				<include refid="abc" />
+	   			<include refid="selectCommon" />
+		) aa
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select>
+   	
+   	<select id="selectOne" resultMap="resultMapObj">
+   		SELECT
+			<include refid="abc" />
+   		FROM
+   			code
+		WHERE 1=1
+			AND seq = #{seq}	
+   	</select>   	
+   	
+   	<update id="update">
+   		UPDATE code
+   		SET
+   			name = #{name}
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<delete id="delete">
+   		delete from code WHERE seq = #{seq}	
+   	</delete>   	
+   	 
+   	<update id="uelete">
+   		UPDATE code
+   		SET
+   			codeGroup_seq= 1
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	
+   	<insert id="insert">
+   		INSERT INTO code (
+   			seq
+	    	,delNy
+	    	,useNy
+	    	,name
+	    	,codeGroup_seq
+   			
+   		) values (
+   		    #{seq}
+   		   ,#{delNy}
+   			,#{useNy}
+   			,#{name}
+   			,#{codeGroup_seq}
+   		)
+   	</insert>   	
+   
+	<select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
+		SELECT
+			seq
+	    	,delNy
+	    	,useNy
+	    	,name
+	    	,codeGroup_seq
+			
+		 FROM
+		 
+			code
+	
+    </select>
+</mapper>

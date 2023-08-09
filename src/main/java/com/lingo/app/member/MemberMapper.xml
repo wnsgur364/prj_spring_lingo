@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--        전체 매퍼중에서 유일한 값을 사용 한다.-->
+<!--        해서 관계적으로 해당 파일의 패스와 파일이름(확장자제외)-->
+<!--        그리고 dao에서 namespace와 일치하여야 된다.-->
+
+<mapper namespace="com.lingo.app.member.MemberMapper">
+
+    <!--                                        select 결과물 받을 객체-->
+    <resultMap id="resultMapObj" type="com.lingo.app.member.Member"/>
+    <sql id="abc">
+        seq,
+        delNy,
+        id,
+        name,
+        email,
+        password,
+        signupDate,
+        lastLoginDate,
+        address,
+        addressDetail,
+        badge,
+        gender
+    </sql>
+
+    <sql id="selectCommon">
+        FROM
+        member
+        WHERE 1=1
+        <if test="shKeyword != null and !shKeyword.equals('')">AND delNy LIKE CONCAT('%',#{shKeyword},'%')</if>
+    </sql>
+
+    <select id="selectOneCount" resultType="Integer">
+        SELECT count(*)
+        <include refid="selectCommon" />
+    </select>
+
+    <select id="selectList" resultMap="resultMapObj">
+        SELECT bb.* FROM (
+        SELECT
+        <include refid="abc" />
+        <include refid="selectCommon" />
+        ) bb
+        LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}
+    </select>
+
+
+    <select id="selectOne" resultMap="resultMapObj">
+        SELECT
+            <include refid="abc"/>
+        FROM
+            member
+        WHERE
+            seq = #{seq}
+    </select>
+
+    <select id="selectOneLogin" resultMap="resultMapObj">
+
+        SELECT
+            seq,
+            id,
+            name
+        FROM
+            member
+        WHERE 1=1
+        AND
+            id = #{id}
+        AND
+            password = #{password}
+
+    </select>
+
+    <update id="update">
+        UPDATE member
+        SET
+        delNy = #{delNy},
+        id = #{id},
+        name = #{name},
+        email = #{email},
+        password = #{password},
+        signupDate = NOW(),
+        lastLoginDate = #{lastLoginDate},
+        address = #{address},
+        addressDetail = #{addressDetail},
+        badge = #{badge},
+        gender = #{gender}
+        WHERE seq = #{seq}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM member
+        WHERE seq = #{seq}
+    </delete>
+
+    <insert id="insert">
+        INSERT INTO member (
+            delNy,
+            id,
+            name,
+            email,
+            password,
+            signupDate,
+            lastLoginDate,
+            address,
+            addressDetail,
+            badge,
+            gender
+        ) VALUES (
+                     #{delNy},
+                     #{id},
+                     #{name},
+                     #{email},
+                     #{password},
+                     NOW(),
+                     NULL,
+                     #{address},
+                     #{addressDetail},
+                     #{badge},
+                     #{gender}
+                 )
+    </insert>
+
+
+
+
+    <update id="uelete">
+        UPDATE member
+        SET delNy = #{delNy}
+        WHERE seq = #{seq}
+    </update>
+
+   <select id="selectOneCheckId" resultType="Integer">
+       SELECT
+           count(seq)
+         FROM
+              member
+            WHERE
+                1=1
+            AND
+              id = #{id}
+   </select>
+
+
+</mapper>
