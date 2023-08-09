@@ -3,12 +3,14 @@ package com.lingo.app.code;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.lingo.app.code.CodeService;
 import com.lingo.app.code.Code;
 import com.lingo.app.code.CodeDao;
 import com.lingo.app.code.CodeVo;
 
+@Service
 public class CodeServiceImpl implements CodeService {
 
 	
@@ -47,7 +49,7 @@ public class CodeServiceImpl implements CodeService {
 
 	@Override
 	public int selectOneCount(CodeVo vo) {
-		// TODO Auto-generated method stub
+		
 		return dao.selectOneCount(vo);
 	}
 	

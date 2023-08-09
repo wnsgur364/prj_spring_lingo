@@ -42,21 +42,16 @@
       	<li>
         	<a href="codeGroupList">
           		<i class="zmdi zmdi-grid"></i> 
-          		<span>CodeGroup Table</span>
+          		<span>CodeGroup Tables</span>
         	</a>
       	</li>
       	<li>
         	<a href="codeList">
           		<i class="zmdi zmdi-grid"></i> 
-          		<span>Code Table</span>
+          		<span>Code Tables</span>
         	</a>
       	</li>
-      	<li>
-        	<a href="tables">
-          		<i class="zmdi zmdi-grid"></i>  
-          		<span>Member Table</span>
-        	</a>
-      	</li>
+      
 		<li>
 			<a href="/adminMemberList">
 				<i class="zmdi zmdi-grid"></i>
@@ -77,12 +72,42 @@
           		<span>Profile</span>
         	</a>
       	</li>
-      	<li>
-        	<a href="login.html" target="_blank">
-          		<i class="zmdi zmdi-lock"></i> 
-          		<span>Login</span>
-        	</a>
-      	</li>
+		<c:choose>
+			<c:when test="${not empty id}">
+				<li>
+					<a href="" target="_blank">
+						<i class="zmdi zmdi-lock"></i>
+						<span><c:out value="${id}" /></span>
+					</a>
+				</li>
+				<li>
+					<a href="/logout">
+						<i class="zmdi zmdi-lock"></i>
+						<span>Logout</span>
+					</a>
+				</li>
+				<c:if test="${id eq 'admin'}">
+				<a href="/indexAdmin">
+					<i class="zmdi zmdi-lock"></i>
+					<span>Admin Page</span>
+				</a>
+				</c:if>
+			</c:when>
+			<c:otherwise>
+				<li>
+					<a href="/login" target="_blank">
+						<i class="zmdi zmdi-lock"></i>
+						<span>Login</span>
+					</a>
+				</li>
+				<li>
+					<a href="/join" target="_blank">
+						<i class="zmdi zmdi-lock"></i>
+						<span>Join us</span>
+					</a>
+				</li>
+			</c:otherwise>
+		</c:choose>
        	<li>
         	<a href="register.html" target="_blank">
           		<i class="zmdi zmdi-account-circle"></i> 

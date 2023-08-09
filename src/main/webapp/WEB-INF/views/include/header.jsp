@@ -62,9 +62,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbars-host">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="materials">Materials</a></li>
-
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a>
             <div class="dropdown-menu" aria-labelledby="dropdown-a">
@@ -75,11 +74,56 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="hover-btn-new log orange" href="/login" <%--data-toggle="modal" data-target="#login"--%>><span>Login</span></a></li>
+        <ul class="nav navbar-nav navbar-right" style="align-items: center">
+      <c:choose>
+            <c:when test="${not empty id}">
+              <li class="nav-item">
+            <button id="btnLogout" style="background-color: transparent; border: none; position: relative;">
+              <a class="hover-btn-new log orange">
+              <span>Logout</span>
+              </a>
+            </button>
+                <span style="position: absolute; left: 50%; transform: translate(-50%, -50%); bottom: -25%; width: 100%; text-align: center;">Hi! <c:out value="${id}"/></span>
+              </li>
+
+<%--              <c:if test="${id eq 'admin'}">--%>
+<%--                <li class="nav-item">--%>
+<%--                <a href="/indexAdmin" class="nav-link">--%>
+<%--                    <span>Admin Page</span>--%>
+<%--                  </a>--%>
+<%--                </li>--%>
+<%--                </c:if>--%>
+            </c:when>
+            <c:otherwise>
+              <li class="nav-item">
+                  <a class="hover-btn-new log orange" href="/login">
+                       <span>Login</span>
+                  </a>
+              </li>
+            </c:otherwise>
+      </c:choose>
         </ul>
       </div>
     </div>
   </nav>
+  <script>
+
+    $("#btnLogout").on("click", function(){
+      $.ajax({
+        async: true,
+        cache: false,
+        type: "post",
+        url: "/logoutProc",
+        data: { },
+        success: function(response){
+          location.href = "/index"
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+        }
+      });
+    });
+
+  </script>
 </header>
 <!-- End header -->

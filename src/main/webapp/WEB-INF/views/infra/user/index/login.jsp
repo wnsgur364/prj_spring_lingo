@@ -50,7 +50,7 @@
                     <div class="form-group">
                         <label for="id" class="sr-only">UserID</label>
                         <div class="position-relative has-icon-right">
-                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="admin">
+                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="test">
                             <div class="form-control-position">
                                 <i class="icon-user"></i>
                             </div>
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="card-footer text-center py-3">
-            <p class="text-warning mb-0">Do not have an account? <a href="register.html"> Sign Up here</a></p>
+            <p class="text-warning mb-0">Do not have an account? <a href="/join"> Sign Up here</a></p>
         </div>
     </div>
 
@@ -200,7 +200,11 @@
             data: { "id": id, "password": password },
             success: function(response) {
                 if (response.rt == "success") {
-                    location.href = "/index";
+                    if (id === "admin") { // 아이디가 admin인 경우
+                        location.href = "/indexAdmin"; // /admin 페이지로 리디렉션
+                    } else {
+                        location.href = "/index"; // 그 외의 경우 /index 페이지로 리디렉션
+                    }
                 } else {
                     $("#mb_login_msg").text("아이디 또는 비밀번호를 잘못 입력하셨습니다.").show();
                 }

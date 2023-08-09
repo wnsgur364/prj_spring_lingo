@@ -12,7 +12,7 @@
     	,delNy
     	,useNy
     	,name
-    	,codeGroup_seq
+    	,codegroup_seq
     	
     </sql>
     
@@ -61,7 +61,7 @@
    	<update id="uelete">
    		UPDATE code
    		SET
-   			codeGroup_seq= 1
+   			codegroup_seq= 1
 		WHERE
 			seq = #{seq}	
    	</update>   	
@@ -72,14 +72,14 @@
 	    	,delNy
 	    	,useNy
 	    	,name
-	    	,codeGroup_seq
+	    	,codegroup_seq
    			
    		) values (
    		    #{seq}
    		   ,#{delNy}
    			,#{useNy}
    			,#{name}
-   			,#{codeGroup_seq}
+   			,#{codegroup_seq}
    		)
    	</insert>   	
    
@@ -89,7 +89,7 @@
 	    	,delNy
 	    	,useNy
 	    	,name
-	    	,codeGroup_seq
+	    	,codegroup_seq
 			
 		 FROM
 		 
