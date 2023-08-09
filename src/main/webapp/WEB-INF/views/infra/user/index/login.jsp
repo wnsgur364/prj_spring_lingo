@@ -50,7 +50,7 @@
                     <div class="form-group">
                         <label for="id" class="sr-only">UserID</label>
                         <div class="position-relative has-icon-right">
-                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="admin">
+                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="test">
                             <div class="form-control-position">
                                 <i class="icon-user"></i>
                             </div>
