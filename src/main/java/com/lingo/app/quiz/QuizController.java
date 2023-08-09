@@ -46,8 +46,7 @@ public class QuizController {
                 }
             }
         } else {
-            // Handle the case where there are not enough questions
-            // You can show a message or take a different action here
+            // by pass
         }
 
         qModel.addAttribute("quiz", selectedQuizzes);
