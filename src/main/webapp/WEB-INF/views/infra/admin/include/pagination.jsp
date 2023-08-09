@@ -55,6 +55,6 @@
 <script>
   goList = function(thisPage) {
     $("input:hidden[name=thisPage]").val(thisPage);
-    $("form[name=formList]").attr("action", "adminList").submit();
+    $("form[name=formList]").attr("action", "adminMemberList").submit();
   }
 </script>
