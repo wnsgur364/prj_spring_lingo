@@ -57,7 +57,14 @@
           		<span>Member Table</span>
         	</a>
       	</li>
-      	<li>
+		<li>
+			<a href="/adminMemberList">
+				<i class="zmdi zmdi-grid"></i>
+				<span>Member Tables</span>
+			</a>
+		</li>
+
+		<li>
         	<a href="calendar.html">
           		<i class="zmdi zmdi-calendar-check"></i> 
           		<span>Calendar</span>

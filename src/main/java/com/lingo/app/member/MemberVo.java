@@ -1,7 +1,9 @@
 package com.lingo.app.member;
 
 
-public class MemberVo{
+import com.lingo.app.common.base.BaseVo;
+
+public class MemberVo extends BaseVo {
 
     private Integer shOption;
     private String shKeyword;
