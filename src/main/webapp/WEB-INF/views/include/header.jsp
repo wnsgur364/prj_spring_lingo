@@ -33,8 +33,12 @@
 
 <!-- ALL JS FILES -->
 <script src="../../../../resources/vendor/js/all.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>
 <!-- ALL PLUGINS -->
 <script src="../../../../resources/vendor/js/custom.js"></script>
+<!-- Mapsed JavaScript -->
+<script src="../../../../resources/vendor/js/mapsed.js"></script>
+<script src="../../../../resources/vendor/js/01-custom-places-example.js"></script>
 
 <style>
   .headerLogo {

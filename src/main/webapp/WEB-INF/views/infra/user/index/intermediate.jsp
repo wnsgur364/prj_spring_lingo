@@ -22,8 +22,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../../../../../resources/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../../../../../resources/images/apple-touch-icon.png">
 
 </head>
 <body class="host_version"> 
@@ -244,11 +244,6 @@
     
 
    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
-
-    <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
 
 </body>
 </html>

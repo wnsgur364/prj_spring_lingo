@@ -19,32 +19,20 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="css/versions.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Modernizer for Portfolio -->
-    <script src="/resources/template/js/modernizer.js"></script>
+    <link rel="shortcut icon" href="../../../../../resources/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../../../../../resources/images/apple-touch-icon.png">
 
 </head>
 <body class="host_version"> 
 
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
+<div class="h1 text-center py-5">TEST</div>
 <div class="container d-flex justify-content-center align-items-center">
 	<form name="form" method="post">
 	    <c:forEach items="${quiz}" var="quiz" varStatus="loop">
-	        <div class="col quiz-div" style="font-size: 2vw;">
+	        <div class="col" style="font-size: 1.5vw;">
 	            ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
 	            <c:forEach items="${answer}" var="answer">
 	                <c:if test="${quiz.seq eq answer.quiz_seq}">
@@ -59,41 +47,13 @@
 	        </div>
 	    </c:forEach>
 	    <div class="d-flex justify-content-center align-items-center">
-	    	<button type="button" class="btn btn-dark"><strong>&lt;</strong></button>
-	    	<button type="button" class="btn btn-dark"><strong>&gt;</strong></button>
+	        <button type="button" class="btn btn-dark"><strong>뒤로</strong></button>
+	        <button type="button" class="btn btn-dark"><strong>제출</strong></button>
 	    </div>
 	</form>
 </div>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
-<!-- ALL JS FILES -->
-<script src="js/all.js"></script>
-<!-- ALL PLUGINS -->
-<script src="js/custom.js"></script>
 <script>
-
-	var currentQuizIndex = 0;
-	var quizDivs = document.querySelectorAll('.quiz-div');
-	
-	function showQuizByIndex(index) {
-	    for (var i = 0; i < quizDivs.length; i++) {
-	        quizDivs[i].style.display = 'none';
-	    }
-	
-	    quizDivs[index].style.display = 'block';
-	}
-	
-	function moveToQuiz(direction) {
-	    if (direction === 'previous') {
-	        currentQuizIndex = Math.max(0, currentQuizIndex - 1);
-	    } else if (direction === 'next') {
-	        currentQuizIndex = Math.min(currentQuizIndex + 1, quizDivs.length - 1);
-	    }
-	
-	    showQuizByIndex(currentQuizIndex);
-	}
-	
-	// Show the first quiz initially
-	showQuizByIndex(0);
 	
 </script>
 </body>
