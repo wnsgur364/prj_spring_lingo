@@ -34,16 +34,16 @@
             					<h5 class="card-title">CodeGroup Table</h5>
 								<div class="table">
 								
-			<%-- 					 
+			 					 
                <form name="formList" method="post">
 	              	<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 					<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
 					<input type="text" name="shKeyword" value="<c:out value="${vo.shKeyword}"/>">
 						
-					<button type="button" class="btn btn-primary" id="btn">Search</button>
+					<button type="button" class="btn btn-secondary" id="btn">Search</button>
 		
-			   </form> --%>
-             						<!-- Rest of your HTML code... -->
+			   </form>
+             						
 
 <table class="table">
     <thead>
@@ -74,12 +74,13 @@
         </c:choose>
     </tbody>
 </table>
-
+<%@include file="../include/pagination.jsp"%>
 <!-- Rest of your HTML code... -->
 
-    <a href="codeGroupForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>          
-  				
+    <a href="codeGroupForm"><button type="button" class="btn btn-secondary" id="btn">Add</button></a> 
+    
           						</div>
+          						   
           					</div>
         				</div>
       				</div>
@@ -90,7 +91,7 @@
 
 		</div>
    		<!-- End container-fluid-->
-    
+ 
    	</div><!--End content-wrapper-->
 <%@ include file="../include/footer.jsp" %>  
 </div><!--End wrapper-->
@@ -103,7 +104,10 @@ $("#btn").on("click", function(){
 	$("form[name=formList]").attr("action", "/codeGroupList").submit();
 	
 });
-
+goList = function(thisPage) {
+	$("input:hidden[name=thisPage]").val(thisPage);
+	$("form[name=formList]").attr("action", "codeGroupList").submit();
+}
 </script>
 </body>
 </html>

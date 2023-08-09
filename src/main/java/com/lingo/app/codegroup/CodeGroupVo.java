@@ -1,18 +1,17 @@
 package com.lingo.app.codegroup;
 
-public class CodeGroupVo {
+import com.lingo.app.common.base.BaseVo;
+
+public class CodeGroupVo extends BaseVo {
 	
 	 private Integer shOption;
 	 private String shKeyword;
-	 private int rowNumToShow = 10;
+	
 	 private String seq;
 	 private String name;
 	 private Integer delNy;
 	 private Integer useNy;
-	 private int startRnumForMysql = 0;	
-	 
-	 
-	 
+	
 	 
 	public Integer getShOption() {
 		return shOption;
@@ -51,19 +50,4 @@ public class CodeGroupVo {
 		this.useNy = useNy;
 	}
 	
-	public int getStartRnumForMysql() {
-		return startRnumForMysql;
-	}
-	public void setStartRnumForMysql(int startRnumForMysql) {
-		this.startRnumForMysql = startRnumForMysql;
-	}
-	public int getRowNumToShow() {
-		return rowNumToShow;
-	}
-	public void setRowNumToShow(int rowNumToShow) {
-		this.rowNumToShow = rowNumToShow;
-	}
-
-
-
 }

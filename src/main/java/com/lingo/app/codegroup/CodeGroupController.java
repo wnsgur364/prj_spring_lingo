@@ -22,13 +22,21 @@ public class CodeGroupController {
 	
 	    @RequestMapping("/codeGroupList")
 	    public String codeGroupList(@ModelAttribute("vo") CodeGroupVo vo, Model model) {
-	        List<CodeGroup> list = service.selectList(vo);
+	        
+	    	vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+	    	
+			vo.setParamsPaging(service.selectOneCount(vo));
+	    	
+	    	
+			if(vo.getTotalRows() > 0) {
+	    	List<CodeGroup> list = service.selectList(vo);
 	        model.addAttribute("list", list); 
+			} else {
+			
+			}
 	        return "infra/admin/codeGroup/codeGroupList";
 	    }
 	    
-
-
 	
 	@RequestMapping("/codeGroupForm")
 	public String codeGroupForm(CodeGroupVo vo, Model model) {

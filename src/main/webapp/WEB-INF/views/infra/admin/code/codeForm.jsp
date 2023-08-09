@@ -32,7 +32,7 @@
       <div class="col-lg-6">
          <div class="card">
            <div class="card-body">
-           <div class="card-title">CodeGroup Form</div>
+           <div class="card-title">Code Form</div>
            <hr>
            
              <form  name="form" method="post">
@@ -54,6 +54,10 @@
            <div class="form-group">
             <label for="input-3">Name</label>
             <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.name }"/>" >
+           </div>
+            <div class="form-group">
+            <label for="input-3">Codegroup_seq</label>
+            <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.codegroup_seq }"/>" >
            </div>
         
           	

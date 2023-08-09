@@ -7,7 +7,7 @@ public class Code {
 	private Integer delNy;
 	private Integer useNy;
 	private String name;
-	private Integer codeGroup_seq;
+	private Integer codegroup_seq;
 	
 	public String getSeq() {
 		return seq;
@@ -33,10 +33,10 @@ public class Code {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getCodeGroup_seq() {
-		return codeGroup_seq;
+	public Integer getcodegroup_seq() {
+		return codegroup_seq;
 	}
-	public void setCodeGroup_seq(Integer codeGroup_seq) {
-		this.codeGroup_seq = codeGroup_seq;
+	public void setcodegroup_seq(Integer codegroup_seq) {
+		this.codegroup_seq = codegroup_seq;
 	}
 }

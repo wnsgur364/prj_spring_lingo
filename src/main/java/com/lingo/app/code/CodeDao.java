@@ -18,7 +18,7 @@ public class CodeDao {
 	@Resource(name = "sqlSession")
 	private SqlSession sqlSession;
 	
-	private static String namespace = "com.mycompany.app.infra.code.CodeMapper";
+	private static String namespace = "com.lingo.app.code.CodeMapper";
 
 	public int selectOneCount(CodeVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<Code> selectList(CodeVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	

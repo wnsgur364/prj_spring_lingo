@@ -1842,6 +1842,7 @@ table.grid td {
 
 .card .table{
 	margin-bottom:0px;
+	margin-top: 25px;
 }
 
 .card .table td, .card .table th {
@@ -3316,8 +3317,11 @@ table.grid td {
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
 }
-
-
+/* 수정*/
+.page-link{
+	display:block;
+	margin-left: 500px !important;
+}
 .footer {
   bottom: 0px;
   color: rgba(255, 255, 255, 0.73);

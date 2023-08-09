@@ -33,16 +33,16 @@
             					<h5 class="card-title">Code Table</h5>
 								<div class="table">
 								
-			<%-- 					 
+			 					 
                <form name="formList" method="post">
 	              	<input type="hidden" name="thisPage" value="<c:out value="${vo.thisPage}" default="1"/>">
 					<input type="hidden" name="rowNumToShow" value="<c:out value="${vo.rowNumToShow}"/>">
 					<input type="text" name="shKeyword" value="<c:out value="${vo.shKeyword}"/>">
 						
-					<button type="button" class="btn btn-primary" id="btn">Search</button>
+					<button type="button" class="btn btn-secondary" id="btn">Search</button>
 		
-			   </form> --%>
-             						<!-- Rest of your HTML code... -->
+			   </form> 
+             						
 
 <table class="table">
     <thead>
@@ -54,7 +54,7 @@
             <th scope="col">codegroup_seq</th>
         </tr>
     </thead>
-    <tbody>
+   <tbody>
         <c:choose>
             <c:when test="${fn:length(list) eq 0}">
                 <tr>
@@ -62,23 +62,23 @@
                 </tr>
             </c:when>
             <c:otherwise>
-                <c:forEach items="${list}" var="item" varStatus="status">
+                <c:forEach items="${list}" var="list" varStatus="status">
                     <tr>
                         <th scope="row"><c:out value="${list.seq }"/></th>
-                        <td><a href="codeForm?seq=<c:out value="${list.seq }"/>"><c:out value="${item.delNy }"/></a></td>
+                        <td><c:out value="${list.delNy }"/></a></td>
                         <td><c:out value="${list.useNy }"/></td>
-                        <td><c:out value="${list.name }"/></td>
+                        <td><a href="codeForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.name }"/></td>
                         <td><c:out value="${list.codegroup_seq }"/></td>
                     </tr>
                 </c:forEach>
             </c:otherwise>
         </c:choose>
-    </tbody>
+    </tbody> 
 </table>
-
+<%@include file="../include/pagination.jsp"%>
 <!-- Rest of your HTML code... -->
 
-    <a href="codeForm"><button type="button" class="btn btn-primary" id="btn">Add</button></a>          
+    <a href="codeForm"><button type="button" class="btn btn-secondary" id="btn">Add</button></a>          
   				
           						</div>
           					</div>

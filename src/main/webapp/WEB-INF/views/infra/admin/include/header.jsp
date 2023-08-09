@@ -42,21 +42,16 @@
       	<li>
         	<a href="codeGroupList">
           		<i class="zmdi zmdi-grid"></i> 
-          		<span>CodeGroup Table</span>
+          		<span>CodeGroup Tables</span>
         	</a>
       	</li>
       	<li>
         	<a href="codeList">
           		<i class="zmdi zmdi-grid"></i> 
-          		<span>Code Table</span>
+          		<span>Code Tables</span>
         	</a>
       	</li>
-      	<li>
-        	<a href="tables">
-          		<i class="zmdi zmdi-grid"></i>  
-          		<span>Member Table</span>
-        	</a>
-      	</li>
+      
 		<li>
 			<a href="/adminMemberList">
 				<i class="zmdi zmdi-grid"></i>
