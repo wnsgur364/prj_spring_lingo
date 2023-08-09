@@ -19,33 +19,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="../../../../../resources/assets/css/style.css">
-    <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="css/versions.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-
-    <!-- Modernizer for Portfolio -->
-    <script src="js/modernizer.js"></script>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="shortcut icon" href="../../../../../resources/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../../../../../resources/images/apple-touch-icon.png">
 
 </head>
 <body class="host_version"> 
@@ -115,7 +92,7 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="images/blog_2.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/blog_2.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
 						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -137,7 +114,7 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="images/blog_3.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/blog_3.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
 						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -163,7 +140,7 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="images/blog_4.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/blog_4.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
 						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -185,7 +162,7 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="images/blog_5.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/blog_5.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
 						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -207,7 +184,7 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="images/blog_6.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/blog_6.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
 						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -327,15 +304,6 @@
 </div><!-- end copyrights -->
 
 <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-
-    <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>
-	<!-- Mapsed JavaScript -->
-	<script src="js/mapsed.js"></script>
-	<script src="js/01-custom-places-example.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
 
 </body>
 </html>

@@ -23,29 +23,9 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="css/versions.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Modernizer for Portfolio -->
-    <script src="/resources/template/js/modernizer.js"></script>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-	<script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../../../../../resources/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../../../../../resources/images/apple-touch-icon.png">
+    
 </head>
 <body class="host_version"> 
 
@@ -139,11 +119,6 @@
     </div><!-- end section -->
 
     <%@ include file="/WEB-INF/views/include/footer.jsp" %>
-    
-    <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
 
 </body>
 </html>
