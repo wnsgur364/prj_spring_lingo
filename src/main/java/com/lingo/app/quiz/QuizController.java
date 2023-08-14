@@ -24,7 +24,7 @@ public class QuizController {
     public String quiz(QuizVo qvo, Model qModel, AnswerVo avo, Model aModel) {
         List<Quiz> allQuizzes = qService.selectList(qvo);
 
-        List<Quiz> selectedQuizzes = new ArrayList<>();
+        List<Quiz> selectedQuizzes = new ArrayList<Quiz>();
 
         // Assuming allQuizzes and allAnswers have the same size and corresponding indices match
 
@@ -34,7 +34,7 @@ public class QuizController {
         // Ensure we have enough questions to show
         if (totalQuestions >= numQuestionsToShow) {
             Random random = new Random();
-            List<Integer> selectedIndices = new ArrayList<>();
+            List<Integer> selectedIndices = new ArrayList<Integer>();
 
             while (selectedIndices.size() < numQuestionsToShow) {
                 int randomIndex = random.nextInt(totalQuestions);

@@ -68,3 +68,22 @@
 <script src="/resources/assets/plugins/Chart.js/Chart.min.js"></script>
 <!-- Index js -->
 <script src="/resources/assets/js/index.js"></script>
+<script>
+
+	$("#btnLogout").on("click", function(){
+		$.ajax({
+			async: true,
+			cache: false,
+			type: "post",
+			url: "/logoutProc",
+			data: { },
+			success: function(response){
+				location.href = "/index"
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+			}
+		});
+	});
+
+</script>

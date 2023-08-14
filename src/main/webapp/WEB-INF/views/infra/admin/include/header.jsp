@@ -22,9 +22,10 @@
 <link href="/resources/assets/css/sidebar-menu.css" rel="stylesheet"/>
 <!-- Custom Style-->
 <link href="/resources/assets/css/app-style.css" rel="stylesheet"/>
- 
+
 <!--Start sidebar-wrapper-->
 <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+
 	<div class="brand-logo">
       	<a href="indexAdmin">
        		<img src="/resources/assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
@@ -72,42 +73,6 @@
           		<span>Profile</span>
         	</a>
       	</li>
-		<c:choose>
-			<c:when test="${not empty id}">
-				<li>
-					<a href="" target="_blank">
-						<i class="zmdi zmdi-lock"></i>
-						<span><c:out value="${id}" /></span>
-					</a>
-				</li>
-				<li>
-					<a href="/logout">
-						<i class="zmdi zmdi-lock"></i>
-						<span>Logout</span>
-					</a>
-				</li>
-				<c:if test="${id eq 'admin'}">
-				<a href="/indexAdmin">
-					<i class="zmdi zmdi-lock"></i>
-					<span>Admin Page</span>
-				</a>
-				</c:if>
-			</c:when>
-			<c:otherwise>
-				<li>
-					<a href="/login" target="_blank">
-						<i class="zmdi zmdi-lock"></i>
-						<span>Login</span>
-					</a>
-				</li>
-				<li>
-					<a href="/join" target="_blank">
-						<i class="zmdi zmdi-lock"></i>
-						<span>Join us</span>
-					</a>
-				</li>
-			</c:otherwise>
-		</c:choose>
        	<li>
         	<a href="register.html" target="_blank">
           		<i class="zmdi zmdi-account-circle"></i> 
@@ -188,11 +153,12 @@
         				<a href="javaScript:void();">
            					<div class="media">
              					<div class="avatar">
-             						<img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar">
+									<c:out value="${id}"/>
+									<br>
              					</div>
             					<div class="media-body">
-            						<h6 class="mt-2 user-title">Sarajhon Mccoy</h6>
-            						<p class="user-subtitle">mccoy@example.com</p>
+            						<h6 class="mt-2 user-title"></h6>
+            						<p class="user-subtitle"></p>
             					</div>
            					</div>
           				</a>
@@ -204,10 +170,12 @@
         			<li class="dropdown-divider"></li>
         			<li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
         			<li class="dropdown-divider"></li>
-        			<li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+        			<li class="dropdown-item"><i class="icon-power mr-2"></i> <button id="btnLogout">Logout</button> </li>
       			</ul>
     		</li>
   		</ul>
 	</nav>
 </header>
+
+
 <!--End topb header-->
