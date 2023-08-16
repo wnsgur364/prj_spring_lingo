@@ -1,14 +1,12 @@
 package com.lingo.app.code;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.lingo.app.code.CodeService;
-import com.lingo.app.code.Code;
-import com.lingo.app.code.CodeDao;
-import com.lingo.app.code.CodeVo;
 
 @Service
 public class CodeServiceImpl implements CodeService {
@@ -53,8 +51,41 @@ public class CodeServiceImpl implements CodeService {
 		return dao.selectOneCount(vo);
 	}
 	
+//	for cache
+	@PostConstruct
+	public void selectListCachedCodeArrayList() throws Exception {
+		List<Code> codeListFromDb = (ArrayList<Code>) dao.selectListCachedCodeArrayList();
+		Code.cachedCodeArrayList.clear();
+		Code.cachedCodeArrayList.addAll(codeListFromDb);
+		System.out.println("cachedCodeArrayList: " + Code.cachedCodeArrayList.size() + " chached !");
+	}
 	
+	public static void clear() throws Exception {
+		Code.cachedCodeArrayList.clear();
+	}
+	public static List<Code> selectListCachedCode(String codegroup_seq) throws Exception {
+		List<Code> rt = new ArrayList<Code>();
+		for(Code codeRow : Code.cachedCodeArrayList) {
+			if (codeRow.getcodegroup_seq().equals(codegroup_seq)) {
+				rt.add(codeRow);
+			} else {
+				
+			}
+		}
+		return rt;
+	}
+
 	
-	
-	
+	public static String selectOneCachedCode(int code) throws Exception {
+		String rt = "";
+		for(Code codeRow : Code.cachedCodeArrayList) {
+			if (codeRow.getSeq().equals(Integer.toString(code))) {
+				rt = codeRow.getName();
+			} else {
+			
+			}
+		}
+		return rt;
+	}
+
 }

@@ -24,6 +24,9 @@
 <!-- Start wrapper-->
 <div id="wrapper">
   <%@ include file="../include/header.jsp" %>
+  
+   <jsp:useBean id="CodeServiceImpl" class="com.lingo.app.code.CodeServiceImpl"/>
+   
   <div class="clearfix"></div>
   <div class="content-wrapper">
     <div class="container-fluid">
@@ -80,6 +83,9 @@
                   </tr>
                   </thead>
                   <tbody>
+                  
+                  <c:set var="listCodeGender" value="${CodeServiceImpl.selectListCachedCode('1')}"/>
+                  
                   <c:choose>
                     <c:when test="${fn:length(list) eq 0}">
                     </c:when>
@@ -99,7 +105,13 @@
                           <td><c:out value="${list.address}"/></td>
                           <td><c:out value="${list.addressDetail}"/></td>
                           <td><c:out value="${list.badge}"/></td>
-                          <td><c:out value="${list.gender}"/></td>
+                          <td>
+                          <c:forEach items="${listCodeGender}" var="listGender" varStatus="statusGender">
+							<c:if test="${list.gender eq listGender.seq}">
+								<c:out value="${listGender.name }"/>
+							</c:if> 
+						  </c:forEach>
+							</td>
                         </tr>
                       </c:forEach>
                     </c:otherwise>

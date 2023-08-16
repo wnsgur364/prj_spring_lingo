@@ -82,18 +82,17 @@
    			,#{codegroup_seq}
    		)
    	</insert>   	
-   
-	<select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
+   <select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
 		SELECT
-			seq
-	    	,delNy
-	    	,useNy
-	    	,name
-	    	,codegroup_seq
+		 seq
+    	,delNy
+    	,useNy
+    	,name
+    	,codegroup_seq
 			
-		 FROM
-		 
+		FROM
 			code
 	
     </select>
+
 </mapper>

@@ -101,9 +101,10 @@
 
 $("#btn").on("click", function(){
 	
-	$("form[name=formList]").attr("action", "/codeGroupList").submit();
+	$("form[name=formList]").attr("action", "/codeList").submit();
 	
 });
+
 goList = function(thisPage) {
 	$("input:hidden[name=sthisPage]").val(thisPage);
 	$("form[name=formList]").attr("action", "codeList").submit();

@@ -1,5 +1,6 @@
 package com.lingo.app.code;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -27,6 +28,7 @@ public class CodeDao {
 	public int delete(Code dto){ return sqlSession.delete(namespace + ".delete", dto); }
 	public int uelete(Code dto){ return sqlSession.update(namespace + ".uelete", dto); }
 	public int insert(Code dto){ return sqlSession.insert(namespace + ".insert", dto); }
+	public List<Code> selectListCachedCodeArrayList() {return sqlSession.selectList(namespace + ".selectListCachedCodeArrayList", null);}
 	
 
 }

@@ -1,5 +1,9 @@
 package com.lingo.app.code;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Code {
 
 	
@@ -8,6 +12,11 @@ public class Code {
 	private Integer useNy;
 	private String name;
 	private Integer codegroup_seq;
+	
+	
+//	for cache
+	public static List<Code> cachedCodeArrayList = new ArrayList<Code>();
+	
 	
 	public String getSeq() {
 		return seq;

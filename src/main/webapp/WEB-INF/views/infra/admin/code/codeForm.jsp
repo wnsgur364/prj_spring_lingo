@@ -88,22 +88,22 @@
 
 $("#btnSave").on("click", function(){
 	
-	$("form[name=form]").attr("action", "/codeGroupList").submit();
+	$("form[name=form]").attr("action", "/codeInst").submit();
 	
 });
 
 $("#btnUpdate").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupUpdt").submit();
+ 	$("form[name=form]").attr("action", "/codeUpdt").submit();
 });
 
 
 $("#btnDelete").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupDele").submit();
+ 	$("form[name=form]").attr("action", "/codeDele").submit();
 });
 
 
 $("#btnUelete").on("click", function(){
- 	$("form[name=form]").attr("action", "/codeGroupUele").submit();
+ 	$("form[name=form]").attr("action", "/codeUele").submit();
 });
 
 </script>

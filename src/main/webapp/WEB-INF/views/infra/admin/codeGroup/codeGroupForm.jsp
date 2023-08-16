@@ -63,7 +63,9 @@
             <button type="button" class="btn btn-light " id="btnUelete"> Uelete</button>
             <button type="button" class="btn btn-light " id="btnUpdate"> Update</button>
           </div>
+          
           </form>
+          
          </div>
          </div>
       </div>
@@ -84,7 +86,7 @@
 
 $("#btnSave").on("click", function(){
 	
-	$("form[name=form]").attr("action", "/codeGroupList").submit();
+	$("form[name=form]").attr("action", "/codeGroupInst").submit();
 	
 });
 
