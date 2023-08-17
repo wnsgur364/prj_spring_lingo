@@ -44,7 +44,7 @@ public class MemberController {
         }
 
 
-        return "/infra/admin/modules/adminMemberList";
+        return "/infra/admin/member/adminMemberList";
     }
 
 

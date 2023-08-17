@@ -43,42 +43,44 @@
       	<li>
         	<a href="codeGroupList">
           		<i class="zmdi zmdi-grid"></i> 
-          		<span>CodeGroup Tables</span>
+          		<span>CodeGroup Table</span>
         	</a>
       	</li>
       	<li>
         	<a href="codeList">
           		<i class="zmdi zmdi-grid"></i> 
-          		<span>Code Tables</span>
+          		<span>Code Table</span>
         	</a>
       	</li>
       
 		<li>
 			<a href="/adminMemberList">
 				<i class="zmdi zmdi-grid"></i>
-				<span>Member Tables</span>
+				<span>Member Table</span>
 			</a>
 		</li>
-
+		
 		<li>
-        	<a href="calendar.html">
-          		<i class="zmdi zmdi-calendar-check"></i> 
-          		<span>Calendar</span>
-          		<small class="badge float-right badge-light">New</small>
-        	</a>
-      	</li>
-      	<li>
-        	<a href="profile.html">
-          		<i class="zmdi zmdi-face"></i> 
-          		<span>Profile</span>
-        	</a>
-      	</li>
-       	<li>
-        	<a href="register.html" target="_blank">
-          		<i class="zmdi zmdi-account-circle"></i> 
-          		<span>Registration</span>
-        	</a>
-      	</li>
+			<a href="/adminMemberList">
+				<i class="zmdi zmdi-grid"></i>
+				<span>Answer Table</span>
+			</a>
+		</li>
+		
+
+	
+      <li>
+			<a href="/adminMemberList">
+				<i class="zmdi zmdi-grid"></i>
+				<span>Quiz Table</span>
+			</a>
+		</li>
+       	 <li>
+			<a href="/adminMemberList">
+				<i class="zmdi zmdi-grid"></i>
+				<span>Quiz Table</span>
+			</a>
+		</li>
       	<li class="sidebar-header">LABELS</li>
       	<li>
       		<a href="javaScript:void();">
