@@ -78,7 +78,7 @@
 			url: "/logoutProc",
 			data: { },
 			success: function(response){
-				location.href = "/index"
+				location.href = "/"
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
