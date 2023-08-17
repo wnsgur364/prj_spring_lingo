@@ -28,7 +28,7 @@
 	<div class="content-wrapper">
   		<div class="container-fluid">
    			<div class="row mt-3">
-      			<div class="col-lg-6">
+      			<div class="col-lg-12">
        				<div class="card">
           				<div class="card-body">
             					<h5 class="card-title">CodeGroup Table</h5>
@@ -84,7 +84,7 @@
           					</div>
         				</div>
       				</div>
-	  
+				  </div>
  			<!--start overlay-->
 	  		<div class="overlay toggle-menu"></div>
 			<!--end overlay-->
