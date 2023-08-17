@@ -2,7 +2,6 @@ package com.lingo.app.quiz;
 
 import java.util.List;
 
-
 public interface QuizService {
 	
 	public int selectOneCount(QuizVo vo);
