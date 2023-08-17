@@ -53,7 +53,7 @@
 <header class="top-navbar">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index">
+      <a class="navbar-brand" href="/">
         <img src="../../../../resources/vendor/images/LingoLogo.png" alt="" class="headerLogo" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbars-host">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="materials">Materials</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a>
@@ -117,7 +117,7 @@
         url: "/logoutProc",
         data: { },
         success: function(response){
-          location.href = "/index"
+          location.href = "/"
         },
         error: function(jqXHR, textStatus, errorThrown) {
           alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
