@@ -22,36 +22,34 @@ public class QuizController {
 	
     @RequestMapping("/quiz")
     public String quiz(QuizVo qvo, Model qModel, AnswerVo avo, Model aModel) {
-        List<Quiz> allQuizzes = qService.selectList(qvo);
+        List<Quiz> quiz = qService.selectList(qvo);
+        
+        List<Quiz> selectQuiz = new ArrayList<Quiz>();
+        
+        int totalQuiz = quiz.size();
+        int quizToShow = 20;	// 보여질 퀴즈 숫자 (20개)
 
-        List<Quiz> selectedQuizzes = new ArrayList<Quiz>();
-
-        // Assuming allQuizzes and allAnswers have the same size and corresponding indices match
-
-        int totalQuestions = allQuizzes.size();
-        int numQuestionsToShow = 20;
-
-        // Ensure we have enough questions to show
-        if (totalQuestions >= numQuestionsToShow) {
+        if (totalQuiz >= quizToShow) {
             Random random = new Random();
-            List<Integer> selectedIndices = new ArrayList<Integer>();
+            List<Integer> selectIndex = new ArrayList<Integer>();
 
-            while (selectedIndices.size() < numQuestionsToShow) {
-                int randomIndex = random.nextInt(totalQuestions);
+            while (selectIndex.size() < quizToShow) {
+                int randomIndex = random.nextInt(totalQuiz);
                 
-                // Avoid duplicate questions
-                if (!selectedIndices.contains(randomIndex)) {
-                    selectedIndices.add(randomIndex);
-                    selectedQuizzes.add(allQuizzes.get(randomIndex));
+                if (!selectIndex.contains(randomIndex)) {
+                	selectIndex.add(randomIndex);
+                    selectQuiz.add(quiz.get(randomIndex));
                 }
             }
         } else {
             // by pass
         }
 
-        qModel.addAttribute("quiz", selectedQuizzes);
+        qModel.addAttribute("quiz", selectQuiz);
         aModel.addAttribute("answer", aService.selectList(avo));
 
         return "/infra/user/index/quiz";
     }
+    
+    
 }

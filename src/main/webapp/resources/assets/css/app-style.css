@@ -767,8 +767,8 @@ body.bg-theme15 {
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
    border: none;
    background-color: rgba(0,0,0,.2);
-   width:950px;
-   height:500px;
+/*    width:950px; */
+/*    height:500px; */
 }
 
 .card-header {
