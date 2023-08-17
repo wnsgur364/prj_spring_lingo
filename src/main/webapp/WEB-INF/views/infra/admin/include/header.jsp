@@ -61,7 +61,7 @@
 		</li>
 		
 		<li>
-			<a href="/adminMemberList">
+			<a href="answerList">
 				<i class="zmdi zmdi-grid"></i>
 				<span>Answer Table</span>
 			</a>
@@ -70,9 +70,9 @@
 
 	
       <li>
-			<a href="/adminMemberList">
+			<a href="learningList">
 				<i class="zmdi zmdi-grid"></i>
-				<span>Quiz Table</span>
+				<span>Learning Table</span>
 			</a>
 		</li>
        	 <li>

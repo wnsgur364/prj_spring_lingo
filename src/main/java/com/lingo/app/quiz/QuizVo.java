@@ -2,13 +2,14 @@ package com.lingo.app.quiz;
 
 import com.lingo.app.common.base.BaseVo;
 
+
 public class QuizVo extends BaseVo {
 	
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
 	
-// ----
+	
 	
 	public Integer getShOption() {
 		return shOption;

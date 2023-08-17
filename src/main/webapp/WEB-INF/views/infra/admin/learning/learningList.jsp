@@ -30,7 +30,7 @@
       			<div class="col-lg-12">
        				<div class="card">
           				<div class="card-body">
-            					<h5 class="card-title">Answer Table</h5>
+            					<h5 class="card-title">Learning Table</h5>
 								<div class="table">
 								
 			 					 
@@ -49,9 +49,11 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">delNy</th>
-            <th scope="col">useNy</th>
-            <th scope="col">name</th>
-            <th scope="col">codegroup_seq</th>
+            <th scope="col">title</th>
+            <th scope="col">tags</th>
+            <th scope="col">question</th>
+            <th scope="col">answer</th>
+            <th scope="col">member_seq</th>
         </tr>
     </thead>
    <tbody>
@@ -66,9 +68,11 @@
                     <tr>
                         <th scope="row"><c:out value="${list.seq }"/></th>
                         <td><c:out value="${list.delNy }"/></a></td>
-                        <td><c:out value="${list.answerNy }"/></td>
-                        <td><a href="answerForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.answer }"/></td>
-                        <td><c:out value="${list.quiz_seq }"/></td>
+                        <td><c:out value="${list.title }"/></td>
+                        <td><a href="learningForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.tags }"/></td>
+                        <td><c:out value="${list.question }"/></td>
+                        <td><c:out value="${list.answer }"/></td>
+                        <td><c:out value="${list.member_seq }"/></td>
                     </tr>
                 </c:forEach>
             </c:otherwise>
@@ -78,7 +82,7 @@
 <%@include file="../include/pagination.jsp"%>
 <!-- Rest of your HTML code... -->
 
-    <a href="answerForm"><button type="button" class="btn btn-secondary" id="btn">Add</button></a>          
+    <a href="learningListForm"><button type="button" class="btn btn-secondary" id="btn">Add</button></a>          
   				
           						</div>
           					</div>
@@ -101,13 +105,13 @@
 
 $("#btn").on("click", function(){
 	
-	$("form[name=formList]").attr("action", "/answerList").submit();
+	$("form[name=formList]").attr("action", "/learningList").submit();
 	
 });
 
 goList = function(thisPage) {
 	$("input:hidden[name=sthisPage]").val(thisPage);
-	$("form[name=formList]").attr("action", "answerList").submit();
+	$("form[name=formList]").attr("action", "learningList").submit();
 }
 
 </script>

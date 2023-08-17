@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -52,10 +51,18 @@
       </c:otherwise>
   </c:choose>         
            <div class="form-group">
-            <label for="input-3">Name</label>
-            <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.name }"/>" >
+            <label for="input-3">delNy</label>
+            <input type="text" class="form-control" name="delNy" id="delNy" value="<c:out value="${item.delNy }"/>" >
            </div>
             <div class="form-group">
+            <label for="input-3">useNy</label>
+            <input type="text" class="form-control" name="useNy" id="useNy" value="<c:out value="${item.useNy }"/>" >
+           </div>
+           <div class="form-group">
+            <label for="input-3">name</label>
+            <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.name }"/>" >
+           </div>
+           <div class="form-group">
             <label for="input-3">Codegroup_seq</label>
             <input type="text" class="form-control" name="name" id="name" value="<c:out value="${item.codegroup_seq }"/>" >
            </div>
