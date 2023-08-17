@@ -58,7 +58,7 @@
                         </div><!-- /  CONTENT BOX-->
 
                         <div class="pricingTable-sign-up">
-                            <a href="#" class="hover-btn-new orange"><span>Test</span></a>
+                            <a href="quiz" class="hover-btn-new orange"><span>Test</span></a>
                         </div><!-- BUTTON BOX-->
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         </div><!-- /  CONTENT BOX-->
 
                         <div class="pricingTable-sign-up">
-                            <a href="#" class="hover-btn-new orange"><span>Test</span></a>
+                            <a href="quiz" class="hover-btn-new orange"><span>Test</span></a>
                         </div><!-- BUTTON BOX-->
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                         </div><!-- /  CONTENT BOX-->
 
                         <div class="pricingTable-sign-up">
-                            <a href="#" class="hover-btn-new orange"><span>Test</span></a>
+                            <a href="quiz" class="hover-btn-new orange"><span>Test</span></a>
                         </div><!-- BUTTON BOX-->
                     </div>
                 </div>
