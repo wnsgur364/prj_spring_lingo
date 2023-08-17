@@ -31,14 +31,17 @@
 <div class="h1 text-center py-5">TEST</div>
 <div class="container d-flex justify-content-center align-items-center" style="background: #f3f3f3;">
     <form name="form" method="post">
-        <c:forEach items="${quiz}" var="quiz" varStatus="loop">
+        <c:forEach items="${quiz}" var="quiz" varStatus="quizLoop">
 	        <div class="col quiz-div" style="font-size: 1.5vw;">
-	            ${loop.count} <strong><c:out value="${quiz.question}"></c:out></strong>
-	            <c:forEach items="${answer}" var="answer">
+       	        <c:if test="${quizLoop.count != 1}">
+		            <hr>
+		        </c:if>
+	            <strong>Q${quizLoop.count}. <c:out value="${quiz.question}"></c:out></strong><br>
+	            <c:forEach items="${answer}" var="answer" varStatus="answerLoop">
 	                <c:if test="${quiz.seq eq answer.quiz_seq}">
 	                    <div class="form-check d-flex align-items-center">
-	                        <input class="form-check-input" type="radio" name="answer-${loop.index}" id="answer-${loop.index}" value="${answer.answer}">
-	                        <label class="form-check-label" for="answer-${loop.index}">
+                    	 	<input class="form-check-input" type="radio" name="answer-${quizLoop.index}" id="answer-${quizLoop.index}-${answerLoop.index}" value="${answer.answer}">
+	                        <label class="form-check-label" for="answer-${quizLoop.index}-${answerLoop.index}">
 	                            <c:out value="${answer.answer}"></c:out>
 	                        </label>
 	                    </div>
@@ -49,11 +52,22 @@
     </form>
 </div>
 <div class="d-flex justify-content-center align-items-center">
-	<button type="button" class="btn btn-dark">제출</button>
+	<button type="button" class="btn btn-dark" id="submit">제출</button>
 </div>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
 <script>
-	
+    // 인서트버튼 클릭이벤트
+    $("#submit").on("click", function(){
+        <c:forEach items="${quiz}" var="quiz" varStatus="quizLoop">
+            var quizIndex = ${quizLoop.index};
+            if(!$(':input:radio[name="answer-' + quizIndex + '"]:checked').val()) {
+                alert("정답을 선택해주세요.");
+                return;
+            }
+        </c:forEach>
+        alert("제출이 완료되었습니다.");
+        // $("form[name=form]").attr("action","/submit").submit();
+    });
 </script>
 </body>
 </html>

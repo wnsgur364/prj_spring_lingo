@@ -203,7 +203,7 @@
                     if (id === "admin") { // 아이디가 admin인 경우
                         location.href = "/indexAdmin"; // /admin 페이지로 리디렉션
                     } else {
-                        location.href = "/index"; // 그 외의 경우 /index 페이지로 리디렉션
+                        location.href = "/"; // 그 외의 경우 /index 페이지로 리디렉션
                     }
                 } else {
                     $("#mb_login_msg").text("아이디 또는 비밀번호를 잘못 입력하셨습니다.").show();
