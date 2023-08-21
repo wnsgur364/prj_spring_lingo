@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Login</title>
+    <title>AdminLogin</title>
     <!-- loader-->
     <link href="../../../../../resources/assets/css/pace.min.css" rel="stylesheet"/>
     <script src="../../../../../resources/assets/js/pace.min.js"></script>
@@ -45,12 +45,12 @@
                 <div class="text-center">
                     <img src="../../../../../resources/assets/images/logo-icon.png" alt="logo icon">
                 </div>
-                <div class="card-title text-uppercase text-center py-3">Sign In</div>
+                <div class="card-title text-uppercase text-center py-3">Admin Sign In</div>
                 <form name="form" method="post">
                     <div class="form-group">
                         <label for="id" class="sr-only">UserID</label>
                         <div class="position-relative has-icon-right">
-                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="test">
+                            <input type="text" name="id" id="id" class="form-control input-shadow" placeholder="Enter User ID" value="admin">
                             <div class="form-control-position">
                                 <i class="icon-user"></i>
                             </div>

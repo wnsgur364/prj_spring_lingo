@@ -29,6 +29,10 @@ public class MemberController {
         return "/infra/user/index/login";
     }
 
+    @RequestMapping("/adminLogin")
+    public String adminLogin() {
+        return "/infra/user/index/adminLogin";
+    }
 
     @RequestMapping("/adminMemberList")
 
