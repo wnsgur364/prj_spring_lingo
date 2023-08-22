@@ -38,4 +38,5 @@ public class MemberDao {
 
     public int uelete(Member dto) { return sqlSession.update(namespace + ".uelete", dto); }
 
+    public String getMemberSeqBySessionId(String sessionId) { return sqlSession.selectOne(namespace + ".getMemberSeqBySessionId", sessionId); }
 }

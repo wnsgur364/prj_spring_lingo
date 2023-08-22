@@ -2,6 +2,8 @@ package com.lingo.app.member;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 public interface MemberService {
 
     public int selectOneCount(MemberVo vo);
@@ -21,6 +23,6 @@ public interface MemberService {
 
     public int uelete(Member dto);
 
-
+    public String getMemberSeqBySessionId(@Param("sessionId") String sessionId);
 
 }
