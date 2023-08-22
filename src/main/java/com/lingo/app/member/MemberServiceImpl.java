@@ -39,5 +39,8 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public int uelete(Member dto) { return dao.uelete(dto); }
 
-
+	@Override
+	public String getMemberSeqBySessionId(String sessionId) {
+		return dao.getMemberSeqBySessionId(sessionId);
+	}
 }
