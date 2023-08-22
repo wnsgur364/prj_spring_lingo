@@ -20,6 +20,7 @@ public class AnswerServiceImpl implements AnswerService {
 	public List<Answer> selectList(AnswerVo vo) {
 		return dao.selectList(vo);
 	}
+	
 
 	@Override
 	public Answer selectOne(AnswerVo vo) {

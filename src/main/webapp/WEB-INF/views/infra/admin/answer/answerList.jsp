@@ -48,10 +48,10 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">delNy</th>
-            <th scope="col">useNy</th>
-            <th scope="col">name</th>
-            <th scope="col">codegroup_seq</th>
+            <th scope="col">quiz_seq</th>
+            <th scope="col">question</th>
+            <th scope="col">answerNy</th>
+            <th scope="col">answer</th>        
         </tr>
     </thead>
    <tbody>
@@ -61,14 +61,27 @@
                     <td class="text-center" colspan="4">There is no data!</td>
                 </tr>
             </c:when>
+            
             <c:otherwise>
                 <c:forEach items="${list}" var="list" varStatus="status">
                     <tr>
                         <th scope="row"><c:out value="${list.seq }"/></th>
-                        <td><c:out value="${list.delNy }"/></a></td>
-                        <td><c:out value="${list.answerNy }"/></td>
-                        <td><a href="answerForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.answer }"/></td>
-                        <td><c:out value="${list.quiz_seq }"/></td>
+                        
+                         <td><c:out value="${list.quiz_seq }"/></td>
+                       
+                         <td><c:out value="${list.question }"/></td>
+                                             
+                        <td>
+				    <c:choose>
+				        <c:when test="${list.answerNy == 1}"> 
+				           correct
+				        </c:when>
+				        <c:when test="${list.answerNy == 0}">      
+				            wrong
+				        </c:when>
+				    </c:choose>
+				      </td>
+                        <td><a href="answerForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.answer }"/></td>                        
                     </tr>
                 </c:forEach>
             </c:otherwise>
@@ -106,7 +119,7 @@ $("#btn").on("click", function(){
 });
 
 goList = function(thisPage) {
-	$("input:hidden[name=sthisPage]").val(thisPage);
+	$("input:hidden[name=thisPage]").val(thisPage);
 	$("form[name=formList]").attr("action", "answerList").submit();
 }
 

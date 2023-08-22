@@ -9,8 +9,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.lingo.app.code.Code;
-import com.lingo.app.code.CodeVo;
+
 
 @Repository
 public class CodeDao {

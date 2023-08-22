@@ -19,6 +19,7 @@ public class AnswerDao {
 
 	public int selectOneCount(AnswerVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<Answer> selectList(AnswerVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
+	
 	public Answer selectOne(AnswerVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
 	public int update(Answer dto){ return sqlSession.update(namespace + ".update", dto); }
 	public int delete(Answer dto){ return sqlSession.update(namespace + ".delete", dto); }

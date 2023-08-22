@@ -18,6 +18,7 @@ public class AnswerController {
 	
 	@RequestMapping("/answerList")
 	 public String answerList(@ModelAttribute("vo") AnswerVo vo, Model model) {
+		
 		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
     	
 		vo.setParamsPaging(service.selectOneCount(vo));
@@ -61,5 +62,7 @@ public class AnswerController {
 		service.insert(dto);
 		return "redirect:/answerList";
 	}
-
+	
+	
+	
 }

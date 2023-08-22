@@ -1,6 +1,5 @@
 package com.lingo.app.code;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
 import java.util.List;
 
@@ -10,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.lingo.app.codegroup.CodeGroupVo;
 
 @Controller
 public class CodeController {

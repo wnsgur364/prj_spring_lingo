@@ -7,6 +7,7 @@ public class Answer {
 	private Integer answerNy;
 	private String answer;
 	private String quiz_seq;
+	private String question;
 	
 //	----
 	
@@ -39,6 +40,12 @@ public class Answer {
 	}
 	public void setQuiz_seq(String quiz_seq) {
 		this.quiz_seq = quiz_seq;
+	}
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(String question) {
+		this.question = question;
 	}
 	
 }

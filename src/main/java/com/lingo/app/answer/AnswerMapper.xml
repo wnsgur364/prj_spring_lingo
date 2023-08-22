@@ -8,19 +8,26 @@
     <resultMap id="resultMapObj" type="com.lingo.app.answer.Answer"></resultMap>
     
 	<sql id="answer">
-		seq
-		,delNy
-		,answerNy
-		,answer
-		,quiz_seq   	
-	</sql>
-    
-   <sql id ="selectCommon">
+    a.seq ,
+    a.delNy,
+    a.answerNy,
+    a.answer,
+    a.quiz_seq
+</sql>
+
+<sql id="quiz">
+   
+    q.question
+</sql>
+
+
+ <sql id ="selectCommon">
    		FROM    
 	    	answer
 		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND answer LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
     </sql>
+
 
    	<select id="selectOneCount" resultType="Integer">
 		SELECT count(*)
@@ -28,12 +35,21 @@
 	</select>
 
    	<select id="selectList" resultMap="resultMapObj">
-<!-- 		SELECT aa.* FROM (   	 -->
-	   		SELECT
-				<include refid="answer" />
-	   			<include refid="selectCommon" />
-<!-- 		)aa -->
-<!-- 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
+ 		SELECT aa.* FROM (
+    SELECT 
+        a.seq,
+        a.delNy,
+        a.answerNy,
+        a.answer,
+        a.quiz_seq,
+        q.question
+    FROM 
+        answer a
+    JOIN 
+        quiz q ON a.quiz_seq = q.seq
+    WHERE 1=1
+) aa
+LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
    	
    	<select id="selectOne" resultMap="resultMapObj">
@@ -78,6 +94,6 @@
    			,#{answer}
    		  	,#{quiz_seq}
    		)
-   	</insert>  
-    
+   	</insert> 
+
 </mapper>
