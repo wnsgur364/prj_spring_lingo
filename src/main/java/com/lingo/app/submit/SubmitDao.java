@@ -1,5 +1,7 @@
 package com.lingo.app.submit;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.inject.Inject;
 
@@ -14,6 +16,13 @@ public class SubmitDao {
 	private SqlSession sqlSession;
 	
 	private static String namespace = "com.lingo.app.submit.SubmitMapper";
+	
+	public int selectOneCount(SubmitVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
+	public List<Submit> selectList(SubmitVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
+	public Submit selectOne(SubmitVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
+	public int update(Submit dto){ return sqlSession.update(namespace + ".update", dto); }
+	public int delete(Submit dto){ return sqlSession.update(namespace + ".delete", dto); }
+	public int insert(Submit dto){ return sqlSession.insert(namespace + ".insert", dto); }
 
 
 

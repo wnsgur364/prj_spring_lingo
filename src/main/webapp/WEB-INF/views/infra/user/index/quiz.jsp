@@ -66,7 +66,7 @@
             }
         </c:forEach>
         alert("제출이 완료되었습니다.");
-        // $("form[name=form]").attr("action","/submit").submit();
+        $("form[name=form]").attr("action","/submitInsert").submit();
     });
 </script>
 </body>
