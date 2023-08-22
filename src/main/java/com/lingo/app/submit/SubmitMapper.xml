@@ -17,11 +17,56 @@
 	</sql>
 	
    <sql id ="selectCommon">
-   		FROM    
-	    	submit
+   		FROM 
+   			submit s
+				LEFT JOIN quiz q ON s.quizSeq = q.seq
+				LEFT JOIN member m ON s.memberSeq = m.seq
+				LEFT JOIN answer a ON s.answer = a.seq AND s.answerNy = a.answerNy
 		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND memberSeq LIKE CONCAT('%',#{shKeyword},'%')</if>
+			<if test="shKeyword != null and !shKeyword.equals('')">AND answer LIKE CONCAT('%',#{shKeyword},'%')</if>
     </sql>
+
+  	<select id="selectOneCount" resultType="Integer">
+		SELECT count(*)
+		<include refid="selectCommon" />
+	</select>
+
+   	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM (   	
+	   		SELECT
+				<include refid="submit" />
+	   			<include refid="selectCommon" />
+			)aa
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select>
+   	
+   	<select id="selectOne" resultMap="resultMapObj">
+   		SELECT
+			<include refid="submit" />
+   		FROM
+   			submit
+		WHERE 1=1
+			AND seq = #{seq}	
+   	</select>   	
+   	
+   	<update id="update">
+   		UPDATE submit
+   		SET
+   			quizSeq = #{quizSeq}
+   			,memberSeq = #{memberSeq}
+   			,answerNy = #{answerNy}
+   			,answer = #{answer}
+		WHERE
+			seq = #{seq}	
+   	</update>   	
+   	 
+   	<update id="delete">
+   		UPDATE submit
+   		SET
+   			delNy = 1
+		WHERE
+			seq = #{seq}	
+   	</update>  
     
   	<insert id="insert">
    		INSERT INTO submit (
@@ -34,7 +79,7 @@
    		  	0
    		  	,#{quizSeq}
    			,#{memberSeq}
-   			,#{answerNy}
+   			,(SELECT answerNy FROM answer WHERE seq = #{answerSeq})
    		  	,#{answer}
    		)
    	</insert> 

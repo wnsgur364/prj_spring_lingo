@@ -4,10 +4,11 @@ public class Submit {
 
 	private String seq;
 	private Integer delNy;
-	private Integer quizSeq;
-	private Integer	memberSeq;
+	private String quizSeq;
+	private String	memberSeq;
+	private String	answerSeq;
 	private Integer	answerNy;
-	private Integer	answer;
+	private String	answer;
 	
 //	----
 	
@@ -23,16 +24,16 @@ public class Submit {
 	public void setDelNy(Integer delNy) {
 		this.delNy = delNy;
 	}
-	public Integer getQuizSeq() {
+	public String getQuizSeq() {
 		return quizSeq;
 	}
-	public void setQuizSeq(Integer quizSeq) {
+	public void setQuizSeq(String quizSeq) {
 		this.quizSeq = quizSeq;
 	}
-	public Integer getMemberSeq() {
+	public String getMemberSeq() {
 		return memberSeq;
 	}
-	public void setMemberSeq(Integer memberSeq) {
+	public void setMemberSeq(String memberSeq) {
 		this.memberSeq = memberSeq;
 	}
 	public Integer getAnswerNy() {
@@ -41,11 +42,17 @@ public class Submit {
 	public void setAnswerNy(Integer answerNy) {
 		this.answerNy = answerNy;
 	}
-	public Integer getAnswer() {
+	public String getAnswer() {
 		return answer;
 	}
-	public void setAnswer(Integer answer) {
+	public void setAnswer(String answer) {
 		this.answer = answer;
+	}
+	public String getAnswerSeq() {
+		return answerSeq;
+	}
+	public void setAnswerSeq(String answerSeq) {
+		this.answerSeq = answerSeq;
 	}
 	
 }
