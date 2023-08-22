@@ -50,8 +50,8 @@
             <th scope="col">#</th>
             <th scope="col">quiz_seq</th>
             <th scope="col">question</th>
-            <th scope="col">answerNy</th>
-            <th scope="col">answer</th>        
+            <th scope="col">answer</th>   
+            <th scope="col">answerNy</th>     
         </tr>
     </thead>
    <tbody>
@@ -65,23 +65,20 @@
             <c:otherwise>
                 <c:forEach items="${list}" var="list" varStatus="status">
                     <tr>
-                        <th scope="row"><c:out value="${list.seq }"/></th>
-                        
+                         <th scope="row"><c:out value="${list.seq }"/></th>
                          <td><c:out value="${list.quiz_seq }"/></td>
-                       
                          <td><c:out value="${list.question }"/></td>
-                                             
-                        <td>
-				    <c:choose>
-				        <c:when test="${list.answerNy == 1}"> 
-				           correct
-				        </c:when>
-				        <c:when test="${list.answerNy == 0}">      
-				            wrong
-				        </c:when>
-				    </c:choose>
-				      </td>
-                        <td><a href="answerForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.answer }"/></td>                        
+                         <td><a href="answerForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.answer }"/></td>                   
+                          <td>
+							    <c:choose>
+							        <c:when test="${list.answerNy == 1}"> 
+							           correct
+							        </c:when>
+							        <c:when test="${list.answerNy == 0}">      
+							            wrong
+							        </c:when>
+							    </c:choose>
+				          </td>
                     </tr>
                 </c:forEach>
             </c:otherwise>

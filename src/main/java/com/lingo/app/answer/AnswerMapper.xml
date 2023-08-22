@@ -8,25 +8,25 @@
     <resultMap id="resultMapObj" type="com.lingo.app.answer.Answer"></resultMap>
     
 	<sql id="answer">
-    a.seq ,
-    a.delNy,
-    a.answerNy,
-    a.answer,
-    a.quiz_seq
-</sql>
-
-<sql id="quiz">
-   
-    q.question
-</sql>
-
-
- <sql id ="selectCommon">
-   		FROM    
-	    	answer
-		WHERE 1=1
-			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+	    a.seq ,
+	    a.delNy,
+	    a.answerNy,
+	    a.answer,
+	    a.quiz_seq
     </sql>
+
+	<sql id="quiz">
+	   
+	    q.question
+	</sql>
+
+
+	  <sql id ="selectCommon">
+	   		FROM    
+		    	answer
+			WHERE 1=1
+				<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
+	    </sql>
 
 
    	<select id="selectOneCount" resultType="Integer">
@@ -56,7 +56,7 @@ LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}
    		SELECT
 			<include refid="answer" />
    		FROM
-   			answer
+   			answer a
 		WHERE 1=1
 			AND seq = #{seq}	
    	</select>   	

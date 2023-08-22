@@ -2212,6 +2212,11 @@ table.grid td {
 .pagination-separate .page-item .page-link{
    margin-left: 4px;
 }
+.pagination{
+	margin-left: 500px !important;
+/* 	margin-bottom: 10px !important; */
+	margin-top: 25px !important;
+}
 
 /* List Groups */
 .list-group {
@@ -3315,10 +3320,10 @@ table.grid td {
     border-bottom-left-radius: .25rem;
 }
 /* 수정*/
-.page-link{
-	display:block;
-	margin-left: 500px !important;
-}
+/* .page-link{ */
+/* 	display:block; */
+/* 	gap: 10px !important; */
+/* } */
 .footer {
   bottom: 0px;
   color: rgba(255, 255, 255, 0.73);
