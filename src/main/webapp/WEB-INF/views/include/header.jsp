@@ -84,7 +84,7 @@
               <span>Logout</span>
               </a>
             </button>
-                <span style="position: absolute; left: 50%; transform: translate(-50%, -50%); bottom: -25%; width: 100%; text-align: center;">Hi! <c:out value="${id}"/></span>
+                <span style="position: absolute; left: 50%; transform: translate(-50%, -50%); bottom: -25%; width: 100%; text-align: center;">Hi! <c:out value="${name}"/></span>
               </li>
 
 <%--              <c:if test="${id eq 'admin'}">--%>

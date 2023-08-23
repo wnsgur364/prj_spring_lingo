@@ -40,7 +40,7 @@
 			<exclude-mapping path="/quiz" />
 			<exclude-mapping path="/selectOneLogin" />
 			<exclude-mapping path="/adminLogin" />
-
+			<exclude-mapping path="/login/**" />
 
 			<beans:bean id="checkLoginSessionInterception" class="com.lingo.app.common.interceptor.CheckLoginSessionInterception"/>
 		</interceptor>
