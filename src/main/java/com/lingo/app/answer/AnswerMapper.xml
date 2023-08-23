@@ -52,6 +52,21 @@
 LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
    	
+   	<select id="selectView" resultMap="resultMapObj">
+	    SELECT 
+	        a.seq,
+	        a.delNy,
+	        a.answerNy,
+	        a.answer,
+	        a.quiz_seq,
+	        q.question
+	    FROM 
+	        answer a
+	    		LEFT JOIN quiz q ON a.quiz_seq = q.seq
+	    WHERE 1=1
+   	</select>
+   	
+   	
    	<select id="selectOne" resultMap="resultMapObj">
    		SELECT
 			<include refid="answer" />
