@@ -111,7 +111,7 @@ public class QuizController {
 	    System.out.println(sessionId + "의 seq는 " + memberSeq + "이고 " + selectedQuizSeq + " 의 정답 시퀀스는 " + selectedAnswerSeq);
 	    
 		sService.insert(dto);
-		return "redirect:/quiz";
+		return "redirect:/materials";
 	}
 	
 }
