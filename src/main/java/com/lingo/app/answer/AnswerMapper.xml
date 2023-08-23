@@ -49,7 +49,7 @@
         quiz q ON a.quiz_seq = q.seq
     WHERE 1=1
 ) aa
-LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+<!-- LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
    	</select>
    	
    	<select id="selectOne" resultMap="resultMapObj">

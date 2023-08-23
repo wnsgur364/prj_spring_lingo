@@ -26,6 +26,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <!--fontawesome -->
 <script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
+<!-- googlefont -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -34,7 +36,7 @@
 
 <!-- ALL JS FILES -->
 <script src="../../../../resources/vendor/js/all.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script> -->
 <!-- ALL PLUGINS -->
 <script src="../../../../resources/vendor/js/custom.js"></script>
 <!-- Mapsed JavaScript -->
