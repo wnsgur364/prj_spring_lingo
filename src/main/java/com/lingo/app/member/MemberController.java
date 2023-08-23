@@ -129,6 +129,7 @@ public class MemberController {
             // 로그인 성공 시 세션에 사용자 정보 저장
             httpSession.setMaxInactiveInterval(60 * 60); // 60min
             httpSession.setAttribute("id", vo.getId());
+            httpSession.setAttribute("name", rtMember.getName());
 
             returnMap.put("rtMember", rtMember);
             returnMap.put("rt", "success");

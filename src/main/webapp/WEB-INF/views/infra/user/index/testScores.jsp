@@ -43,8 +43,7 @@
                     <div class="pricingTable">
                         <div class="pricingTable-header">
                             <span class="heading">
-                                <h3><span class="material-symbols-outlined">
-									verified_user
+                                <h3>
 									</span>Test Date Scores</h3>
                             </span>
                            <span class="month"> </span>

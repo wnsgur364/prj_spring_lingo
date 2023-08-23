@@ -68,20 +68,20 @@
 			seq = #{seq}	
    	</update>  
     
-  	<insert id="insert">
-   		INSERT INTO submit (
-   			delNy
-			,quizSeq
-			,memberSeq
-			,answerNy
-			,answer 
-   		) values (
-   		  	0
-   		  	,#{quizSeq}
-   			,#{memberSeq}
-   			,(SELECT answerNy FROM answer WHERE seq = #{answerSeq})
-   		  	,#{answer}
-   		)
-   	</insert> 
+	<insert id="insert">
+	    INSERT INTO submit (
+	        delNy
+	        ,quizSeq
+	        ,memberSeq
+	        ,answerNy
+	        ,answer 
+	    ) values (
+	        0
+	        ,#{quizSeq}
+	        ,#{memberSeq}
+	        ,#{answerNy}
+	        ,#{answer}
+	    )
+	</insert>
     
 </mapper>

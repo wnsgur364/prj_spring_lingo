@@ -21,6 +21,11 @@ public class AnswerServiceImpl implements AnswerService {
 		return dao.selectList(vo);
 	}
 	
+	@Override
+	public List<Answer> selectView(AnswerVo vo) {
+		return dao.selectView(vo);
+	}
+	
 
 	@Override
 	public Answer selectOne(AnswerVo vo) {

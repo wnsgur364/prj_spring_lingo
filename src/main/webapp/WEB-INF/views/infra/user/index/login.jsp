@@ -85,7 +85,12 @@
 
                     <div class="form-row mt-4">
                         <div class="form-group mb-0 col-6">
-                            <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> KakaoTalk</button>
+<%--                            여기 a 태그에 적절하게 넣어야함 redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Flogin/kakao   본인 호스트/login/kakao까지--%>
+                            <a href="https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=6b4cc63a82c5df0d0745f8c7e135a319&redirect_uri=http://localhost:8080/login/kakao&response_type=code">
+                                <button type="button" class="btn btn-light btn-block">
+                                    <i class="fa fa-facebook-square"></i> KakaoTalk
+                                </button>
+                            </a>
                         </div>
                         <div class="form-group mb-0 col-6 text-right">
                             <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Naver</button>

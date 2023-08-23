@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lingo.app.kakao.KakaoMapper">
+
+
+    <!-- 정보 찾기 -->
+    <select id="findKakao" parameterType="java.util.HashMap" resultType="com.lingo.app.kakao.Kakao">
+        SELECT
+            *
+        FROM
+            member
+        WHERE
+            name=#{nickname} AND
+            email=#{email}
+    </select>
+
+    <!-- 정보 저장 -->
+    <insert id="kakaoInsert" parameterType="java.util.HashMap">
+        INSERT INTO member (
+                name,
+                email,
+                id
+        ) VALUES (
+                  #{nickname},
+                  #{email},
+                  #{email}
+                 )
+    </insert>
+
+</mapper>
