@@ -47,7 +47,7 @@ public class QuizController {
 	    String selectedAnswerSeq = ""; // 정답 seq 값을 담을 변수 초기화
 	    
 	    int totalQuiz = quiz.size();
-	    int quizToShow = 3; // 보여질 퀴즈 숫자 (20개)
+	    int quizToShow = 5; // 보여질 퀴즈 숫자 (20개)
 
 	    if (totalQuiz >= quizToShow) {
 	        Random random = new Random();
@@ -62,19 +62,23 @@ public class QuizController {
 
 	                selectedQuizSeqBuilder.append(selectedQuiz.getSeq()).append(", "); // 퀴즈 seq 값을 StringBuilder에 추가
 
-	                List<Answer> selectAnswers = aService.selectList(avo);
+	                List<Answer> selectAnswers = aService.selectView(avo);
 	                for (Answer selectedAnswer : selectAnswers) {
 	                    if (selectedAnswer.getQuiz_seq().equals(selectedQuiz.getSeq())) { // 퀴즈와 정답의 seq 값이 같은 경우
 	                        selectedAnswerSeqBuilder.append(selectedAnswer.getSeq()).append(", "); // 정답 seq 값을 StringBuilder에 추가
-	                    }
-	                }
+	                    } else {
+		                	// by pass
+		                }
+	                } 
+	            } else {
+	            	// by pass
 	            }
 	        }
 	    } else {
 	        // by pass
 	    }
 
-	 // 마지막에 불필요한 쉼표와 공백 제거
+	    // 마지막에 불필요한 쉼표와 공백 제거
 	    selectedQuizSeqBuilder.setLength(selectedQuizSeqBuilder.length() - 2);
 	    selectedAnswerSeqBuilder.setLength(selectedAnswerSeqBuilder.length() - 2);
 
@@ -85,66 +89,29 @@ public class QuizController {
 	    httpSession.setAttribute("selectedQuizSeq", selectedQuizSeq);
 	    httpSession.setAttribute("selectedAnswerSeq", selectedAnswerSeq);
 	    
+//	    qModel.addAttribute("selectedQuizSeq", selectedQuizSeq);
+//	    aModel.addAttribute("selectedAnswerSeq", selectedAnswerSeq);
+	    
 	    qModel.addAttribute("quiz", selectQuiz);
-        aModel.addAttribute("answer", aService.selectList(avo));
+        aModel.addAttribute("answer", aService.selectView(avo));
 
 	    System.out.println(sessionId + " 의 seq는 " + memberSeq + " 의 퀴즈 seq는 " + selectedQuizSeq + " 의 정답 seq는 " + selectedAnswerSeq);
 
 	    return "/infra/user/index/quiz";
 	}
 	
-//	@RequestMapping("/submitInsert")
-//	public String submitInsert(Submit dto, HttpSession httpSession) {
-//
-//	    String sessionId = (String) httpSession.getAttribute("id");
-//	    String memberSeq = mService.getMemberSeqBySessionId(sessionId);
-//	    String selectedQuizSeq = (String) httpSession.getAttribute("selectedQuizSeq");
-//	    String selectedAnswerSeq = (String) httpSession.getAttribute("selectedAnswerSeq");
-//	    
-//	    System.out.println(selectedQuizSeq + " 의 정답 시퀀스는 " + selectedAnswerSeq);
-//			
-//		sService.insert(dto);
-//		return "redirect:/quiz";
-//	}
-	
 	@RequestMapping("/submitInsert")
-	public String submitInsert(HttpServletRequest request, HttpSession httpSession) {
+	public String submitInsert(Submit dto, HttpSession httpSession) {
+
 	    String sessionId = (String) httpSession.getAttribute("id");
 	    String memberSeq = mService.getMemberSeqBySessionId(sessionId);
-
-	    Enumeration<String> parameterNames = request.getParameterNames();
-	    while (parameterNames.hasMoreElements()) {
-	        String paramName = parameterNames.nextElement();
-	        if (paramName.startsWith("answer-")) {
-	            String selectedAnswer = request.getParameter(paramName);
-	            int quizIndex = Integer.parseInt(paramName.split("-")[1]);
-
-	            // 퀴즈 시퀀스와 답변 시퀀스 세션에서 가져오기
-	            String selectedQuizSeq = (String) httpSession.getAttribute("selectedQuizSeq");
-	            String selectedAnswerSeq = (String) httpSession.getAttribute("selectedAnswerSeq");
-
-	            // 선택한 답변과 퀴즈 시퀀스로 답변 정보 조회
-	            Answer answer = aService.getAnswerBySelectedAnswerAndQuizSeq(selectedAnswerSeq, selectedQuizSeq);
-
-
-	            if (quiz != null && answer != null) {
-	                String selectedQuizSeq = quiz.getSeq();
-	                String selectedAnswerSeq = answer.getSeq();
-
-	                // DTO 생성 및 인서트 작업 수행
-	                Submit dto = new Submit();
-	                dto.setQuizSeq(selectedQuizSeq);
-	                dto.setMemberSeq(memberSeq);
-	                dto.setAnswerNy(selectedAnswerSeq);
-	                dto.setAnswer(selectedAnswer);
-	                
-	                sService.insert(dto); // DTO를 이용하여 인서트 작업 수행
-	            }
-	        }
-	    }
-
-	    return "redirect:/quiz";
+	    String selectedQuizSeq = (String) httpSession.getAttribute("selectedQuizSeq");
+	    String selectedAnswerSeq = (String) httpSession.getAttribute("selectedAnswerSeq");
+	    
+	    System.out.println(sessionId + "의 seq는 " + memberSeq + "이고 " + selectedQuizSeq + " 의 정답 시퀀스는 " + selectedAnswerSeq);
+	    
+		sService.insert(dto);
+		return "redirect:/quiz";
 	}
-
-    
+	
 }

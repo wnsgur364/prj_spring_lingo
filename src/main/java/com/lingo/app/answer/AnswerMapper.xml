@@ -24,6 +24,7 @@
  <sql id ="selectCommon">
    		FROM    
 	    	answer
+    		    LEFT JOIN quiz q ON a.quiz_seq = q.seq
 		WHERE 1=1
 			<if test="shKeyword != null and !shKeyword.equals('')">AND name LIKE CONCAT('%',#{shKeyword},'%')</if>
     </sql>
@@ -45,11 +46,25 @@
         q.question
     FROM 
         answer a
-    JOIN 
+    LEFT JOIN 
         quiz q ON a.quiz_seq = q.seq
     WHERE 1=1
 ) aa
 LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
+   	</select>
+   	
+   	<select id="selectView" resultMap="resultMapObj">
+	    SELECT 
+	        a.seq,
+	        a.delNy,
+	        a.answerNy,
+	        a.answer,
+	        a.quiz_seq,
+	        q.question
+	    FROM 
+	        answer a
+	    		LEFT JOIN quiz q ON a.quiz_seq = q.seq
+	    WHERE 1=1
    	</select>
    	
    	<select id="selectOne" resultMap="resultMapObj">
