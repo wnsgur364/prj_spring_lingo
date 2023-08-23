@@ -83,15 +83,6 @@
                     <p id="mb_login_msg" class="p_msg"></p>
                     <div class="text-center mt-3">Sign In With</div>
 
-                    <div class="form-row mt-4">
-                        <div class="form-group mb-0 col-6">
-                            <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> KakaoTalk</button>
-                        </div>
-                        <div class="form-group mb-0 col-6 text-right">
-                            <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Naver</button>
-                        </div>
-                    </div>
-
                 </form>
             </div>
         </div>

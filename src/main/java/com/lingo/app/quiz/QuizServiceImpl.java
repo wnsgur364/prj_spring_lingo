@@ -41,4 +41,9 @@ public class QuizServiceImpl implements QuizService {
 		return dao.insert(dto);
 	}
 
+	@Override
+	public List<Quiz> selectView(QuizVo vo) {
+		return dao.selectView(vo);
+	}
+
 }

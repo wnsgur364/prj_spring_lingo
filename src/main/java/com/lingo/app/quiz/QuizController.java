@@ -39,7 +39,7 @@ public class QuizController {
 	    String memberSeq = mService.getMemberSeqBySessionId(sessionId);
 	    System.out.println(sessionId + "의 seq는 " + memberSeq);
 	    
-	    List<Quiz> quiz = qService.selectList(qvo);
+	    List<Quiz> quiz = qService.selectView(qvo);
 	    List<Quiz> selectQuiz = new ArrayList<Quiz>();
 	    StringBuilder selectedQuizSeqBuilder = new StringBuilder(); // 여러 개의 퀴즈 seq 값을 담을 StringBuilder
 	    StringBuilder selectedAnswerSeqBuilder = new StringBuilder(); // 여러 개의 정답 seq 값을 담을 StringBuilder
@@ -110,8 +110,13 @@ public class QuizController {
 	    
 	    System.out.println(sessionId + "의 seq는 " + memberSeq + "이고 " + selectedQuizSeq + " 의 정답 시퀀스는 " + selectedAnswerSeq);
 	    
+	    
+	    
+	    
+	    
+	    
 		sService.insert(dto);
-		return "redirect:/quiz";
+		return "redirect:/materials";
 	}
 	
 }
