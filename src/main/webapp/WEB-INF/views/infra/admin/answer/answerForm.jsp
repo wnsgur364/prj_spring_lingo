@@ -31,7 +31,7 @@
       <div class="col-lg-6">
          <div class="card">
            <div class="card-body">
-           <div class="card-title">Code Form</div>
+           <div class="card-title">Answer Form</div>
            <hr>
            
              <form  name="form" method="post">

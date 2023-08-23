@@ -82,7 +82,7 @@
 <%@include file="../include/pagination.jsp"%>
 <!-- Rest of your HTML code... -->
 
-    <a href="learningListForm"><button type="button" class="btn btn-secondary" id="btn">Add</button></a>          
+    <a href="learningForm"><button type="button" class="btn btn-secondary" id="btn">Add</button></a>          
   				
           						</div>
           					</div>
