@@ -27,13 +27,19 @@
 		<include refid="selectCommon" />
 	</select>
 
-   	<select id="selectList" resultMap="resultMapObj">
-<!-- 		SELECT qq.* FROM (   	 -->
+   	<select id="selectView" resultMap="resultMapObj">
+   		SELECT
+			<include refid="quiz" />
+   			<include refid="selectCommon" />
+   	</select>
+   	
+  	<select id="selectListAdmin" resultMap="resultMapObj">
+		SELECT qq.* FROM (   	
 	   		SELECT
 				<include refid="quiz" />
 	   			<include refid="selectCommon" />
-<!-- 		)qq -->
-<!-- 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
+		)qq
+		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			
    	</select>
    	
    	<select id="selectOne" resultMap="resultMapObj">

@@ -40,8 +40,8 @@
 	            <c:forEach items="${answer}" var="answer" varStatus="answerLoop">
 	                <c:if test="${quiz.seq eq answer.quiz_seq}">
 	                    <div class="form-check d-flex align-items-center">
-                    	 	<input class="form-check-input" type="radio" name="answer-${quizLoop.index}" id="answer-${quizLoop.index}-${answerLoop.index}" value="${answer.answer}">
-	                        <label class="form-check-label" for="answer-${quizLoop.index}-${answerLoop.index}">
+                    	 	<input class="form-check-input" type="radio" name="answer-${quizLoop.index}" id="answer" value="${answer.seq}">
+	                        <label class="form-check-label" for="answer-${quizLoop.index}">
 	                            <c:out value="${answer.answer}"></c:out>
 	                        </label>
 	                    </div>
@@ -60,12 +60,13 @@
     $("#submit").on("click", function(){
         <c:forEach items="${quiz}" var="quiz" varStatus="quizLoop">
             var quizIndex = ${quizLoop.index};
-            if(!$(':input:radio[name="answer-' + quizIndex + '"]:checked').val()) {
+            var submitAnswer = $(':input:radio[name="answer-' + quizIndex + '"]:checked').val();
+            if(!submitAnswer) {
                 alert("정답을 선택해주세요.");
                 return;
             }
         </c:forEach>
-        alert("제출이 완료되었습니다.");
+        alert(submitAnswer + "제출이 완료되었습니다.");
         $("form[name=form]").attr("action","/submitInsert").submit();
     });
 </script>
