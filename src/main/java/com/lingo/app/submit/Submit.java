@@ -1,5 +1,7 @@
 package com.lingo.app.submit;
 
+import java.util.List;
+
 public class Submit {
 
 	private String seq;
@@ -9,6 +11,7 @@ public class Submit {
 	private String	answerSeq;
 	private Integer	answerNy;
 	private String	answer;
+	private List<Submit> selectedAnswers;
 	
 //	----
 	
@@ -53,6 +56,12 @@ public class Submit {
 	}
 	public void setAnswerSeq(String answerSeq) {
 		this.answerSeq = answerSeq;
+	}
+	public List<Submit> getSelectedAnswers() {
+		return selectedAnswers;
+	}
+	public void setSelectedAnswers(List<Submit> selectedAnswers) {
+		this.selectedAnswers = selectedAnswers;
 	}
 	
 }

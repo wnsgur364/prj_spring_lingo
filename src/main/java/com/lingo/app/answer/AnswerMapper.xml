@@ -101,7 +101,6 @@ LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}
 			,answerNy
 			,answer
 			,quiz_seq
-   			
    		) values (
    		    #{seq}
    		  	,0
