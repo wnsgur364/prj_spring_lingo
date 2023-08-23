@@ -38,6 +38,9 @@ public class SubmitServiceImpl implements SubmitService {
 
 	@Override
 	public int insert(Submit dto) {
+		
+		
+		
 		return dao.insert(dto);
 	}
 	

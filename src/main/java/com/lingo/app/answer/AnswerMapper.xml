@@ -101,7 +101,6 @@
 			,answerNy
 			,answer
 			,quiz_seq
-   			
    		) values (
    		    #{seq}
    		  	,0

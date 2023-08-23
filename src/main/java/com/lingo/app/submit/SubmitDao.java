@@ -23,8 +23,4 @@ public class SubmitDao {
 	public int update(Submit dto){ return sqlSession.update(namespace + ".update", dto); }
 	public int delete(Submit dto){ return sqlSession.update(namespace + ".delete", dto); }
 	public int insert(Submit dto){ return sqlSession.insert(namespace + ".insert", dto); }
-
-
-
-
 }

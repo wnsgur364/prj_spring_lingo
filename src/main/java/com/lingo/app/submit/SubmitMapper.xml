@@ -13,15 +13,17 @@
 		,quizSeq
 		,memberSeq
 		,answerNy
-		,answer   	
+		,answer
+		,submitDatetime   	
 	</sql>
 	
    <sql id ="selectCommon">
    		FROM 
-   			submit s
-				LEFT JOIN quiz q ON s.quizSeq = q.seq
-				LEFT JOIN member m ON s.memberSeq = m.seq
-				LEFT JOIN answer a ON s.answer = a.seq AND s.answerNy = a.answerNy
+   			submit 
+<!--    				s -->
+<!-- 				LEFT JOIN quiz q ON s.quizSeq = q.seq -->
+<!-- 				LEFT JOIN member m ON s.memberSeq = m.seq -->
+<!-- 				LEFT JOIN answer a ON s.answer = a.seq AND s.answerNy = a.answerNy -->
 		WHERE 1=1
 			<if test="shKeyword != null and !shKeyword.equals('')">AND answer LIKE CONCAT('%',#{shKeyword},'%')</if>
     </sql>
@@ -74,14 +76,16 @@
 	        ,quizSeq
 	        ,memberSeq
 	        ,answerNy
-	        ,answer 
-	    ) values (
+	        ,answer
+	        ,submitDatetime
+	    ) VALUES (
 	        0
 	        ,#{quizSeq}
 	        ,#{memberSeq}
 	        ,#{answerNy}
 	        ,#{answer}
-	    )
+	        ,now()
+		)	    
 	</insert>
     
 </mapper>

@@ -1,17 +1,17 @@
 package com.lingo.app.quiz;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
 import java.util.Random;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lingo.app.answer.Answer;
 import com.lingo.app.answer.AnswerServiceImpl;
@@ -100,6 +100,7 @@ public class QuizController {
 	    return "/infra/user/index/quiz";
 	}
 	
+	@ResponseBody
 	@RequestMapping("/submitInsert")
 	public String submitInsert(Submit dto, HttpSession httpSession) {
 
@@ -107,12 +108,15 @@ public class QuizController {
 	    String memberSeq = mService.getMemberSeqBySessionId(sessionId);
 	    String selectedQuizSeq = (String) httpSession.getAttribute("selectedQuizSeq");
 	    String selectedAnswerSeq = (String) httpSession.getAttribute("selectedAnswerSeq");
+	    List<Submit> selectedAnswers = dto.getSelectedAnswers();
 	    
 	    System.out.println(sessionId + "의 seq는 " + memberSeq + "이고 " + selectedQuizSeq + " 의 정답 시퀀스는 " + selectedAnswerSeq);
 	    
-	    
-	    
-	    
+	    dto.setQuizSeq(selectedQuizSeq);
+	    dto.setMemberSeq(memberSeq);
+	    dto.setAnswerNy(null);
+	    	
+	    System.out.println("퀴즈 seq: " + dto.getQuizSeq() + ", 회원 seq: " + dto.getMemberSeq() + ", 정답유무: " + dto.getAnswerNy() + ", 정답 seq: " + selectedAnswers);
 	    
 	    
 		sService.insert(dto);
