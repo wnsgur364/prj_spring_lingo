@@ -11,7 +11,7 @@ public class Submit {
 	private String	answerSeq;
 	private Integer	answerNy;
 	private String	answer;
-	private List<Submit> selectedAnswers;
+	private String[] selectedAnswers;
 	
 //	----
 	
@@ -57,10 +57,10 @@ public class Submit {
 	public void setAnswerSeq(String answerSeq) {
 		this.answerSeq = answerSeq;
 	}
-	public List<Submit> getSelectedAnswers() {
+	public String[] getSelectedAnswers() {
 		return selectedAnswers;
 	}
-	public void setSelectedAnswers(List<Submit> selectedAnswers) {
+	public void setSelectedAnswers(String[] selectedAnswers) {
 		this.selectedAnswers = selectedAnswers;
 	}
 	
