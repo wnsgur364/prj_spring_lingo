@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -26,49 +25,78 @@
     <link rel="shortcut icon" href="../../../../../resources/images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="../../../../../resources/images/apple-touch-icon.png">
     
+    
+	<!-- 부트스트랩 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   
+	    
 </head>
+
 <body class="host_version"> 
 
-<%@ include file="/WEB-INF/views/include/header.jsp" %>
-	<div class="all-title-box">
-		<div class="container text-center">
-			<h1>Test Scores</h1>
+	<%@ include file="/WEB-INF/views/include/header.jsp" %>
+		<div class="all-title-box">
+			<div class="container text-center">
+				<h1>Test Scores</h1>
+			</div>
 		</div>
+	
+	<div class="mainTable">
+		<div class=" h1 text-center py-5">Quiz Answer</div>
+	
+		<table class="table table-bordered table-spacing">
+		  <tbody>
+		    <tr >
+		      <th scope="col" style="font-size:large;">Name:</th>
+		      <th scope="col" style="font-size:large;">Date:</th>
+		    </tr>
+		  </tbody>
+		</table>
+		
+		<table class="table table-bordered">
+		  <thead>
+		    <tr >
+		      <th scope="row" style="text-align:center; font-size:large;">Quiz</th>
+		      <th scope="row" style="text-align:center; font-size:large;">My Answer</th>
+		      <th scope="row" style="text-align:center; font-size:large;">Answer</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">who are you</th>
+		      <td></td>
+		      <td></td>
+		    </tr>
+		    <tr>
+		      <th scope="row">baboo</th>
+		      <td></td>
+		      <td></td>
+		    </tr>
+		    <tr>
+		      <th scope="row">pizza</th>
+		      <td></td>
+		      <td></td>
+		    </tr>
+		    <tr>
+		      <th scope="row">pizza</th>
+		      <td></td>
+		      <td></td>
+		    </tr>
+		    <tr>
+		      <th scope="row">pizza</th>
+		      <td></td>
+		      <td></td>
+		    </tr>
+		  </tbody>
+		</table>
 	</div>
-
-    <div id="pricing-box" class="section wb">
-        <div class="container">
-			<div class="row">
-                <div class="col-md-15 col-sm-12">
-                    <div class="pricingTable">
-                        <div class="pricingTable-header">
-                            <span class="heading">
-                                <h3>
-									</span>Test Date Scores</h3>
-                            </span>
-                           <span class="month"> </span>
-                        </div>
-                        <div class="pricingContent">
-                            
-                            <div>
-                            
-                           
-                            </div>
-                            
-                            
-                          
-                            
-
-                        </div><!-- /  CONTENT BOX-->
-
-                        
-                    </div>
-                </div>
-            </div>
-		</div>
-    </div><!-- end section -->
-
-    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
+	<div class="d-flex justify-content-center align-items-center">
+		<a href="materials"/><button type="button" class="btn btn-dark" id="goback">Go back</button>
+	</div>
+	
+	    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
 
 </body>
 </html>

@@ -98,9 +98,7 @@ public class Member {
     public void setAddressDetail(String addressDetail) {
         this.addressDetail = addressDetail;
     }
-
-
-
+    
     public Integer getBadge() {
         return badge;
     }

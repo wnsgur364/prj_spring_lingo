@@ -35,6 +35,7 @@
 	</select>
 
    	<select id="selectList" resultMap="resultMapObj">
+   		
  		SELECT aa.* FROM (
     SELECT 
         a.seq,

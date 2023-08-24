@@ -76,7 +76,7 @@
 			</a>
 		</li>
        	 <li>
-			<a href="/adminMemberList">
+			<a href="/quizList">
 				<i class="zmdi zmdi-grid"></i>
 				<span>Quiz Table</span>
 			</a>

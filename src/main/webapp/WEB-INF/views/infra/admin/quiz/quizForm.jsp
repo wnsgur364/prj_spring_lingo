@@ -97,11 +97,11 @@
 <script type="text/javascript">
 
 
-$("#btnSave").on("click", function(){
+// $("#btnSave").on("click", function(){
 	
-	$("form[name=form]").attr("action", "/quizInst").submit();
+// 	$("form[name=form]").attr("action", "/quizInst").submit();
 	
-});
+// });
 
 $("#btnUpdate").on("click", function(){
  	$("form[name=form]").attr("action", "/quizUpdt").submit();
