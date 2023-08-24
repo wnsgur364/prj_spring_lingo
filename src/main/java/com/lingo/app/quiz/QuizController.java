@@ -79,6 +79,7 @@ public class QuizController {
 	
 	@RequestMapping("/testScores")
 	public String testScores() {
+		// answer, quiz 조인해서 보여주고 점수 내야함
 		return "/infra/user/index/testScores";
 	}
 	
