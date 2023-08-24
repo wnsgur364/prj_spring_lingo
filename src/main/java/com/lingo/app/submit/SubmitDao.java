@@ -20,6 +20,7 @@ public class SubmitDao {
 	
 	public int selectOneCount(SubmitVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<Submit> selectList(SubmitVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
+	public List<Submit> selectView(SubmitVo vo) {return sqlSession.selectList(namespace + ".selectView", vo); }	
 	public Submit selectOne(SubmitVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
 	public int update(Submit dto){ return sqlSession.update(namespace + ".update", dto); }
 	public int delete(Submit dto){ return sqlSession.update(namespace + ".delete", dto); }

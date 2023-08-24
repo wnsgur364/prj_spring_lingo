@@ -45,52 +45,45 @@
 	
 	<div class="col-md-12">
 		<div class=" h1 text-center py-5">Quiz Answer</div>
-	
-		<table class="table table-bordered table-spacing">
-		  <tbody>
-		    <tr >
-		      <th scope="col" style="font-size:large;">Name:</th>
-		      <th scope="col" style="font-size:large;">Date:</th>
-		    </tr>
-		  </tbody>
-		</table>
-		
-		<table class="table table-bordered">
-		  <thead>
-		    <tr >
-		      <th scope="row" style="text-align:center; font-size:large;">Quiz</th>
-		      <th scope="row" style="text-align:center; font-size:large;">My Answer</th>
-		      <th scope="row" style="text-align:center; font-size:large;">Answer</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <th scope="row">who are you</th>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		    <tr>
-		      <th scope="row">baboo</th>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		    <tr>
-		      <th scope="row">pizza</th>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		    <tr>
-		      <th scope="row">pizza</th>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		    <tr>
-		      <th scope="row">pizza</th>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		  </tbody>
-		</table>
+		<c:choose>
+			<c:when test="${fn:length(list) eq 0}">
+				<tr>
+	                <td colspan="6">There is no data</td>
+	            </tr>
+			</c:when>
+			<c:otherwise>
+				<c:forEach items="${list}" var="list" varStatus="loop">
+				<c:if test="${loop.index % 5 == 0}">
+				<table class="table table-borderess table-spacing">
+				  <tbody>
+				    <tr >
+				      <th scope="col">Name: ${list.name}</th>
+				      <th scope="col">Date: ${list.submitDatetime}</th>
+				    </tr>
+				  </tbody>
+				</table>
+				</c:if>
+				<table class="table table-borderess">
+				  <thead>
+				    <tr>
+				      <th class="col-6">Quiz</th>
+				      <th class="col-2">My Answer</th>
+				      <th class="col-2">Answer</th>
+				      <th class="col-2">O/X</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>Q${loop.count}.${list.question}</td>
+				      <td>${list.answer}</td>
+				      <td>${list.answerCheck}</td>
+				      <td>${list.answerNy == 1 ? "O" : "X"}</td>
+				    </tr>
+                </tbody>
+				</table>
+				</c:forEach>
+			</c:otherwise>
+		</c:choose>
 	</div>
 	<div class="d-flex justify-content-center align-items-center py-4">
 		<button type="button" class="btn btn-dark" id="goback" onclick="location.href='materials'">Go back</button>

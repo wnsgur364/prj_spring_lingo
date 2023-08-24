@@ -80,4 +80,9 @@ public class SubmitServiceImpl implements SubmitService {
 
 	    return insertedDataCount; // 저장한 데이터 개수 반환
 	}
+
+	@Override
+	public List<Submit> selectView(SubmitVo vo) {
+		return dao.selectView(vo);
+	}
 }

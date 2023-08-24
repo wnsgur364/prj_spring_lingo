@@ -6,6 +6,7 @@ public interface SubmitService {
 	
 	public int selectOneCount(SubmitVo vo);
 	public List<Submit> selectList(SubmitVo vo);
+	public List<Submit> selectView(SubmitVo vo);
 	public Submit selectOne(SubmitVo vo);
 	public int update(Submit dto);
 	public int delete(Submit dto);
