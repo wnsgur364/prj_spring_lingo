@@ -67,10 +67,10 @@
                 <c:forEach items="${list}" var="list" varStatus="status">
                     <tr>
                         <th scope="row"><c:out value="${list.seq }"/></th>
-                        <td><c:out value="${list.delNy }"/></a></td>
+                        <td><c:out value="${list.delNy }"/></td>
                         <td><c:out value="${list.title }"/></td>
-                        <td><a href="learningForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.tags }"/></td>
-                        <td><c:out value="${list.question }"/></td>
+                        <td><c:out value="${list.tags }"/></td>
+                        <td><a href="learningForm?seq=<c:out value="${list.seq }"/>"><c:out value="${list.question }"/></td>
                         <td><c:out value="${list.answer }"/></td>
                         <td><c:out value="${list.member_seq }"/></td>
                     </tr>

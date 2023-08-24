@@ -7,6 +7,8 @@ public class LearningVo extends BaseVo {
 	private Integer shOption;
 	private String shKeyword;
 	private String seq;
+	
+	
 	public Integer getShOption() {
 		return shOption;
 	}

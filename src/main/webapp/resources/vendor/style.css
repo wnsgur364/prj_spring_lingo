@@ -3912,9 +3912,22 @@ a.link-style3 {
 .course-meta-bot ul li:hover{
 	color: #eea412;
 }
-
-
-
+.mainTable{
+	width:1500px;
+	height:750px;
+	background-color:rgba(0,0,0,0.01);
+	}
+		
+.table {
+	margin-top: 50px;
+	margin:auto;
+	width: 1000px !important;
+	height: 2500px important;
+}
+.table-spacing {
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+    }
 
 
 

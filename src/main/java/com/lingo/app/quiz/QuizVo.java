@@ -10,7 +10,6 @@ public class QuizVo extends BaseVo {
 	private String seq;
 	
 	
-	
 	public Integer getShOption() {
 		return shOption;
 	}

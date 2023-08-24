@@ -37,16 +37,16 @@ public class CodeGroupController {
 	    }
 	    
 	
-	@RequestMapping("/codeGroupForm")
-	public String codeGroupForm(CodeGroupVo vo, Model model) {
-
-
-		CodeGroup item = service.selectOne(vo);
-		
-		model.addAttribute("item", item);
-		
-		 return "/infra/admin/codeGroup/codeGroupForm";
-	}
+		@RequestMapping("/codeGroupForm")
+		public String codeGroupForm(CodeGroupVo vo, Model model) {
+	
+	
+			CodeGroup item = service.selectOne(vo);
+			
+			model.addAttribute("item", item);
+			
+			 return "/infra/admin/codeGroup/codeGroupForm";
+		}
 		
 	
 	@RequestMapping("/codeGroupUpdt")

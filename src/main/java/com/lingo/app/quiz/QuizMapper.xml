@@ -33,7 +33,7 @@
    			<include refid="selectCommon" />
    	</select>
    	
-  	<select id="selectListAdmin" resultMap="resultMapObj">
+  	<select id="selectList" resultMap="resultMapObj">
 		SELECT qq.* FROM (   	
 	   		SELECT
 				<include refid="quiz" />

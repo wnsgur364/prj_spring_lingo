@@ -10,6 +10,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
+>>>>>>> branch 'main' of https://github.com/wnsgur364/prj_spring_lingo.git
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lingo.app.answer.AnswerServiceImpl;
@@ -80,5 +85,41 @@ public class QuizController {
 	public String testScores() {
 		return "/infra/user/index/testScores";
 	}
+	
+	
+	
+	//admin
+	
+	
+	
+	 @RequestMapping("/quizList")
+	    public String quizList(@ModelAttribute("vo") QuizVo vo, Model model) {
+	        
+	    	vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
+	    	
+			vo.setParamsPaging(qService.selectOneCount(vo));
+	    	
+	    	
+			if(vo.getTotalRows() > 0) {
+	    	List<Quiz> list = qService.selectList(vo);
+	        model.addAttribute("list", list); 
+			} else {
+			
+			}
+	        return "infra/admin/quiz/quizList";
+	    }
+	    
+	
+		@RequestMapping("/quizForm")
+		public String quizForm(QuizVo vo, Model model) {
+	
+	
+			Quiz item = qService.selectOne(vo);
+			
+			model.addAttribute("item", item);
+			
+			 return "/infra/admin/quiz/quizForm";
+		}
+		
 	
 }
