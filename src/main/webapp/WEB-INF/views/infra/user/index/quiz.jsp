@@ -55,6 +55,7 @@
 </div>
 <div class="d-flex justify-content-center align-items-center">
 	<button type="button" class="btn btn-dark" id="submit">Submit</button>
+<!-- 	버튼 클릭시 모달로 이동하도록 해야함	 -->
 </div>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
 <script>

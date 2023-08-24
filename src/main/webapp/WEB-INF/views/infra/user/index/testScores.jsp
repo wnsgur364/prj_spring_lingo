@@ -43,7 +43,7 @@
 			</div>
 		</div>
 	
-	<div class="mainTable">
+	<div class="col-md-12">
 		<div class=" h1 text-center py-5">Quiz Answer</div>
 	
 		<table class="table table-bordered table-spacing">
@@ -92,8 +92,8 @@
 		  </tbody>
 		</table>
 	</div>
-	<div class="d-flex justify-content-center align-items-center">
-		<a href="materials"/><button type="button" class="btn btn-dark" id="goback">Go back</button>
+	<div class="d-flex justify-content-center align-items-center py-4">
+		<button type="button" class="btn btn-dark" id="goback" onclick="location.href='materials'">Go back</button>
 	</div>
 	
 	    <%@ include file="/WEB-INF/views/include/footer.jsp" %>
