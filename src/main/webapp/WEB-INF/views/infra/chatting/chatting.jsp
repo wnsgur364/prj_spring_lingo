@@ -13,7 +13,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dodomall_livetv</title>
+    <title>LingoChat</title>
 
     <!-- 채팅 css -->
     <link rel="stylesheet" href="../../../../resources/chat/css/chat.css" />
@@ -39,72 +39,67 @@
 
 <body>
 <div class="hugeContainer">
-    <div class="chatCurtain"></div>
+<%--    <div class="chatCurtain"></div>--%>
 
     <%@include file="chat.jsp"%>
-    <div class="border_box">
-        <%--검색 부분--%>
-        <%--검색 부분--%>
-        <div class="srch_box">
-            <c:choose>
-                <c:when test="${not empty id }">
-                    <%--Profile Picture--%>
-                    <%--Profile Picture--%>
+<%--    <div class="border_box">--%>
+<%--        &lt;%&ndash;검색 부분&ndash;%&gt;--%>
+<%--        &lt;%&ndash;검색 부분&ndash;%&gt;--%>
+<%--        <div class="srch_box">--%>
+<%--            <c:choose>--%>
+<%--                <c:when test="${not empty id }">--%>
+<%--                    &lt;%&ndash;Profile Picture&ndash;%&gt;--%>
+<%--                    &lt;%&ndash;Profile Picture&ndash;%&gt;--%>
 
 
-                    <div class="dropDown">
-                        <a id="headerProfile" href="#">
-                            <c:choose>
-                                <c:when test="${not empty sessionProfilePath}">
-                                    <img style="object-fit: cover; align-self: center; transition: all .2s ease-in-out;"
-                                         id="uploadImgProfilePreview1"
-                                         src="<c:out value="${sessionProfilePath}"/><c:out value="${userName}"/>"
-                                         class="rounded-circle d-block" width="80" height="80"
-                                    />
-                                </c:when>
-                                <c:otherwise>
-                                    <img style="object-fit: cover; align-self: center; transition: all .2s ease-in-out;"
-                                         id="uploadImgProfilePreview"
-                                         src="/resources/img/prj_1/admin/defaultProfile.png"
-                                         class="rounded-circle d-block" width="75" height="75"
-                                    />
-                                </c:otherwise>
-                            </c:choose>
+<%--                    <div class="dropDown">--%>
+<%--                        <a id="headerProfile" href="#">--%>
+<%--                            <c:choose>--%>
+<%--                                <c:when test="${not empty sessionProfilePath}">--%>
+<%--                                    <img style="object-fit: cover; align-self: center; transition: all .2s ease-in-out;"--%>
+<%--                                         id="uploadImgProfilePreview1"--%>
+<%--                                         src="<c:out value="${sessionProfilePath}"/><c:out value="${userName}"/>"--%>
+<%--                                         class="rounded-circle d-block" width="80" height="80"--%>
+<%--                                    />--%>
+<%--                                </c:when>--%>
+<%--                                <c:otherwise>--%>
+<%--                                    <img style="object-fit: cover; align-self: center; transition: all .2s ease-in-out;"--%>
+<%--                                         id="uploadImgProfilePreview"--%>
+<%--                                         src="/resources/img/prj_1/admin/defaultProfile.png"--%>
+<%--                                         class="rounded-circle d-block" width="75" height="75"--%>
+<%--                                    />--%>
+<%--                                </c:otherwise>--%>
+<%--                            </c:choose>--%>
 
-                        </a>
-                        <div class="userMenu">
-                            <div id="userGear" class="goTo"><span class="material-symbols-outlined">settings</span></div>
-                            <div onclick="logOutUser()" class="logOut"><span class="material-symbols-outlined">logout</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </c:when>
-                <c:otherwise>
-                    <div style="cursor: pointer;" onclick="location.href='/login'" class="outBtn">
-                        <span class="material-symbols-outlined">login</span>
-                    </div>
-
-                </c:otherwise>
-            </c:choose>
+<%--                        </a>--%>
+<%--                        <div class="userMenu">--%>
+<%--                            <div id="userGear" class="goTo"><span class="material-symbols-outlined">settings</span></div>--%>
+<%--                            <div onclick="logOutUser()" class="logOut"><span class="material-symbols-outlined">logout</span>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
 
 
-        </div>
-        <%--검색 부분--%>
-        <%--검색 부분--%>
+<%--                </c:when>--%>
+<%--                <c:otherwise>--%>
+<%--                    <div style="cursor: pointer;" onclick="location.href='/login'" class="outBtn">--%>
+<%--                        <span class="material-symbols-outlined">login</span>--%>
+<%--                    </div>--%>
+
+<%--                </c:otherwise>--%>
+<%--            </c:choose>--%>
+
+
+<%--        </div>--%>
+<%--        &lt;%&ndash;검색 부분&ndash;%&gt;--%>
+<%--        &lt;%&ndash;검색 부분&ndash;%&gt;--%>
 
 
 
     </div> <%--BorderBox--%>
 </div> <%--hugeContainer--%>
-<%--임시 채팅 div--%>
-<%--임시 채팅 div--%>
-<div style="font-weight: 900; color: white; font-family: 'neurimboGothicRegular'; display: flex; align-items: center; justify-content: center; position: fixed; z-index: 1001; bottom: 10px; right: 10px; width: 100px; height: 30px; background-color: coral; cursor: pointer; border-radius: 10px;" id="chat">
-    TALK
-</div>
-<%--임시 채팅 div--%>
-<%--임시 채팅 div--%>
+<%@ include file="/WEB-INF/views/include/footer.jsp" %>
+
 </body>
 </html>
 <script>
@@ -116,11 +111,11 @@
 </script>
 <script>
     $(function(){
-        const curtain = $(".chatCurtain");
+        const curtain = $(".chat-container");
         const frame = $(".chatFrame");
         curtain.hide();
         frame.hide();
-        $("#chat").on("click",function(){
+        $("#chatNo1").on("click",function(){
             curtain.fadeToggle();
             frame.fadeToggle();
             var chatRecord = $(".chatRecord")[0];
