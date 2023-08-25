@@ -242,11 +242,11 @@
 			<artifactId>spring-websocket</artifactId>
 			<version>4.1.7.RELEASE</version>
 		</dependency>
-<!--		롬복-->
+		<!--롬복-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.12</version>
+			<version>1.18.28</version>
 			<scope>provided</scope>
 		</dependency>
 
