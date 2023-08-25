@@ -36,8 +36,8 @@ public class KakaoServiceImpl implements KakaoService {
 
             sb.append("&client_id=6b4cc63a82c5df0d0745f8c7e135a319"); //본인이 발급받은 key
 //            리다이렉트 주소 입력해야용함
-            sb.append("&redirect_uri=http://localhost:8080/login/kakao"); // 본인이 설정한 주소
-
+//            sb.append("&redirect_uri=http://52.79.240.22:8080/login/kakao"); // 본인이 설정한 주소
+            sb.append("&redirect_uri=http://localhost:8080/login/kakao");
             sb.append("&code=" + authorize_code);
             bw.write(sb.toString());
             bw.flush();
