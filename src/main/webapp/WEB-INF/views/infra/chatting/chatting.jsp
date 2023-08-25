@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -12,10 +13,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>dodomall_livetv</title>
 
     <!-- 채팅 css -->
     <link rel="stylesheet" href="../../../../resources/chat/css/chat.css" />
+
+
+
+    <link rel="stylesheet" href="../../../../resources/chat/css/chatStyle.css" />
 
     <style>
         #header {
@@ -30,6 +35,8 @@
         }
     </style>
 </head>
+<%@ include file="/WEB-INF/views/include/header.jsp" %>
+
 <body>
 <div class="hugeContainer">
     <div class="chatCurtain"></div>
@@ -87,21 +94,6 @@
         <%--검색 부분--%>
         <%--검색 부분--%>
 
-        <%--레시피 검색 결과 부분--%>
-        <%--레시피 검색 결과 부분--%>
-        <div class="recipe_box">
-            <div class="resultInfo">
-                <div class="logoBox">
-                    <img src="/resources/img/prj_1/user/newYummy.png" />
-                </div>
-            </div>
-
-
-
-        </div> <%--RECIPE Box--%>
-
-        <%--레시피 검색 결과 부분 끝--%>
-        <%--레시피 검색 결과 부분 끝--%>
 
 
     </div> <%--BorderBox--%>

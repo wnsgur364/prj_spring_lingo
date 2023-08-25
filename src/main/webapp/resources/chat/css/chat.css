@@ -51,7 +51,7 @@
 }
 .sender,.message,.date{
     font-family: 'TheJamsil5Bold';
-    color: white;
+    color: black;
 }
 .date{
     color: rgba(255,255,255,.5);
@@ -66,7 +66,7 @@
 }
 .sender{
     letter-spacing: 0;
-    color: rgba(255,255,255,.5);
+    color: black;
 }
 #chatEach,#chatEach2{
     width: 100%;
@@ -84,7 +84,7 @@
     color: red!important;
 }
 .right>.message{
-    color: #ffffa8;
+    color: black;
 }
 .chatRecord .left{
     text-align: left;

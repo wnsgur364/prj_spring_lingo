@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -9,35 +10,163 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.5/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 
-<div class="chatFrame">
-    <!-- 새로운채팅출력 -->
-    <div class="chatRecord"></div>
+<div class="wrap">
+<section class="menu-section">
+    <h1>
+        <!-- <a href="#" target="_blank">
+          <img src="Logo.png" alt="logo" />
+        </a> -->
+        이그잼플 채팅
+    </h1>
+    <div class="user-box">
+        <img class="user-img" src="../../../../resources/chat/images/user_0.png" alt="user image" />
+        <div class="name">
+            <!-- addClass : active -->
+            <input type="text" value="안도형" />
+        </div>
+        <a href="javascript:void(0);" class="btn-alter"></a>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li class="active"><a href="javascript:void(0);">채팅방1</a></li>
+            <li><a href="javascript:void(0);">채팅방2</a></li>
+        </ul>
+    </nav>
+    <!-- resource btns -->
+    <%--        <ul class="resource-box">--%>
+    <%--            <li>--%>
+    <%--                <a href="javascript:void(0);" class="btn"--%>
+    <%--                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a--%>
+    <%--                >--%>
+    <%--            </li>--%>
+    <%--            <li>--%>
+    <%--                <a href="javascript:void(0);" class="btn"--%>
+    <%--                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a--%>
+    <%--                >--%>
+    <%--            </li>--%>
+    <%--        </ul>--%>
+</section>
 
-    <script id="temp" type="text/x-handlebars-template">
-        {{#each .}}
-        <div id="chatEach" class="{{printLeftRight sender}}">
-            <div class="sender">{{sender}}</div>
-            <div class="date">{{regdate}}</div>
-            <div class="message">{{message}}
-                <a href="{{seq}}" style="display:{{printNone sender}}">X</a>
+<main class="chat-wrap">
+    <div class="chat-wrap-inner">
+        <div class="chat-container">
+            <h2 class="chat-title">톡플러스</h2>
+            <!-- chat-area -->
+            <div class="chat-area" id="chatView">
+<%--                <div class="date"></div>--%>
+<%--                <div class="notibox">--%>
+<%--                    <span>채팅방 운영정책 및 공지를 입력할 수 있는 영역입니다</span>--%>
+<%--                </div>--%>
+                <!-- message-area -->
+                <div class="message-area">
+
+
+                    <div class="message-list wirter">
+                        <div class="message-box">
+                            <div class="message-time">
+                                <div class="timestamps">오후 00:00</div>
+                                <div class="message-text">발송메시지 영역</div>
+                                <div class="gogo">발송자</div>
+                            </div>
+                        </div>
+                    </div>>
+
+                    <div class="message-list avatar">
+                        <div class="avatar-image"><img src="./images/user_1.png" /></div>
+                        <div class="message-box">
+                            <div class="avatar-name">톡플러스</div>
+                            <div class="message-time">
+                                <div class="message-time">
+                                    <div class="timestamps">오후 00:00</div>
+                                    <div class="message-text">발송메시지 영역</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 새로운채팅출력 -->
+                    <div class="chatRecord"></div>
+
+                    <script id="temp" type="text/x-handlebars-template">
+                        {{#each .}}
+                        <div class="message-list wirter">
+                            <div class="message-box">
+                                <div class="message-time">
+                                    <div class="timestamps">{{regdate}}</div>
+                                    <div class="message-text">{{message}}
+                                        <a href="{{seq}}" style="display:{{printNone sender}}">X</a>
+                                    </div>
+                                    <div class="senderx">{{sender}}</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+
+                        <%--        이거 풀면 db연결--%>
+                    </script>
+
+
+                    <script id="temp1" type="text/x-handlebars-template">
+                        <div class="avatar-image"><img src="./images/user_1.png" /></div>
+                        <class="message-box">
+                        <div class="sender">{{sender}}</div>
+                        <div class="message-time">
+                            <div class="timestamps">{{regdate}}</div>
+                            <div class="message-text">{{message}}</div>
+                        </div>
+
+                        </div>
+                    </script>
+
+
+                </div>
+            </div>
+            <!-- //message-area -->
+        </div>
+        <!-- //chat-area -->
+        <!-- message-write-area -->
+        <!-- message-write-area -->
+        <div class="message-write-area">
+            <div class="message-write-inner">
+                <div class="btn-attach">
+                    <a href="javascript:void(0);"></a>
+                </div>
+                <div class="attach-box">
+                    <ul>
+                        <li>
+                            <a class="attach pic" href="javascript:void(0);">사진첨부</a>
+                        </li>
+                        <li>
+                            <a class="attach video" href="javascript:void(0);"
+                            >동영상 첨부</a
+                            >
+                        </li>
+                        <li>
+                            <a class="attach file" href="javascript:void(0);">파일첨부</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="write-box">
+                    <input
+                            id="txtMessage"
+                            type="text"
+                            class="enterMessage"
+                            placeholder="메시지를 입력해주세요."
+                    />
+                </div>
+                <a id="planeBtn" class="btn-send" id="btnEnterMessage" href="javascript:void(0);"
+                >전송</a
+                >
             </div>
         </div>
-        {{/each}}
-
-        <%--        이거 풀면 db연결--%>
-    </script>
-    <script id="temp1" type="text/x-handlebars-template">
-        <div id="chatEach2" class="{{printLeftRight sender}}">
-            <div class="sender">{{sender}}</div>
-            <div class="date">{{regdate}}</div>
-            <div class="message">{{message}}</div>
-        </div>
-    </script>
-    <div class="inputMsg">
-        <input id="txtMessage" placeholder="✏️ + ↵"/>
-        <i id="planeBtn" class="fa-regular fa-paper-plane"></i>
+        <!-- //message-write-area -->
+        <!-- //message-write-area -->
     </div>
+</main>
+
 </div>
+
+
 
 
 <!-- 메시지 입력시 오른쪽 왼쪽으로 기입되는 방식 지정 -->
