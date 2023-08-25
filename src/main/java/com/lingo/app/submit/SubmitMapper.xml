@@ -32,6 +32,27 @@
 		SELECT count(*)
 		<include refid="selectCommon" />
 	</select>
+	
+  	<select id="selectView" resultMap="resultMapObj">
+   		SELECT
+		    a.seq,
+		    c.question,
+		    d.name,
+		    b.answer,
+		    b.answerNy,
+		    (
+		        SELECT answer
+		        FROM answer
+		        WHERE quiz_seq = b.quiz_seq AND answerNy = 1
+		    ) AS answerCheck,
+		    a.submitDatetime 
+		FROM 
+		    submit a
+			    LEFT JOIN answer b ON b.seq = a.answer
+			    LEFT JOIN quiz c ON c.seq = a.quizSeq
+			    LEFT JOIN member d ON d.seq = a.memberSeq
+		WHERE 1=1;
+   	</select>
 
    	<select id="selectList" resultMap="resultMapObj">
 		SELECT aa.* FROM (   	

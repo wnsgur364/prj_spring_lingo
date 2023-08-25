@@ -1,6 +1,6 @@
 package com.lingo.app.submit;
 
-import java.util.List;
+import java.sql.Date;
 
 public class Submit {
 
@@ -12,6 +12,10 @@ public class Submit {
 	private Integer	answerNy;
 	private String	answer;
 	private String[] selectedAnswers;
+	private String name;
+	private String answerCheck;
+	private Date submitDatetime;
+	private String question;
 	
 //	----
 	
@@ -62,6 +66,30 @@ public class Submit {
 	}
 	public void setSelectedAnswers(String[] selectedAnswers) {
 		this.selectedAnswers = selectedAnswers;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Date getSubmitDatetime() {
+		return submitDatetime;
+	}
+	public void setSubmitDatetime(Date submitDatetime) {
+		this.submitDatetime = submitDatetime;
+	}
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	public String getAnswerCheck() {
+		return answerCheck;
+	}
+	public void setAnswerCheck(String answerCheck) {
+		this.answerCheck = answerCheck;
 	}
 	
 }

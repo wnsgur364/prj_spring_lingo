@@ -18,6 +18,7 @@ import com.lingo.app.answer.AnswerVo;
 import com.lingo.app.member.MemberServiceImpl;
 import com.lingo.app.submit.Submit;
 import com.lingo.app.submit.SubmitServiceImpl;
+import com.lingo.app.submit.SubmitVo;
 
 @Controller
 public class QuizController {
@@ -74,20 +75,25 @@ public class QuizController {
 		
 		sService.insert(dto);
 		
+		// 인서트한 데이터를 세션에 저장
+	    httpSession.setAttribute("insertedData", dto);
+		
 		return "redirect:/testScores";
 	}
 	
 	@RequestMapping("/testScores")
-	public String testScores() {
-		// answer, quiz 조인해서 보여주고 점수 내야함
+	public String testScores(SubmitVo vo, Submit dto, Model model, HttpSession httpSession) {
+	    // 세션에서 인서트한 데이터를 가져옴
+	    Submit insertedData = (Submit) httpSession.getAttribute("insertedData");
+	    
+	    // 가져온 데이터를 모델에 추가하여 화면에 표시
+	    model.addAttribute("insertedData", insertedData);
+	    model.addAttribute("list", sService.selectView(new SubmitVo())); // SubmitVo 객체에 필요한 정보를 추가해야 함
+	   
 		return "/infra/user/index/testScores";
 	}
 	
-	
-	
 	//admin
-	
-	
 	
 	 @RequestMapping("/quizList")
 	    public String quizList(@ModelAttribute("vo") QuizVo vo, Model model) {

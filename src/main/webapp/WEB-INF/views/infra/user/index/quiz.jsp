@@ -51,16 +51,36 @@
         </c:forEach>
         <!-- Hidden input to store selectedAnswers -->
     	<input type="hidden" name="selectedAnswers" id="selectedAnswersInput">
+    	
     </form>
 </div>
 <div class="d-flex justify-content-center align-items-center">
-	<button type="button" class="btn btn-dark" id="submit">Submit</button>
-<!-- 	버튼 클릭시 모달로 이동하도록 해야함	 -->
+	<button type="button" class="btn btn-dark" id="submitCheck" data-toggle="modal" data-target="#staticModal" data-backdrop="static">Submit</button>
+</div>
+<!-- 모달 -->
+<div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-dialog-centered" role="document">
+    	<div class="modal-content">
+     			<div class="modal-header">
+        		<h5 class="modal-title" id="staticModalLabel">ALERT</h5>
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body"> 
+				"Are you sure you want to submit?"
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-light" data-dismiss="modal">Back</button>
+        		<button type="button" class="btn btn-dark" id="submit">Submit</button>
+      		</div>
+   		</div>
+  	</div>
 </div>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
 <script>
 
-    // 인서트버튼 클릭이벤트
+	// 인서트버튼 클릭이벤트
     $("#submit").on("click", function(){
     	var selectedAnswers = []; // 선택한 정답들을 저장할 배열
     	
