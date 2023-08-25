@@ -162,7 +162,7 @@
 .chat-area {
   width: 100%;
   height: calc(100vh - 400px);
-  overflow-y: auto;
+  /*overflow-y: auto;*/
 }
 
 .chat-container .chat-area .date {
@@ -226,32 +226,33 @@
   min-width: 70px;
 }
 
-.message-list.avatar {
+.avatar {
   justify-content: flex-start;
 }
 
-.message-list.avatar .message-box .message-time .message-text {
+.avatar .message-box .message-time .message-text {
   color: #575757;
   background: #fff;
   border-radius: 0 10px 10px 10px;
 }
 
-.message-list.avatar .message-box .message-time .timestamps {
+.avatar .message-box .message-time .timestamps {
   padding-left: 10px;
 }
 
-.message-list.wirter {
+.writer {
   justify-content: flex-end;
   padding-right: 15px;
+  width: 100%;
 }
 
-.message-list.wirter .message-box .message-time .message-text {
+.writer .message-box .message-time .message-text {
   color: #fff;
   background: #0836f0;
   border-radius: 10px 0 10px 10px;
 }
 
-.message-list.wirter .message-box .message-time .timestamps {
+.writer .message-box .message-time .timestamps {
   padding-right: 10px;
   text-align: right;
 }

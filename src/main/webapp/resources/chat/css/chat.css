@@ -51,7 +51,7 @@
 }
 .sender,.message,.date{
     font-family: 'TheJamsil5Bold';
-    color: white;
+    color: black;
 }
 .date{
     color: rgba(255,255,255,.5);
@@ -66,7 +66,7 @@
 }
 .sender{
     letter-spacing: 0;
-    color: rgba(255,255,255,.5);
+    color: black;
 }
 #chatEach,#chatEach2{
     width: 100%;
@@ -74,7 +74,7 @@
 }
 .chatRecord{
     width: 100%;
-    height: 650px;
+    height: 100%;
     overflow-y: scroll;
     padding: 0 30px;
     box-sizing: border-box;
@@ -84,8 +84,33 @@
     color: red!important;
 }
 .right>.message{
-    color: #ffffa8;
+    color: black;
 }
 .chatRecord .left{
     text-align: left;
+}
+
+
+/* width */
+
+.chatRecord::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+/* Track */
+
+.chatRecord::-webkit-scrollbar-track {
+    border-radius: 5px 5px 5px 5px;
+    background: #f1f1f1;
+}
+/* Handle */
+
+.chatRecord::-webkit-scrollbar-thumb {
+    border-radius: 5px 5px 5px 5px;
+    background: rgba(153, 153, 153, 0.2);
+}
+/* Handle on hover */
+
+.chatRecord::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 102, 102, 0.2);
 }
