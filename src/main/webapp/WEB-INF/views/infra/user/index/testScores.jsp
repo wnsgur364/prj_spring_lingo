@@ -43,8 +43,8 @@
 			</div>
 		</div>
 	
-	<div class="col-md-12">
-		<div class=" h1 text-center py-5">Quiz Answer</div>
+	<div class="row" style="font-size: 1.2vw">
+		<div class="h1 text-center py-5 col-12">Quiz Answer</div>
 		<c:choose>
 			<c:when test="${fn:length(list) eq 0}">
 				<tr>
@@ -52,35 +52,37 @@
 	            </tr>
 			</c:when>
 			<c:otherwise>
-				<c:forEach items="${list}" var="list" varStatus="loop">
-				<c:if test="${loop.index % 5 == 0}">
-				<table class="table table-borderess table-spacing">
-				  <tbody>
-				    <tr >
-				      <th scope="col">Name: ${list.name}</th>
-				      <th scope="col">Date: ${list.submitDatetime}</th>
-				    </tr>
-				  </tbody>
-				</table>
-				</c:if>
-				<table class="table table-borderess">
-				  <thead>
-				    <tr>
-				      <th class="col-6">Quiz</th>
-				      <th class="col-2">My Answer</th>
-				      <th class="col-2">Answer</th>
-				      <th class="col-2">O/X</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <td>Q${loop.count}.${list.question}</td>
-				      <td>${list.answer}</td>
-				      <td>${list.answerCheck}</td>
-				      <td>${list.answerNy == 1 ? "O" : "X"}</td>
-				    </tr>
-                </tbody>
-				</table>
+				<c:forEach items="${list}" var="item" varStatus="loop">
+					 <c:if test="${fn:length(list) - loop.index <= 5}">
+					 	<c:if test="${loop.index % 5 == 0}">
+						<table class="table table-borderess table-spacing col-10">
+						  <tbody>
+						    <tr >
+						      <th scope="col">Name: ${item.name}</th>
+						      <th scope="col">Date: ${item.submitDatetime}</th>
+						    </tr>
+						  </tbody>
+						</table>
+						</c:if>
+					<table class="table table-borderess col-10">
+						  <thead>
+						    <tr>
+						      <th class="col-6">Quiz</th>
+						      <th class="col-2">My Answer</th>
+						      <th class="col-2">Answer</th>
+						      <th class="col-2">O/X</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td>${item.question}</td>
+						      <td>${item.answer}</td>
+						      <td>${item.answerCheck}</td>
+						      <td>${item.answerNy == 1 ? "O" : "X"}</td>
+						    </tr>
+                		</tbody>
+					</table>
+					</c:if>
 				</c:forEach>
 			</c:otherwise>
 		</c:choose>

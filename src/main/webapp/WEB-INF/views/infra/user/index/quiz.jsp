@@ -59,16 +59,16 @@
 </div>
 <!-- 모달 -->
 <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true">
-  	<div class="modal-dialog modal-dialog-centered" role="document">
+  	<div class="modal-dialog modal-dialog-centered" role="document" style="align-items: flex-start;">
     	<div class="modal-content">
      			<div class="modal-header">
-        		<h5 class="modal-title" id="staticModalLabel">ALERT</h5>
+        		<h5 class="modal-title" id="staticModalLabel">Confirmation</h5>
         		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           			<span aria-hidden="true">&times;</span>
         		</button>
       		</div>
       		<div class="modal-body"> 
-				"Are you sure you want to submit?"
+				Do you really want to submit?
       		</div>
       		<div class="modal-footer">
         		<button type="button" class="btn btn-light" data-dismiss="modal">Back</button>
