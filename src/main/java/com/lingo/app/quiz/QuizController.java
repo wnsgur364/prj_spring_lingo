@@ -37,14 +37,14 @@ public class QuizController {
 	public String quiz(QuizVo qvo, Model qModel, AnswerVo avo, Model aModel) {
 	    // 기존 코드와 세션 관련 변수 설정 부분은 그대로 유지됩니다.
 	    List<Quiz> quizList = qService.selectView(qvo);
-	    List<Quiz> selectedQuizzes = new ArrayList<>();
+	    List<Quiz> selectedQuizzes = new ArrayList<Quiz>();
 
 	    int totalQuiz = quizList.size();
 	    int quizToShow = 5;
 
 	    if (totalQuiz >= quizToShow) {
 	        Random random = new Random();
-	        List<Integer> selectIndex = new ArrayList<>();
+	        List<Integer> selectIndex = new ArrayList<Integer>();
 
 	        while (selectIndex.size() < quizToShow) {
 	            int randomIndex = random.nextInt(totalQuiz);
