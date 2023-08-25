@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -25,7 +24,7 @@
         </div>
         {{/each}}
 
-<%--        이거 풀면 db연결--%>
+        <%--        이거 풀면 db연결--%>
     </script>
     <script id="temp1" type="text/x-handlebars-template">
         <div id="chatEach2" class="{{printLeftRight sender}}">
@@ -199,9 +198,9 @@
             top: chatRecord.scrollHeight,
             behavior: 'smooth' // Set behavior to 'smooth' for smooth scrolling
 
-        //       var chatRecord = $(".chatRecord")[0];
-        //     chatRecord.scrollTo({
-        //         top: chatRecord.scrollHeight
+            //       var chatRecord = $(".chatRecord")[0];
+            //     chatRecord.scrollTo({
+            //         top: chatRecord.scrollHeight
         });
     }
 

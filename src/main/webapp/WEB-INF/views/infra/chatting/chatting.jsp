@@ -1,95 +1,118 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 
+
+
 <!DOCTYPE html>
-<style>
-    .avatar{
-        width: 100%!important;
-    }
-</style>
-<html>
+<html lang="ko">
 <head>
-    <title>채팅입니당</title>
-    <link rel="stylesheet" href="../../../../resources/chat/css/chatStyle.css" />
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- 채팅 css -->
+    <link rel="stylesheet" href="../../../../resources/chat/css/chat.css" />
+
+    <style>
+        #header {
+            height: 218px;
+        }
+        #category_menu a:nth-child(4) {
+            border-bottom: 3px solid #e83862;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            color: #e83862;
+            height: 44px;
+        }
+    </style>
 </head>
 <body>
-<%@ include file="/WEB-INF/views/include/header.jsp" %>
-<div class="wrap">
-    <section class="menu-section">
-        <h1>
-            <!-- <a href="#" target="_blank">
-              <img src="Logo.png" alt="logo" />
-            </a> -->
-            이그잼플 채팅
-        </h1>
-        <div class="user-box">
-            <img class="user-img" src="../../../../resources/chat/images/user_0.png" alt="user image" />
-            <div class="name">
-                <!-- addClass : active -->
-                <input type="text" value="안도형" />
-            </div>
-            <a href="javascript:void(0);" class="btn-alter"></a>
+<div class="hugeContainer">
+    <div class="chatCurtain"></div>
+
+    <%@include file="chat.jsp"%>
+    <div class="border_box">
+        <%--검색 부분--%>
+        <%--검색 부분--%>
+        <div class="srch_box">
+            <c:choose>
+                <c:when test="${not empty id }">
+                    <%--Profile Picture--%>
+                    <%--Profile Picture--%>
+
+
+                    <div class="dropDown">
+                        <a id="headerProfile" href="#">
+                            <c:choose>
+                                <c:when test="${not empty sessionProfilePath}">
+                                    <img style="object-fit: cover; align-self: center; transition: all .2s ease-in-out;"
+                                         id="uploadImgProfilePreview1"
+                                         src="<c:out value="${sessionProfilePath}"/><c:out value="${userName}"/>"
+                                         class="rounded-circle d-block" width="80" height="80"
+                                    />
+                                </c:when>
+                                <c:otherwise>
+                                    <img style="object-fit: cover; align-self: center; transition: all .2s ease-in-out;"
+                                         id="uploadImgProfilePreview"
+                                         src="/resources/img/prj_1/admin/defaultProfile.png"
+                                         class="rounded-circle d-block" width="75" height="75"
+                                    />
+                                </c:otherwise>
+                            </c:choose>
+
+                        </a>
+                        <div class="userMenu">
+                            <div id="userGear" class="goTo"><span class="material-symbols-outlined">settings</span></div>
+                            <div onclick="logOutUser()" class="logOut"><span class="material-symbols-outlined">logout</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </c:when>
+                <c:otherwise>
+                    <div style="cursor: pointer;" onclick="location.href='/login'" class="outBtn">
+                        <span class="material-symbols-outlined">login</span>
+                    </div>
+
+                </c:otherwise>
+            </c:choose>
+
+
         </div>
-        <nav class="menu">
-            <ul>
-                <li class="active"><a id="chat" href="javascript:void(0);">채팅방1</a></li>
-                <li><a href="javascript:void(0);">채팅방2</a></li>
-            </ul>
-        </nav>
-        <!-- resource btns -->
-<%--        <ul class="resource-box">--%>
-<%--            <li>--%>
-<%--                <a href="javascript:void(0);" class="btn"--%>
-<%--                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a--%>
-<%--                >--%>
-<%--            </li>--%>
-<%--            <li>--%>
-<%--                <a href="javascript:void(0);" class="btn"--%>
-<%--                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a--%>
-<%--                >--%>
-<%--            </li>--%>
-<%--        </ul>--%>
-    </section>
-    <main class = "chat-wrap">
-        <%@include file="chat.jsp"%>
-    </main>
+        <%--검색 부분--%>
+        <%--검색 부분--%>
+
+        <%--레시피 검색 결과 부분--%>
+        <%--레시피 검색 결과 부분--%>
+        <div class="recipe_box">
+            <div class="resultInfo">
+                <div class="logoBox">
+                    <img src="/resources/img/prj_1/user/newYummy.png" />
+                </div>
+            </div>
+
+
+
+        </div> <%--RECIPE Box--%>
+
+        <%--레시피 검색 결과 부분 끝--%>
+        <%--레시피 검색 결과 부분 끝--%>
+
+
+    </div> <%--BorderBox--%>
+</div> <%--hugeContainer--%>
+<%--임시 채팅 div--%>
+<%--임시 채팅 div--%>
+<div style="font-weight: 900; color: white; font-family: 'neurimboGothicRegular'; display: flex; align-items: center; justify-content: center; position: fixed; z-index: 1001; bottom: 10px; right: 10px; width: 100px; height: 30px; background-color: coral; cursor: pointer; border-radius: 10px;" id="chat">
+    TALK
 </div>
-<%@ include file="/WEB-INF/views/include/footer.jsp" %>
-<script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"
-></script>
-<script src="../../../../resources/chat/js/talkplus-0.4.0.js"></script>
-
-<!-- <script src="../../../../resources/chat/js/chat.js" type="module"></script> -->
-
-<script>
-    $(".btn-attach").on("click", function () {
-        $(".attach-box").toggleClass("active");
-    });
-</script>
-<!-- <script>
-
-  $('.btn-attach a').on('click', function () {
-      $(this).toggleClass('active');
-      $(this).closest('.message-write-inner').find('.attach-box').addClass('active');
-  });
-  $('.btn-attach a').on('focusout', function () {
-      $(this).removeClass('active');
-      $(this).closest('.message-write-inner').find('.attach-box').removeClass('active');
-  });
-
-</script> -->
-
-
-
-
+<%--임시 채팅 div--%>
+<%--임시 채팅 div--%>
 </body>
 </html>
 <script>
