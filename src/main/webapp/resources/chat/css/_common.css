@@ -2,8 +2,8 @@
 .wrap {
   min-height: 100%;
   height: 100%;
-  min-width: 1428px;
   display: flex;
+  width: 100%;
 }
 
 .menu-section {
@@ -579,4 +579,31 @@
 
 .chat-area::-webkit-scrollbar-thumb:hover {
   background: rgba(102, 102, 102, 0.2);
+}
+.message-list.writer .senderx {
+display: none;
+}
+
+
+@media (max-width: 1400px) {
+  /* 스타일 수정 및 추가 */
+
+.wrap{
+  flex-direction: column;
+}
+
+.menu-section {
+width:  100%;
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+}
+.chat-wrap{
+  width: 100%;
+
+}
+
+.menu-section .menu {
+  padding-right: 30px;
+}
 }

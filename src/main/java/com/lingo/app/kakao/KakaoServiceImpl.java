@@ -37,6 +37,7 @@ public class KakaoServiceImpl implements KakaoService {
             sb.append("&client_id=6b4cc63a82c5df0d0745f8c7e135a319"); //본인이 발급받은 key
 //            리다이렉트 주소 입력해야용함
             sb.append("&redirect_uri=http://localhost:8080/login/kakao"); // 본인이 설정한 주소
+//            sb.append("&redirect_uri=http://3.36.75.118:8081/login/kakao"); // 본인이 설정한 주소
 
             sb.append("&code=" + authorize_code);
             bw.write(sb.toString());
@@ -110,13 +111,17 @@ public class KakaoServiceImpl implements KakaoService {
 
             String nickname = properties.getAsJsonObject().get("nickname").getAsString();
             String email = kakao_account.getAsJsonObject().get("email").getAsString();
+            String profile = properties.getAsJsonObject().get("profile_image").getAsString();
+
 
             userInfo.put("nickname", nickname);
             userInfo.put("email", email);
+            userInfo.put("profile_image", profile);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         // catch 아래 코드 추가.
         Kakao result = mr.findkakao(userInfo);
         // 위 코드는 먼저 정보가 저장되있는지 확인하는 코드.
@@ -132,6 +137,7 @@ public class KakaoServiceImpl implements KakaoService {
             return result;
             // 정보가 이미 있기 때문에 result를 리턴함.
         }
+
     }
 
 }

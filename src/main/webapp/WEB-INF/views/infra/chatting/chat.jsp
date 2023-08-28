@@ -11,15 +11,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 
 <div class="wrap">
+
 <section class="menu-section">
-    <h1>
-        <!-- <a href="#" target="_blank">
-          <img src="Logo.png" alt="logo" />
-        </a> -->
-        이그잼플 채팅
-    </h1>
+
     <div class="user-box">
-        <img class="user-img" src="../../../../resources/chat/images/user_0.png" alt="user image" />
+        <img class="user-img" src="${sessionScope.profile}" alt="user image" />
         <div class="name">
             <!-- addClass : active -->
             <span class="name-text"><c:out value="${name}"/></span>
@@ -199,7 +195,7 @@
     getList();
 
     // 웹소캣 생성
-    // var sock = new SockJS("http://3.36.75.118/echo/");
+    // var sock = new SockJS("http://3.36.75.118:8081/echo/");
     //
     var sock = new SockJS("http://localhost:8080/echo/");
 
@@ -348,3 +344,4 @@
     }
 
 </script>
+
