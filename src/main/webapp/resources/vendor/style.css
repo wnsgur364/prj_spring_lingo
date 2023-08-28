@@ -3929,7 +3929,17 @@ a.link-style3 {
         margin-bottom: 20px; 
     }
 
-
+.pageBox{
+	width:800px;
+	height:800px;
+	margin:auto;
+	padding-top: 90px;
+	
+}
+.pageNotFound img{
+	width:100%;
+	
+}
 
 
 

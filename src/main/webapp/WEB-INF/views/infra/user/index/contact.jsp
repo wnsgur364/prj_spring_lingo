@@ -31,7 +31,7 @@
 	
 	<div class="all-title-box">
 		<div class="container text-center">
-			<h1>Contact<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+			<h1>Contact</h1>
 		</div>
 	</div>
 	
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="section-title text-center">
                 <h3>Need Help? Sure we are Online!</h3>
-                <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
+                
             </div><!-- end title -->
 
             <div class="row">
@@ -64,7 +64,7 @@
                                     <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
                                 </div>
                                 <div class="text-center pd">
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Submit</button>
                                 </div>
                             </div>
                         </form>

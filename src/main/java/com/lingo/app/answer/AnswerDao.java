@@ -26,4 +26,5 @@ public class AnswerDao {
 	public int delete(Answer dto){ return sqlSession.update(namespace + ".delete", dto); }
 	public int insert(Answer dto){ return sqlSession.insert(namespace + ".insert", dto); }
 	
+	
 }

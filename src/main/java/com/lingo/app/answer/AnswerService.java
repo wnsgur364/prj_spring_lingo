@@ -12,4 +12,5 @@ public interface AnswerService {
 	public int update(Answer dto);
 	public int delete(Answer dto);
 	public int insert(Answer dto);
+	
 }
