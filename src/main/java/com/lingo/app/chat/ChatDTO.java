@@ -1,11 +1,12 @@
 package com.lingo.app.chat;
 
+import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Date;
 
 @Getter
 @Setter
