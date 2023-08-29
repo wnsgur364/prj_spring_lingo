@@ -20,11 +20,13 @@ public class AnswerDao {
 	public int selectOneCount(AnswerVo vo){ return sqlSession.selectOne(namespace + ".selectOneCount", vo); }
 	public List<Answer> selectList(AnswerVo vo) {return sqlSession.selectList(namespace + ".selectList", vo); }	
 	public List<Answer> selectView(AnswerVo vo) {return sqlSession.selectList(namespace + ".selectView", vo); }	
+//	public List<Answer> selectPage(AnswerVo vo) {return sqlSession.selectList(namespace + ".selectPage", vo); }	
 	
 	public Answer selectOne(AnswerVo vo){ return sqlSession.selectOne(namespace + ".selectOne", vo); }
 	public int update(Answer dto){ return sqlSession.update(namespace + ".update", dto); }
 	public int delete(Answer dto){ return sqlSession.update(namespace + ".delete", dto); }
 	public int insert(Answer dto){ return sqlSession.insert(namespace + ".insert", dto); }
+	
 	
 	
 }

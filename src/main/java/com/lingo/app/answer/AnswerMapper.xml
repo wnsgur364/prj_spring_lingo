@@ -8,11 +8,11 @@
     <resultMap id="resultMapObj" type="com.lingo.app.answer.Answer"></resultMap>
     
 	<sql id="answer">
-	    a.seq ,
-	    a.delNy,
-	    a.answerNy,
-	    a.answer,
-	    a.quiz_seq
+	     a.seq,
+        a.delNy,
+        a.answerNy,
+        a.answer,
+        a.quiz_seq,
     </sql>
 
 	<sql id="quiz">
@@ -50,8 +50,18 @@
         quiz q ON a.quiz_seq = q.seq
     WHERE 1=1
 ) aa
-<!-- LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	  -->
+  LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}
    	</select>
+
+   	
+<!--    	<select id="selectPage" resultMap="resultMapObj"> -->
+<!-- 		SELECT aa.* FROM (   	 -->
+<!-- 	   		SELECT -->
+<!-- 				<include refid="answer" /> -->
+<!--  	   			<include refid="selectCommon" />  -->
+<!-- 		) aa -->
+<!-- 		LIMIT #{rowNumToShow} OFFSET #{startRnumForMysql}	   			 -->
+<!--    	</select> -->
    	
    	<select id="selectView" resultMap="resultMapObj">
 	    SELECT 

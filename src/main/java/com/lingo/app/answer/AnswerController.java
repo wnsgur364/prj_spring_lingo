@@ -20,7 +20,7 @@ public class AnswerController {
 	 public String answerList(@ModelAttribute("vo") AnswerVo vo, Model model) {
 		
 		vo.setShKeyword(vo.getShKeyword() == null ? "" : vo.getShKeyword());
-    	
+		
 		vo.setParamsPaging(service.selectOneCount(vo));
 		
 		if(vo.getTotalRows() > 0) {
@@ -62,7 +62,6 @@ public class AnswerController {
 		service.insert(dto);
 		return "redirect:/answerList";
 	}
-	
-	
-	
+
+
 }

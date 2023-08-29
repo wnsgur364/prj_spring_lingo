@@ -1,6 +1,7 @@
 package com.lingo.app.answer;
 
 import com.lingo.app.common.base.BaseVo;
+import com.lingo.app.common.constants.Constants;
 
 public class AnswerVo extends BaseVo {
 
@@ -12,8 +13,12 @@ public class AnswerVo extends BaseVo {
 	private String answer;
 	private Integer quiz_seq;
 	private String question;
+
+	
 	
 // ----
+	
+	
 	
 	public Integer getShOption() {
 		return shOption;
@@ -63,5 +68,6 @@ public class AnswerVo extends BaseVo {
 	public void setQuestion(String question) {
 		this.question = question;
 	}
+
 	
 }

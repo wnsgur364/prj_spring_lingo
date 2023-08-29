@@ -26,6 +26,10 @@ public class AnswerServiceImpl implements AnswerService {
 	public List<Answer> selectView(AnswerVo vo) {
 		return dao.selectView(vo);
 	}
+//	@Override
+//	public List<Answer> selectPage(AnswerVo vo) {
+//		return dao.selectPage(vo);
+//	}
 
 	@Override
 	public Answer selectOne(AnswerVo vo) {
@@ -46,5 +50,6 @@ public class AnswerServiceImpl implements AnswerService {
 	public int insert(Answer dto) {
 		return dao.insert(dto);
 	}
+	
 
 }

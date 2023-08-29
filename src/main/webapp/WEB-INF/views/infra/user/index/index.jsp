@@ -24,6 +24,9 @@
     <link rel="shortcut icon" href="../../../../../resources/images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="../../../../../resources/images/apple-touch-icon.png">
 
+	
+  
+
 </head>
 <body class="host_version"> 
 
@@ -50,6 +53,7 @@
 							</div><!-- end row -->
 						</div><!-- end container -->
 					</div>
+					
 				</div><!-- end section -->
 			</div>
 		</div>
@@ -68,23 +72,24 @@
 
 		<div class="row">
 			<div class="col-lg-4 col-md-6 col-12">
+		
 				<div class="blog-item">
 					<div class="image-blog">
 						<img src="../../../../../resources/images/exchahimg.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
-						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
+						<span><i class="fa fa-calendar"></i> <a href="#">August 11, 2023</a> </span>
 						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
 						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 					</div>
 					<div class="blog-title">
-						<h2><a href="/chatting" title="">방제목</a></h2>
+						<h2><a href="/chatting" title="">Writing Warriors</a></h2>
 					</div>
 					<div class="blog-desc">
-						<p>상세설명</p>
+						<p>ey there, writing champs! 📝 Seeking pals to level up your writing skills? Join us for brainstorming, feedback swaps, and creative writing shenanigans!</p>
 					</div>
 					<div class="blog-button">
-						<a class="hover-btn-new orange" href="/chatting"><span>입장하기<span></a>
+						<a class="hover-btn-new orange" href="/chatting"><span>To Enter<span></a>
 					</div>
 				</div>
 			</div><!-- end col -->
@@ -92,21 +97,22 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="../../../../../resources/images/blog_2.jpg" alt="" class="img-fluid">
+					<img src="../../../../../resources/images/basic_english.png" alt="" class="img-fluid">
+						
 					</div>
 					<div class="meta-info-blog">
-						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-calendar"></i> <a href="#">August 28, 2023</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">5 student</a> </span>
 						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 					</div>
 					<div class="blog-title">
-						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+						<h2><a href="#" title=""> Speaking Sprouts Crew</a></h2>
 					</div>
 					<div class="blog-desc">
-						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+						<p>What's up, chatty pals? 🗣️ Ready to speak English with confidence? This is your spot for casual convos, debates, and polishing those speaking skills together!</p>
 					</div>
 					<div class="blog-button">
-						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<a class="hover-btn-new orange" href="#"><span>To Enter</span></a>
 					</div>
 				</div>
 			</div><!-- end col -->
@@ -114,21 +120,21 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="../../../../../resources/images/blog_3.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/english_blackboard.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
-						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-calendar"></i> <a href="#">August 06, 2023</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">7 student</a> </span>
 						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 					</div>
 					<div class="blog-title">
-						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+						<h2><a href="#" title="">Listening Lounge</a></h2>
 					</div>
 					<div class="blog-desc">
-						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+						<p>Hey, auditory learners! 🎧 Want to enhance your listening skills? Join the club to dissect audio clips, discuss podcasts, and fine-tune your ears for English! </p>
 					</div>
 					<div class="blog-button">
-						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<a class="hover-btn-new orange" href="#"><span>To Enter</span></a>
 					</div>
 				</div>
 			</div><!-- end col -->
@@ -140,21 +146,21 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="../../../../../resources/images/blog_4.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/englishBook.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
-						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-calendar"></i> <a href="#">August 15, 2023</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">5 student</a> </span>
 						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 					</div>
 					<div class="blog-title">
-						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+						<h2><a href="#" title="">Reading Rendezvous</a></h2>
 					</div>
 					<div class="blog-desc">
-						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+						<p>Hiya, bookworms! 📚 Eager to dive into English texts? Join us for book chats, analysis, and uncovering the magic of English literature together! </p>
 					</div>
 					<div class="blog-button">
-						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<a class="hover-btn-new orange" href="#"><span>To Enter</span></a>
 					</div>
 				</div>
 			</div><!-- end col -->
@@ -162,21 +168,21 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="../../../../../resources/images/blog_5.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/learn_block.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
-						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-calendar"></i> <a href="#">August 18, 2023</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">8 student</a> </span>
 						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 					</div>
 					<div class="blog-title">
-						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+						<h2><a href="#" title="">Listen & Laugh Lounge</a></h2>
 					</div>
 					<div class="blog-desc">
-						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+						<p>Yo, sound explorers! 🎧 Tune in for audio clips, funny dialogues, and laughter as we decode English sounds and rock that listening journey!!!!</p>
 					</div>
 					<div class="blog-button">
-						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<a class="hover-btn-new orange" href="#"><span>To Enter</span></a>
 					</div>
 				</div>
 			</div><!-- end col -->
@@ -184,26 +190,30 @@
 			<div class="col-lg-4 col-md-6 col-12">
 				<div class="blog-item">
 					<div class="image-blog">
-						<img src="../../../../../resources/images/blog_6.jpg" alt="" class="img-fluid">
+						<img src="../../../../../resources/images/think.jpg" alt="" class="img-fluid">
 					</div>
 					<div class="meta-info-blog">
-						<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">10 student</a> </span>
+						<span><i class="fa fa-calendar"></i> <a href="#">August 01, 2023</a> </span>
+						<span><i class="fa fa-users" aria-hidden="true"></i>  <a href="#">9 student</a> </span>
 						<span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 					</div>
 					<div class="blog-title">
-						<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+						<h2><a href="#" title=""> Speak Up Squad</a></h2>
 					</div>
 					<div class="blog-desc">
-						<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+						<p>What's poppin', language buddies? 🗣️ Dive into laid-back chats, hilarious tongue twisters, and boost your speaking game as we laugh and learn together! </p>
 					</div>
 					<div class="blog-button">
-						<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
+						<a class="hover-btn-new orange" href="#"><span>To Enter</span></a>
 					</div>
 				</div>
 			</div><!-- end col -->
 		</div><!-- end row -->
+	
 	</div><!-- end container -->
+	<div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
 </div><!-- end section -->
 
  <div id="overviews" class="section wb">
@@ -224,7 +234,7 @@
 
                         <p> Enhance your language skills and knowledge at your own pace. Join us and embark on an exciting journey of English learning and growth! </p>
 
-                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                        <a href="#" class="hover-btn-new orange"><span>To Enter</span></a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 				
@@ -304,6 +314,6 @@
 </div><!-- end copyrights -->
 
 <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-
+ 
 </body>
 </html>

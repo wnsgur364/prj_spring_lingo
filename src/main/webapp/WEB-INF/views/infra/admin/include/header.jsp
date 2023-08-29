@@ -22,6 +22,8 @@
 <link href="/resources/assets/css/sidebar-menu.css" rel="stylesheet"/>
 <!-- Custom Style-->
 <link href="/resources/assets/css/app-style.css" rel="stylesheet"/>
+<!--fontawesome -->
+<script src="https://kit.fontawesome.com/f0e73cfa04.js" crossorigin="anonymous"></script>
 
 <!--Start sidebar-wrapper-->
 <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
