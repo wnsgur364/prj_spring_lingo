@@ -196,6 +196,7 @@
 
     // 웹소캣 생성
     // var sock = new SockJS("http://3.36.75.118:8081/echo/");
+    // var sock = new SockJS("http://52.79.240.22:8080/echo/");
     //
     var sock = new SockJS("http://localhost:8080/echo/");
 
