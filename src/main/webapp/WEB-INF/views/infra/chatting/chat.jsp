@@ -12,37 +12,25 @@
 
 <div class="wrap">
 
-<%--<section class="menu-section">--%>
+<section class="menu-section">
 
-<%--    <div class="user-box">--%>
+    <div class="user-box">
 <%--        <img class="user-img" src="${sessionScope.profile}" alt="user image" />--%>
-<%--        <div class="name">--%>
-<%--            <!-- addClass : active -->--%>
-<%--            <span class="name-text"><c:out value="${name}"/></span>--%>
-<%--        </div>--%>
-<%--        <a href="javascript:void(0);" class="btn-alter"></a>--%>
-<%--    </div>--%>
-<%--    <nav class="menu">--%>
-<%--        <ul>--%>
-<%--            <li><a id="chatNo1" href="javascript:void(0);" onclick="toggleActive('chatNo1')">채팅방1</a></li>--%>
+        <div class="name">
+            <!-- addClass : active -->
+            <span class="name-text"><c:out value="${name}"/></span>
+        </div>
+        <a href="javascript:void(0);" class="btn-alter"></a>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a id="chatNo1" href="javascript:void(0);" onclick="toggleActive('chatNo1')">채팅방 입장</a></li>
 <%--            <li><a id="chatNo2" href="javascript:void(0);" onclick="toggleActive('chatNo2')">채팅방2</a></li>--%>
-<%--        </ul>--%>
-<%--    </nav>--%>
+        </ul>
+    </nav>
 
-<%--    <!-- resource btns -->--%>
-<%--    &lt;%&ndash;        <ul class="resource-box">&ndash;%&gt;--%>
-<%--    &lt;%&ndash;            <li>&ndash;%&gt;--%>
-<%--    &lt;%&ndash;                <a href="javascript:void(0);" class="btn"&ndash;%&gt;--%>
-<%--    &lt;%&ndash;                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a&ndash;%&gt;--%>
-<%--    &lt;%&ndash;                >&ndash;%&gt;--%>
-<%--    &lt;%&ndash;            </li>&ndash;%&gt;--%>
-<%--    &lt;%&ndash;            <li>&ndash;%&gt;--%>
-<%--    &lt;%&ndash;                <a href="javascript:void(0);" class="btn"&ndash;%&gt;--%>
-<%--    &lt;%&ndash;                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a&ndash;%&gt;--%>
-<%--    &lt;%&ndash;                >&ndash;%&gt;--%>
-<%--    &lt;%&ndash;            </li>&ndash;%&gt;--%>
-<%--    &lt;%&ndash;        </ul>&ndash;%&gt;--%>
-<%--</section>--%>
+
+</section>
 
 <main class="chat-wrap">
     <div class="chat-wrap-inner">
@@ -50,36 +38,11 @@
             <h2 class="chat-title">톡플러스</h2>
             <!-- chat-area -->
             <div class="chat-area" id="chatView">
-<%--                <div class="date"></div>--%>
-<%--                <div class="notibox">--%>
-<%--                    <span>채팅방 운영정책 및 공지를 입력할 수 있는 영역입니다</span>--%>
-<%--                </div>--%>
+
                 <!-- message-area -->
                 <div class="message-area" style="height: 100%">
 
 
-<%--                    <div class="message-list writer">--%>
-<%--                        <div class="message-box">--%>
-<%--                            <div class="message-time">--%>
-<%--                                <div class="timestamps">오후 00:00</div>--%>
-<%--                                <div class="message-text">발송메시지 영역</div>--%>
-<%--                                <div class="gogo">발송자</div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>>--%>
-
-<%--                    <div class="message-list avatar">--%>
-<%--                        <div class="avatar-image"><img src="./images/user_1.png" /></div>--%>
-<%--                        <div class="message-box">--%>
-<%--                            <div class="avatar-name">톡플러스</div>--%>
-<%--                            <div class="message-time">--%>
-<%--                                <div class="message-time">--%>
-<%--                                    <div class="timestamps">오후 00:00</div>--%>
-<%--                                    <div class="message-text">발송메시지 영역</div>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
 
                     <!-- 새로운채팅출력 -->
                     <div class="chatRecord"></div>
@@ -105,7 +68,7 @@
 
 
                     <script id="temp1" type="text/x-handlebars-template">
-                        <div class="message-list {{message-list sender}}">
+                        <div class="message-list {{message-list sender}}"  style="width: 100%">
                             <div class="message-box">
                                 <div class="message-time">
                                     <div class="timestamps">{{regdate}}</div>
@@ -195,9 +158,9 @@
     getList();
 
     // 웹소캣 생성
-    // var sock = new SockJS("http://3.36.75.118:8081/echo/");
+    var sock = new SockJS("http://3.36.75.118:8081/echo/");
     //
-    var sock = new SockJS("http://localhost:8080/echo/");
+    // var sock = new SockJS("http://localhost:8080/echo/");
 
     sock.onmessage = onMessage;
     console.log(sock);
@@ -213,10 +176,11 @@
 
     //채팅삭제
     //채팅삭제
-    $(".chatRecord").on('click','.message-text a',function(e){
+    $(".chatRecord").on('click','.message a',function(e){
         e.preventDefault();
         var seq=$(this).attr("href");
         if(!confirm("삭제하시겠습니까?")) return;
+        //     seq+"을(를)
         $.ajax({
             async:true,
             cache:false,
@@ -343,26 +307,4 @@
     }
 
 </script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // chat-container 요소를 찾음
-        var chatContainer = document.querySelector(".chat-container");
-        var chatRecord = document.querySelector(".chatRecord");
-
-        // chat-container 요소가 존재한다면
-        if (chatContainer) {
-            // style.display 속성을 "block"으로 설정
-            chatContainer.style.display = "block";
-
-            // 1초 후에 chatRecord의 스크롤을 가장 하단으로 이동 (부드러운 스크롤링)
-            setTimeout(function() {
-                chatRecord.scrollTop = chatRecord.scrollHeight;
-            }, 500); // 1000 밀리초(1초) 지연
-        }
-    });
-</script>
-
-
-
 
