@@ -105,7 +105,7 @@
 
 
                     <script id="temp1" type="text/x-handlebars-template">
-                        <div class="message-list {{message-list sender}}">
+                        <div class="message-list {{message-list sender}}" style="width: 100%">
                             <div class="message-box">
                                 <div class="message-time">
                                     <div class="timestamps">{{regdate}}</div>

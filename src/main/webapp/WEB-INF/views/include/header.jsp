@@ -66,16 +66,16 @@
       <div class="collapse navbar-collapse" id="navbars-host">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="materials">Materials</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown-a">
-              <a class="dropdown-item" href="begginner">Beginner</a>
-              <a class="dropdown-item" href="intermediate">Intermediate</a>
-              <a class="dropdown-item" href="advanced">Advanced</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="materials">Quiz</a></li>
+<!--           <li class="nav-item dropdown"> -->
+<!--             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Learning</a> -->
+<!--             <div class="dropdown-menu" aria-labelledby="dropdown-a"> -->
+<!--               <a class="dropdown-item" href="begginner">Beginner</a> -->
+<!--               <a class="dropdown-item" href="intermediate">Intermediate</a> -->
+<!--               <a class="dropdown-item" href="advanced">Advanced</a> -->
+<!--             </div> -->
+<!--           </li> -->
+<!--           <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li> -->
         </ul>
         <ul class="nav navbar-nav navbar-right" style="align-items: center">
       <c:choose>

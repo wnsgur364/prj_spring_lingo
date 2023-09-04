@@ -28,7 +28,7 @@
 <body class="host_version"> 
 
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
-<div class="h1 text-center py-5">TEST</div>
+<div class="h1 text-center py-5">Quiz</div>
 <div class="container d-flex justify-content-center align-items-center" style="background: #f3f3f3;">
     <form name="form" method="post">
         <c:forEach items="${quiz}" var="quiz" varStatus="quizLoop">

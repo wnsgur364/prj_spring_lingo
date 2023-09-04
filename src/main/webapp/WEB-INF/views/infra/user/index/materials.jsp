@@ -32,7 +32,7 @@
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 	<div class="all-title-box">
 		<div class="container text-center">
-			<h1>English Materials</h1>
+			<h1>English Quiz</h1>
 		</div>
 	</div>
 

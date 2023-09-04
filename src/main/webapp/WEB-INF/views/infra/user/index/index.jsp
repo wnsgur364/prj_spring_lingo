@@ -45,7 +45,7 @@
 									    <p>Become Master</p>
 										<h2><strong >Learn English Skills <br> Online Find Best <br>Courses</Strong> </h2>
 										<!-- <p class="lead"> Lingo offers a wide range of engaging and interactive activities, exercises, and lessons that are specifically designed to enhance your reading, writing, speaking, and listening abilities. </p> -->
-											<a href="/chatting" class="hover-btn-new"><span>to enter</span></a>
+											<a href="/chatting" class="hover-btn-new"><span>Chatting</span></a>
 											
 
 									</div>
