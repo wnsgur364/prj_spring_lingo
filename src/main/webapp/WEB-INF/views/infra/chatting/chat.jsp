@@ -12,37 +12,37 @@
 
 <div class="wrap">
 
-<section class="menu-section">
+<%--<section class="menu-section">--%>
 
-    <div class="user-box">
-        <img class="user-img" src="${sessionScope.profile}" alt="user image" />
-        <div class="name">
-            <!-- addClass : active -->
-            <span class="name-text"><c:out value="${name}"/></span>
-        </div>
-        <a href="javascript:void(0);" class="btn-alter"></a>
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a id="chatNo1" href="javascript:void(0);" onclick="toggleActive('chatNo1')">채팅방1</a></li>
-            <li><a id="chatNo2" href="javascript:void(0);" onclick="toggleActive('chatNo2')">채팅방2</a></li>
-        </ul>
-    </nav>
+<%--    <div class="user-box">--%>
+<%--        <img class="user-img" src="${sessionScope.profile}" alt="user image" />--%>
+<%--        <div class="name">--%>
+<%--            <!-- addClass : active -->--%>
+<%--            <span class="name-text"><c:out value="${name}"/></span>--%>
+<%--        </div>--%>
+<%--        <a href="javascript:void(0);" class="btn-alter"></a>--%>
+<%--    </div>--%>
+<%--    <nav class="menu">--%>
+<%--        <ul>--%>
+<%--            <li><a id="chatNo1" href="javascript:void(0);" onclick="toggleActive('chatNo1')">채팅방1</a></li>--%>
+<%--            <li><a id="chatNo2" href="javascript:void(0);" onclick="toggleActive('chatNo2')">채팅방2</a></li>--%>
+<%--        </ul>--%>
+<%--    </nav>--%>
 
-    <!-- resource btns -->
-    <%--        <ul class="resource-box">--%>
-    <%--            <li>--%>
-    <%--                <a href="javascript:void(0);" class="btn"--%>
-    <%--                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a--%>
-    <%--                >--%>
-    <%--            </li>--%>
-    <%--            <li>--%>
-    <%--                <a href="javascript:void(0);" class="btn"--%>
-    <%--                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a--%>
-    <%--                >--%>
-    <%--            </li>--%>
-    <%--        </ul>--%>
-</section>
+<%--    <!-- resource btns -->--%>
+<%--    &lt;%&ndash;        <ul class="resource-box">&ndash;%&gt;--%>
+<%--    &lt;%&ndash;            <li>&ndash;%&gt;--%>
+<%--    &lt;%&ndash;                <a href="javascript:void(0);" class="btn"&ndash;%&gt;--%>
+<%--    &lt;%&ndash;                ><img src="../../../../resources/chat/images/icon_resource1.png" />Resource</a&ndash;%&gt;--%>
+<%--    &lt;%&ndash;                >&ndash;%&gt;--%>
+<%--    &lt;%&ndash;            </li>&ndash;%&gt;--%>
+<%--    &lt;%&ndash;            <li>&ndash;%&gt;--%>
+<%--    &lt;%&ndash;                <a href="javascript:void(0);" class="btn"&ndash;%&gt;--%>
+<%--    &lt;%&ndash;                ><img src="../../../../resources/chat/images/icon_resource2.png" />Resource</a&ndash;%&gt;--%>
+<%--    &lt;%&ndash;                >&ndash;%&gt;--%>
+<%--    &lt;%&ndash;            </li>&ndash;%&gt;--%>
+<%--    &lt;%&ndash;        </ul>&ndash;%&gt;--%>
+<%--</section>--%>
 
 <main class="chat-wrap">
     <div class="chat-wrap-inner">
@@ -214,11 +214,10 @@
 
     //채팅삭제
     //채팅삭제
-    $(".chatRecord").on('click','.message a',function(e){
+    $(".chatRecord").on('click','.message-text a',function(e){
         e.preventDefault();
         var seq=$(this).attr("href");
         if(!confirm("삭제하시겠습니까?")) return;
-        //     seq+"을(를)
         $.ajax({
             async:true,
             cache:false,
@@ -345,4 +344,26 @@
     }
 
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // chat-container 요소를 찾음
+        var chatContainer = document.querySelector(".chat-container");
+        var chatRecord = document.querySelector(".chatRecord");
+
+        // chat-container 요소가 존재한다면
+        if (chatContainer) {
+            // style.display 속성을 "block"으로 설정
+            chatContainer.style.display = "block";
+
+            // 1초 후에 chatRecord의 스크롤을 가장 하단으로 이동 (부드러운 스크롤링)
+            setTimeout(function() {
+                chatRecord.scrollTop = chatRecord.scrollHeight;
+            }, 500); // 1000 밀리초(1초) 지연
+        }
+    });
+</script>
+
+
+
 

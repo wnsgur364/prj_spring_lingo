@@ -163,6 +163,9 @@
   height: calc(100vh - 400px);
   /*overflow-y: auto;*/
 }
+.chat-container{
+  display: block!important;
+}
 
 .chat-container .chat-area .date {
   text-align: center;
