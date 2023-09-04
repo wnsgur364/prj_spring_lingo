@@ -12,120 +12,120 @@
 
 <div class="wrap">
 
-<section class="menu-section">
+    <section class="menu-section">
 
-    <div class="user-box">
-<%--        <img class="user-img" src="${sessionScope.profile}" alt="user image" />--%>
-        <div class="name">
-            <!-- addClass : active -->
-            <span class="name-text"><c:out value="${name}"/></span>
+        <div class="user-box">
+            <%--        <img class="user-img" src="${sessionScope.profile}" alt="user image" />--%>
+            <div class="name">
+                <!-- addClass : active -->
+                <span class="name-text"><c:out value="${name}"/></span>
+            </div>
+            <a href="javascript:void(0);" class="btn-alter"></a>
         </div>
-        <a href="javascript:void(0);" class="btn-alter"></a>
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a id="chatNo1" href="javascript:void(0);" onclick="toggleActive('chatNo1')">채팅방 입장</a></li>
-<%--            <li><a id="chatNo2" href="javascript:void(0);" onclick="toggleActive('chatNo2')">채팅방2</a></li>--%>
-        </ul>
-    </nav>
+        <nav class="menu">
+            <ul>
+                <li><a id="chatNo1" href="javascript:void(0);" onclick="toggleActive('chatNo1')">채팅방 입장</a></li>
+                <%--            <li><a id="chatNo2" href="javascript:void(0);" onclick="toggleActive('chatNo2')">채팅방2</a></li>--%>
+            </ul>
+        </nav>
 
 
-</section>
+    </section>
 
-<main class="chat-wrap">
-    <div class="chat-wrap-inner">
-        <div class="chat-container">
-            <h2 class="chat-title">톡플러스</h2>
-            <!-- chat-area -->
-            <div class="chat-area" id="chatView">
+    <main class="chat-wrap">
+        <div class="chat-wrap-inner">
+            <div class="chat-container">
+                <h2 class="chat-title">톡플러스</h2>
+                <!-- chat-area -->
+                <div class="chat-area" id="chatView">
 
-                <!-- message-area -->
-                <div class="message-area" style="height: 100%">
+                    <!-- message-area -->
+                    <div class="message-area" style="height: 100%">
 
 
 
-                    <!-- 새로운채팅출력 -->
-                    <div class="chatRecord"></div>
+                        <!-- 새로운채팅출력 -->
+                        <div class="chatRecord"></div>
 
-                    <script id="temp" type="text/x-handlebars-template">
-                        {{#each .}}
-                        <div class="message-list {{message-list sender}}" style="width: 100%">
-                            <div class="message-box">
-                                <div class="message-time">
-                                    <div class="timestamps">{{regdate}}</div>
-                                    <div class="message-text">{{message}}
-                                        <a href="{{seq}}" style="display:{{printNone sender}}">X</a>
+                        <script id="temp" type="text/x-handlebars-template">
+                            {{#each .}}
+                            <div class="message-list {{message-list sender}}" style="width: 100%">
+                                <div class="message-box">
+                                    <div class="message-time">
+                                        <div class="timestamps">{{regdate}}</div>
+                                        <div class="message-text">{{message}}
+                                            <a href="{{seq}}" style="display:{{printNone sender}}">X</a>
+                                        </div>
+                                        <div class="senderx">{{sender}}</div>
+
                                     </div>
-                                    <div class="senderx">{{sender}}</div>
-
                                 </div>
                             </div>
-                        </div>
-                        {{/each}}
+                            {{/each}}
 
-                        <%--        이거 풀면 db연결--%>
-                    </script>
+                            <%--        이거 풀면 db연결--%>
+                        </script>
 
 
-                    <script id="temp1" type="text/x-handlebars-template">
-                        <div class="message-list {{message-list sender}}"  style="width: 100%">
-                            <div class="message-box">
-                                <div class="message-time">
-                                    <div class="timestamps">{{regdate}}</div>
-                                    <div class="message-text">{{message}}</div>
-                                    <div class="senderx">{{sender}}</div>
+                        <script id="temp1" type="text/x-handlebars-template">
+                            <div class="message-list {{message-list sender}}"  style="width: 100%">
+                                <div class="message-box">
+                                    <div class="message-time">
+                                        <div class="timestamps">{{regdate}}</div>
+                                        <div class="message-text">{{message}}</div>
+                                        <div class="senderx">{{sender}}</div>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </script>
+                        </script>
 
 
+                    </div>
                 </div>
+                <!-- //message-area -->
             </div>
-            <!-- //message-area -->
-        </div>
-        <!-- //chat-area -->
+            <!-- //chat-area -->
 
-    </div>
-    <!-- message-write-area -->
-    <!-- message-write-area -->
-    <div class="message-write-area">
-        <div class="message-write-inner">
-            <div class="btn-attach">
-                <a href="javascript:void(0);"></a>
-            </div>
-            <div class="attach-box">
-                <ul>
-                    <li>
-                        <a class="attach pic" href="javascript:void(0);">사진첨부</a>
-                    </li>
-                    <li>
-                        <a class="attach video" href="javascript:void(0);"
-                        >동영상 첨부</a
-                        >
-                    </li>
-                    <li>
-                        <a class="attach file" href="javascript:void(0);">파일첨부</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="write-box">
-                <input
-                        id="txtMessage"
-                        type="text"
-                        class="enterMessage"
-                        placeholder="메시지를 입력해주세요."
-                />
-            </div>
-            <a id="planeBtn" class="btn-send" id="btnEnterMessage" href="javascript:void(0);"
-            >전송</a
-            >
         </div>
-    </div>
-    <!-- //message-write-area -->
-    <!-- //message-write-area -->
-</main>
+        <!-- message-write-area -->
+        <!-- message-write-area -->
+        <div class="message-write-area">
+            <div class="message-write-inner">
+                <div class="btn-attach">
+                    <a href="javascript:void(0);"></a>
+                </div>
+                <div class="attach-box">
+                    <ul>
+                        <li>
+                            <a class="attach pic" href="javascript:void(0);">사진첨부</a>
+                        </li>
+                        <li>
+                            <a class="attach video" href="javascript:void(0);"
+                            >동영상 첨부</a
+                            >
+                        </li>
+                        <li>
+                            <a class="attach file" href="javascript:void(0);">파일첨부</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="write-box">
+                    <input
+                            id="txtMessage"
+                            type="text"
+                            class="enterMessage"
+                            placeholder="메시지를 입력해주세요."
+                    />
+                </div>
+                <a id="planeBtn" class="btn-send" id="btnEnterMessage" href="javascript:void(0);"
+                >전송</a
+                >
+            </div>
+        </div>
+        <!-- //message-write-area -->
+        <!-- //message-write-area -->
+    </main>
 
 </div>
 
@@ -138,7 +138,7 @@
     var uid = "${id}";
     Handlebars.registerHelper("message-list", function(sender) {
         if (uid != sender) {
-             return "avatar";
+            return "avatar";
 
         } else {
             return "writer";
@@ -291,10 +291,10 @@
         chatRecord.scrollTo({
             top: chatRecord.scrollHeight,
             behavior: 'smooth' // Set behavior to 'smooth' for smooth scrolling
-                //
-                //   var chatRecord = $(".chatRecord")[0];
-                // chatRecord.scrollTo({
-                //     top: chatRecord.scrollHeight
+            //
+            //   var chatRecord = $(".chatRecord")[0];
+            // chatRecord.scrollTo({
+            //     top: chatRecord.scrollHeight
         });
     }
 
@@ -307,4 +307,3 @@
     }
 
 </script>
-
